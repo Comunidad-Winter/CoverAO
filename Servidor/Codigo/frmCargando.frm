@@ -1,87 +1,100 @@
 VERSION 5.00
 Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.3#0"; "COMCTL32.OCX"
 Begin VB.Form frmCargando 
-   BackColor       =   &H00C0C0C0&
+   BackColor       =   &H80000004&
    BorderStyle     =   0  'None
-   Caption         =   "Argentum"
-   ClientHeight    =   3105
+   Caption         =   "CoverAO"
+   ClientHeight    =   1185
    ClientLeft      =   1410
    ClientTop       =   3000
-   ClientWidth     =   6450
+   ClientWidth     =   2745
    ControlBox      =   0   'False
+   Icon            =   "frmCargando.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   261.181
+   ScaleHeight     =   99.678
    ScaleMode       =   0  'User
-   ScaleWidth      =   430
+   ScaleWidth      =   183
    ShowInTaskbar   =   0   'False
    StartUpPosition =   2  'CenterScreen
-   Begin ComctlLib.ProgressBar cargar 
-      Height          =   255
+   Begin VB.Frame Frame1 
+      Height          =   1095
       Left            =   120
-      TabIndex        =   3
-      Top             =   2760
-      Width           =   3855
-      _ExtentX        =   6800
-      _ExtentY        =   450
-      _Version        =   327682
-      Appearance      =   1
-      Min             =   1e-4
-   End
-   Begin VB.PictureBox Picture1 
-      BorderStyle     =   0  'None
-      Height          =   2775
-      Left            =   -120
-      ScaleHeight     =   2775
-      ScaleWidth      =   6735
-      TabIndex        =   0
-      Top             =   -120
-      Width           =   6735
-      Begin VB.Label Label1 
-         Alignment       =   2  'Center
-         AutoSize        =   -1  'True
+      TabIndex        =   1
+      Top             =   0
+      Width           =   2535
+      Begin VB.Label Label3 
          BackStyle       =   0  'Transparent
-         Caption         =   "Cargando, por favor espere..."
+         Caption         =   "Cargando datos de CoverAO"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Tahoma"
+            Size            =   6
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         ForeColor       =   &H000000FF&
-         Height          =   225
-         Index           =   3
-         Left            =   2280
+         Height          =   255
+         Left            =   430
+         TabIndex        =   4
+         Top             =   600
+         Width           =   2655
+      End
+      Begin VB.Label Label1 
+         Alignment       =   2  'Center
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Cargando..."
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   2
+         Left            =   765
+         TabIndex        =   3
+         Top             =   300
+         Width           =   975
+      End
+      Begin VB.Label Label2 
+         BackStyle       =   0  'Transparent
+         Caption         =   "Cargando Servidor CoverAO"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   6
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   430
          TabIndex        =   2
-         Top             =   2040
-         Width           =   2445
+         Top             =   840
+         Width           =   2655
       End
    End
-   Begin VB.Label Label1 
-      Alignment       =   1  'Right Justify
-      AutoSize        =   -1  'True
-      BackStyle       =   0  'Transparent
-      Caption         =   " aa"
-      BeginProperty Font 
-         Name            =   "Tahoma"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00000000&
-      Height          =   195
-      Index           =   2
-      Left            =   6120
-      TabIndex        =   1
-      Top             =   2760
-      Width           =   255
+   Begin ComctlLib.ProgressBar cargar 
+      Height          =   255
+      Left            =   240
+      TabIndex        =   0
+      Top             =   3360
+      Visible         =   0   'False
+      Width           =   3855
+      _ExtentX        =   6800
+      _ExtentY        =   450
+      _Version        =   327682
+      Appearance      =   1
+      Min             =   1e-4
    End
 End
 Attribute VB_Name = "frmCargando"
@@ -119,7 +132,7 @@ Attribute VB_Exposed = False
 
 Option Explicit
 
-Private Sub Form_Load()
-'Label1(1).Caption = Label1(1).Caption & " V." & App.Major & "." & App.Minor & "." & App.Revision
-Picture1.Picture = LoadPicture(App.Path & "\logo.jpg")
+Private Sub Picture1_Click()
+
 End Sub
+

@@ -1,0 +1,113 @@
+Error de lectura en la base de datos. Por favor reintente más tarde.
+El servidor se encuentra restringido por mantenimiento. Por favor intente más tarde.
+La creación de personajes está prohibida temporalmente. Intente más tarde.
+Nombre inválido.
+Nombre del familiar invalido.
+Las cuentas privilegiadas no pueden crear personajes.
+Ya existe el personaje.
+El personaje está conectado.
+El servidor está demasiado ocupado. Por favor espere un instante.
+No puedes crear mas personajes, has llegado a tu límite de diez personajes.
+No se permite el borrado de personajes baneados.
+La cuenta no existe o bien la contraseña es inválida. Si olvidó su contraseña o nombre de cuenta, dirígase a los servicios de cuenta del botón "¿Olvidaste tu contaseña?".
+La cuenta no está verificada. Debe completar sus datos y seguir las instrucciones dadas por algún Administrador para continuar.
+El servidor está siendo apagado.
+El servidor ha alcanzado el maximo de usuarios soportado, por favor vuelva a intentarlo mas tarde.
+La cuenta está conectada.
+Debes bajar el nuevo cliente de www.coverao.com.ar para jugar.
+El servidor de Login está actualmente en mantenimiento. Por favor intente en unos instantes.
+Su cuenta está baneada. Si crees que esto es un erorr, comunicate con algún Administrador para regularizr tu situación.
+Ha ingresado anónimamente a este servidor Battle. Esto quiere decir que ingreso datos de cuenta inexistentes o erróneos. No se guardarán puntajes para las estadísticas.
+Su red ha sido bloqueada para acceder al juego por los administradores. Si usted cree que esto es un error, por favor contáctese con soporte.
+El personaje ha sido bloqueado y no puede ser accedido.
+No puede realizar esta acción ya que su cuenta no está verificada. Para verificar su cuenta, comunicate con algún Administrador.
+El Mundo se encuentra restringido para usuarios Donadores. Si está interesado en conectarse, por favor, comunicate con algún Administrador.
+Su cuenta ha alcanzado el límite de conexiones simultáneas permitidas para este servidor.
+El nombre del personaje ha sido bloqueado por un administrador y no puede ser accedido. Por favor, comunicate con algún Administrador para regularizar esta situación.
+Ha ocurrido un error al conectar con el servidor solicitado. Le recomendamos verificar el estado del servidor en www.coverao.com.ar, y asegurese de estar conectado directamente a internet.
+Por favor espere, intentando completar conexión.
+Contraseña incorrecta.
+Servidor temporalmente privado para administradores del juego.
+La respuesta es incorrecta o tu dirección de IP no es la registrada para conectarte. Por motivos de seguridad, la cuenta se ha bloqueado hasta que un Administrador pueda revisar el estado de la misma.
+La cuenta ha sido creada con éxito.
+Desconectado por inactividad.
+El nombre es muy corto.
+El nombre es muy largo.
+La acción no puede ser realizada debido a un error, consulte con algún Admnistrador para regularizar la situación.
+Personaje invalido.
+El personaje no existe.
+La cuenta no existe.
+Personaje borrado.
+Ya existe la cuenta.
+Se perdió la conexión con el servidor.
+Por favor, sea paciente e intente de nuevo, tu solicitud de conexión y login con el servidor fue enviada demasiado rápida.
+El personaje está saliendo del juego.
+Un jugador está intentando entrar con tu personaje, se te desconectará, si crees que esto es un error, notifica a algún Administrador.
+El personaje está online, espere mientras es desconectado.
+Ya hay un usuario conectado con esta cuenta, solo puedes logear un personaje por cuenta.
+El cliente no está actualizado. Recomendamos descargar la version más reciente del juego o ejecutar el launcher del mismo, ¿desea continuar?
+Ingrese una contraseña válida.
+Contraseña restablecida.
+Código incorrecto.
+La contraseña ingresada es incorrecta, intente de nuevo.
+Solo se pueden ingresar números en el código de la cuenta.
+Pin incorrecto.
+Las contraseñas no coinciden.
+El pin de verificación no coincide.
+Ingrese la confirmación de su contraseña.
+Ingresa un código para tu cuenta.
+Ingresa la confirmación del código de tu cuenta.
+Ingresa el pin que se muestra en pantalla para continuar.
+Los códigos no coinciden.
+¡Ingrese un nombre válido!
+El nombre de la cuenta debe tener menos de 20 letras.
+Nombre inválido.
+¡Ingrese una contraseña!
+La contraseña debe tener menos de 30 letras.
+¡Ingrese un código válido!
+El código debe tener menos de 5 letras.
+No es posible usar más de una conexión al mismo tiempo.
+El servidor se encuentra restringido para Game Master. Por favor intente más tarde.
+Su cuenta se encuentra bajo tolerancia 0. Tiene prohibido el acceso. Cod: #0001
+Su cuenta se encuentra bajo tolerancia 0. Tiene prohibido el acceso. Cod: #0002
+Debes seleccionar un personaje para continuar.
+No está permitido usar este nombre en el juego.
+Ingresa una raza válida.
+Ingresa un género válido.
+Ingresa una clase válida.
+Ingresa un hogar válido.
+Ingresa una cabeza válida.
+Los atributos del personaje son invalidos.
+Por favor, sea paciente e intente de nuevo. Procesando conexión y login con el servidor. Sea paciente e intente de nuevo.
+Estás intentando crear muchos personajes, vuelva a intentarlo más tarde.
+Error en la lectura del personaje. Por favor comuniqueselo a algún Administrador para regularizar la situación y mencionale este código (#138).
+Error en la lectura del personaje. Por favor comuniqueselo a algún Administrador para regularizar la situación y mencionale este código (#139).
+Responder consulta
+Administración
+Consulta.
+Ingrese una respuesta.
+Tu consulta es muy corta, debes tener al menos 5 caracteres para enviarla.
+Tu consulta es muy larga, por favor, trata de explicarlo en un menor de 100 caracteres.
+¡Ingrese una consulta válida!
+¡Ingrese una opción válida!
+¡Ingrese una respuesta válida!
+Error en la lectura de la cuenta. Por favor comuniqueselo a algún Administrador para regularizar la situación y mencionale este código (#140).
+¡Seleccione un servidor de la lista!
+Alguien se conectó a la cuenta mientras creabas un personaje, intente de nuevo cuando no haya nadie conectado.
+Ha ocurrido un error al conectar con el servidor solicitado. Le recomendamos reintentar y si el problema continua, verificar el estado del servidor en www.coverao.com.ar, y asegurese de estar conectado directamente a internet.
+El key de ingreso a la versión es inválido.
+El key de ingreso ya fue utilizado.
+Tu cuenta no está activada.
+Error en la lectura del personaje. Por favor comuniqueselo a algún Administrador para regularizar la situación y mencionale este código (#140).
+Hubo un error al aplicar un cuerpo a tu personaje.
+No tienes ningún personaje para borrar.
+Selecciona un personaje válido para eliminar.
+Slot inválido.	
+No puedes borrar un personaje online.
+Hubo un error al intentar borrar tu personaje.
+El servidor recibio un nombre del personaje distinto al numero de tu personaje, es probable que alguien esté intentando borrar un personaje en simultaneo.
+Parece que hay un problema con tu cuenta, habla con algún Administrador para regularizar tu situación.
+Personaje eliminado.
+Tu cuenta es especial, únicamente puedes tener un personaje.
+Tu cliente no es el actual permitido por el servidor.
+No puedes ejecutar esta acción mientras un personaje está online

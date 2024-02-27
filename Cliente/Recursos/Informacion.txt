@@ -1,0 +1,6 @@
+MIDI.iao -> Guarda todos los sonidos de baja calidad
+Graficos.iao -> Guarda todas las texturas
+Init.iao -> Guarda todos los scripts
+Sounds.iao -> Guarda todos los sonidos
+Interface.iao -> Guarda los archivos de la GUI
+Maps.iao -> Guarda los mapas del mundo

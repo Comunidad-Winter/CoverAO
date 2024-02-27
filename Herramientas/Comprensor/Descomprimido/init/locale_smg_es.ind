@@ -1,0 +1,714 @@
+[%N] ha sido expulsado del clan ya que modificó su alineamiento.|12|1
+(Clan) [#1] ha ingresado al juego.|12|1
+Por favor espera unos instantes, realizando tareas de mantenimiento.|12|1
+#1, tiene #2 consulta(s) privadas pendientes. Ingresa "/SHOW" para atenderlas.|12|1
+¡Se te ha autorizado a fundar el clan #1!|12|1
+Record de usuarios conectados simultáneamente: Hay #1 usuarios jugando.|12|1
+¡El usuario está muerto!|12|1
+Estas muy lejos.|12|1
+Personajes nivel inferior a #1 no pueden utilizar el global.|12|1
+No disponible|12|1
+¡Has sido silenciado!|12|1
+Modo combate activado|2|0
+Modo combate desactivado|2|0
+Seguro activado|2|0
+Seguro desactivado|2|0
+Para fundar un clan debes de ser nivel #1 o superior|12|1
+Para fundar un clan necesitas al menos #1 pts en liderazgo|12|1
+¡Felicidades has creado el clan numero #1 de CoverAO!|12|1
+No puedes salir en este momento|12|1
+No disponible navegando|12|1
+No disponible cabalgando|12|1
+Primero hace click izquierdo sobre el personaje.|12|1
+[#1] rechazó la petición de matrimonio.|12|1
+[#1] canceló la petición para un matrimonio.|12|1
+No podés tener mas objetos.|12|1
+Oro insuficiente.|12|1
+Ya se ha ofrecido una recompensa por ese personaje. Si deseas ofrecer más, sólo tienes que buscar su nombre en la lista y ver su información.|12|1
+Debes ofrecer por lo menos #1 monedas de oro.|12|1
+¡Has ganado #1 monedas de oro!|11|0
+El marino, al recibir tu pase, se muestra enojado ya que no te lo ha vendido él.|12|1
+Has viajado por varios días, te sientes exhausto.|2|0
+#1 te ha restaurado #2 puntos de vida.|2|0
+Te has restaurado #1 puntos de vida.|2|0
+#1 te ha quitado #2 puntos de vida.|2|0
+(GRUPO) ¡El grupo ha sido eliminado debido a que la cantidad de miembros llegó a ser uno!|20|1
+¡El grupo ha sido creado!|12|1
+(GRUPO) Has sido removido del grupo.|20|1
+(GRUPO) El nuevo líder del grupo es [#1]|20|1
+El grupo ha alcanzado el límite máximo de miembros.|12|1
+(GRUPO) ¡[#1] ha ingresado al grupo!|20|1
+El personaje ya forma parte de un grupo.|12|1
+La petición ha llegado. Ahora sólo debes esperar una respuesta.|12|1
+[#1] tiene intenciones de formar grupo. Haz click en grupo y luego en él si deseas aceptar.|12|1
+¡El personaje objetivo no debe estar en modo combate!|12|1
+No puedes ingresar o formar un grupo de diferentes alineamientos.|12|1
+¡Estas muriendo de frio! Abrigate o moriras|12|1
+¡Estas envenenado! Cúrate o morirás.|12|1
+¡Estas en llamas! Apaga el fuego rápido o morirás.|12|1
+El servidor cerrará en #1 minutos.|12|1
+#1 segundos para el cerrado del servidor.|12|1
+Un minuto para el limpiado del mundo. Tomar items del piso.|12|1
+#1 ha ganado #2 puntos de experiencia.|13|0
+Inválido.|12|1
+No podes moverte porque estas paralizado.|2|0
+Ya estas oculto.|2|0
+No podes ocultarte si estas navegando.|2|0
+No has logrado esconderte|2|0
+No has logrado domar la criatura.|2|0
+¡No has pescado nada!|2|0
+Los minerales no eran de buena calidad, no has logrado hacer un lingote.|2|0
+¡No has obtenido leña!|2|0
+¡No has conseguido nada!|2|0
+No has podido hacer la fogata.|2|0
+¡Has pescado algo!|2|0
+¡Has conseguido algo de leña!|2|0
+¡Has extraido algunos minerales!|2|0
+No podes ocultarte si estas montando.|12|1
+Estás invisible.|12|1
+Advertencia: tu grupo esta demasiado lejos. No has ganado experiencia.|12|1
+Estás obstruyendo la vía pública, ¡muévete o serás encarcelado!|12|1
+Los Renegados no pueden utilizar el chat faccionario.|12|1
+¡#1 te ha matado!|2|0
+¡Has rechazado el ataque con el escudo!|2|0
+¡El usuario rechazó el ataque con su escudo!|2|0
+Usuario offline.|12|1
+¡Has matado a #1!|2|0
+¡Estás muerto! Ve al sacerdote más cercano para que puedas ser revivido.|12|1
+¡No has logrado realizar un movimiento especial!|2|0
+¡No has logrado apuñalar a tu enemigo!|2|0
+El personaje no existe.|12|1
+La cuenta no existe.|12|1
+El cura lanza unas palabras al aire. Comienzas a sentir como tu cuerpo se vuelve a formar...|12|1
+El sacerdote levanta sus manos, recita unas palabras, y comienzas a sentir un fuerte ardor. Luego ves como van cerrando tus heridas... ¡Has sido curado!|12|1
+No puedes enviar mensajes de soporte tan seguido. Si tu consulta fue invalidada, por favor relee el reglamento y el FAQ antes de volver a pedir soporte.|12|1
+¡Gracias por tu mensaje! En caso de que estes conectado y en una zona segura, un administrador acudirá a ti. Caso contrario, ve hacia un correo local, se te notificará cuando llegue una respuesta.|12|1
+*Fallas*|12|1
+Estás saliendo de una zona segura. Recuerda que aquí corres riesgo de ser atacado por otros.|12|1
+¡Tu consulta ha sido ignorada debido a que está respondida en el manual básico o bien las preguntas frecuentes (FAQ)! Te recomendamos leer los textos en el sitio oficial: www.coverao.com.ar|12|1
+¡Tu consulta ha sido ignorada debido a que es inválida! Te recomendamos leer el reglamento del juego en el sitio oficial: www.coverao.com.ar|12|1
+¡Has vuelto a la vida!|12|1
+Tu cuerpo comienza a tomar forma... serás revivido en #1 segundos.|12|1
+*Falla*|12|1
+Estas muy cansado|12|1
+Para entrenar con este objeto debes tener equipada un arma de proyectil o arrojadiza.|12|1
+Una maldición impide que ataques.|12|1
+No podes atacar otros miembros de tu faccion o sus criaturas, para hacerlo debes desactivar el seguro.|12|1
+No podes atacar ciudadanos de tu misma faccion o sus criaturas, para hacerlo deberás convertirte en renegado escribiendo /RETIRAR.|12|1
+¡No puedes atacar miembros de tu mismo grupo o sus criaturas!|12|1
+¡Los renegados no pueden particiar en guerras!|12|1
+No puedes pelear aquí.|12|1
+¡No podes atacar a los administradores del juego!|12|1
+Debes estar en modo combate para realizar esa acción|12|1
+¡El usuario está en duelo!|12|1
+¡Solo puedes pelear contra tu enemigo en duelo!|12|1
+Interactúa con el NPC haciendo click derecho.|12|1
+Eres fundador de un clan, no puedes salir del mismo.|12|1
+No perteneces a ningún clan.|12|1
+[#1] decidió dejar al clan.|12|1
+#1 minuto(s) para salir de la cárcel.|12|1
+Los administradores te han impedido hablar durante los próximos #1 minuto(s) debido a tu comportamiento.|12|1
+Tu descripción ha cambiado.|12|1
+Utilice el comando /GM por favor.|12|1
+Ambos deben ser nivel #1 o más para formar un matrimonio.|12|1
+Ya has mandado una peticion a #1, si la quieres cancelar tipea el comando /RECHAZARMATRIMONIO.|12|1
+Ya tienes la peticion de #1 pendiente, si la quieres cancelar tipea el comando /RECHAZARMATRIMONIO.|12|1
+¡Ya estas casado!|12|1
+No podes casarte con un usuario de tu mismo género.|12|1
+El usuario ya a mandado una peticion.|12|1
+El usuario ya tiene una peticion pendiente.|12|1
+¡El usuario ya esta casado!|12|1
+¡Has sido liberado!|12|1
+Comenzas a meditar.|12|1
+Dejas de meditar.|12|1
+Para lanzar ese hechizo debes estar usando un #1|12|1
+No tenes municiones.|12|1
+Debes desactivar el seguro.|12|1
+No podés usar asi esta arma.|12|1
+¡#1 ha transferido #2 monedas de oro a tu cuenta Goliath!|12|1
+El nuevo nombre de su personaje es: #1|12|1
+Has sido envenenado por el ataque de #1|2|0
+Has envenenado a #1|2|0
+Has sido incinerado por el ataque de #1|2|0
+Has incinerado a #1|2|0
+Has sido paralizado por el ataque de #1|2|0
+Has paralizado a #1|2|0
+¡Tu ataque paralizó a la criatura!|2|0
+#1 ha ganado #2 puntos de vida.|2|0
+#1 ha ganado #2 puntos de golpe.|2|0
+#1 ha matado a la criatura.|2|0
+Has ganado #1 puntos de experiencia.|13|0
+El grupo ha ganado #1 puntos de experiencia.|13|0
+#1 te ha transportado.|12|1
+#1 se ha trasportado hacia donde te encontras.|12|1
+Se te ha vuelto a posibilitar el hablar.|12|1
+#1 te ha encarcelado, deberas permanecer en la carcel #2 minutos. Escribe /PENA para ver el tiempo restante.|12|1
+Has sido encarcelado, deberas permanecer en la carcel #1 minutos. Escribe /PENA para ver el tiempo restante.|12|1
+Deberás desequipar el objeto antes.|12|1
+El NPC no esta interesado en comprar ese objeto.|12|1
+El NPC no puede cargar tantos objetos.|12|1
+¡Realizando tareas de mantenimiento y apagando el servidor desde consola!|12|1
+¡Realizando tareas de mantenimiento y reiniciando el servidor!|12|1
+Mapa exclusivo para personajes de nivel entre #1 y #2.|12|1
+Mapa exclusivo para faccionarios durante el evento "Captura de Fuertes".|12|1
+El personaje ya está en duelo.|12|1
+#1 está ofreciendote iniciar un duelo. Haz click en él y luego escribe /DUELO si deseas aceptar.|12|1
+¡Ambos personajes deben estar en una zona de arena!|12|1
+¡El duelo ha sido cancelado!|12|1
+¡#1 ha subido de nivel!|12|1
+¡Tu familiar ha sido resucitado!|2|0
+¡Tu familiar ha sido curado!|2|0
+¡No tienes espacio para el hechizo de invocación!|12|1
+¡#1 no tiene familiar!|12|1
+¡El golpe te ha paralizado!|2|0
+¡El golpe te ha entorpecido!|2|0
+¡El golpe te ha dejado ciego!|2|0
+¡Has sido desarmado!|2|0
+¡Está nevando!|12|1
+¡Está lloviendo!|12|1
+¡No puedes hacer fuego allí!|12|1
+Has prendido fogata.|12|1
+No has podido hacer fuego.|12|1
+La puerta esta cerrada con llave.|12|1
+Comienzas a sentir como la quinta esencia vuelve hacia ti... ¡Has recuperado tu maná!|12|1
+El pozo está drenado. Vuelve más tarde.|12|1
+Has bebido del pozo. Te sientes refrescado.|12|1
+Si no eres Mago, Cazador o Druida, para poseer una mascota debes tener #1 puntos en domar animales como mínimo.|12|1
+Te acomodas junto a la fogata y comenzas a descansar.|12|1
+Te levantas.|12|1
+Iniciando WorldSave.|12|1
+Grabando Personajes.|12|1
+Tu familiar fue incapacitado. Llévalo lo antes posible a un templo para que sea sanado.|2|0
+¡La criatura te ha envenenado!|2|0
+¡El amo de ese NPC está en duelo!|2|0
+¡Has matado a #1!|2|0
+¡#1 te ha matado!|2|0
+¡Has subido de nivel!|2|0
+Has ganado #1 skillpoints.|2|0
+No puedes pescar desde aquí adentro.|12|1
+Necesitas como mínimo #1 puntos en pesca para usar el objeto.|12|1
+Debes tener una caña de pescar o bien una red para trabajar allí.|12|1
+Esta es una zona segura, no puedes trabajar aquí.|12|1
+Debes tener un par de tijeras o bien un hacha para trabajar allí.|12|1
+Debes tener un piquete de minero para trabajar allí.|12|1
+No tenes conocimientos de mineria suficientes para trabajar este mineral.|12|1
+Selecciona el mineral que deseas fundir en tu inventario.|12|1
+Debes tener un martillo de herrero para trabajar allí.|12|1
+Has ganado #1 puntos de vida.|2|0
+Has ganado #1 puntos de vitalidad.|2|0
+Has ganado #1 puntos de maná.|2|0
+Tu golpe maximo y mínimo aumentaron en #1 puntos.|2|0
+¡Se está desarrollando una terrible guerra en #1!|12|1
+(GRUPO) #1 abandonó el grupo.|20|1
+Cerrando... el juego cerrará en #1 segundos... (presione escape para cancelar)|12|1
+#1 ha dejado el juego.|12|1
+Para usar este barco necesitas #1 puntos en navegacion.|12|1
+No tenés suficientes materiales.|12|1
+¡Has obtenido #1 lingotes!|12|1
+Debe haber no mas ni menos de tres troncos para hacer una fogata.|12|1
+¡#1 ha intentado robarte!|2|0
+Has apuñalado a #1 por #2|2|0
+Has sido apuñalado por #1 (#2)|2|0
+Has apuñalado a la criatura por #1|2|0
+¡Tu bella música ha apaciguado a las bestias!|2|0
+¡No has logrado tocar el instrumento!|2|0
+¡Tu golpe a estupidizado a #1!|2|0
+¡El golpe de #1 te ha estupidizado!|2|0
+¡Tu golpe a desarmado a #1!|2|0
+¡El golpe de #1 te ha desarmado!|2|0
+¡Has conseguido algunas raíces!|2|0
+Para montar este corcel necesitas #1 puntos en equitación.|12|1
+No tenes suficientes puntos de magia para lanzar este hechizo.|12|1
+No tenes suficiente mana.|12|1
+Solo afecta usuarios.|12|1
+Solo afecta NPCs.|12|1
+No hay torneo en curso. Para crear un torneo, debes ser tener como mínimo nivel #1, #2 monedas de oro y #3 puntos en liderazgo.|12|1
+La inscripción al torneo se encuentra cerrada. El mismo comenzará en #1 minuto(s).|12|1
+¡Ya hay un torneo en curso y su inscripción se encuentra cerrada!|12|1
+¡Has sido expulsado del torneo por el líder!|12|1
+El torneo ha sido cancelado por decisión de un administrador.|12|1
+¡Bienvenido! La inscripción al torneo cerrará en #1 minuto(s), luego habrá un precalentamiento y el torneo comenzará.|12|1
+¡El torneo '#1' ha abierto su inscripción! Para más información selecciona el menú torneos.|12|1
+¡El torneo '#1' comenzará en los próximos #2 minutos! La inscripción se encuentra cerrada. La arena será despejada y cerrada.|12|1
+Para cerrar la inscripción debe haber como mínimo dos inscriptos.|12|1
+¡El torneo ha sido cancelado debido a falta de inscriptos (mínimo dos)|12|1
+¡El torneo '#1' ha dado comienzo!|12|1
+¡El sacerdote de #1 celebra la boda de #2 y #3|11|1
+El usuario no posee espacio en su casilla.|12|1
+El mensaje es demasiado largo.|12|1
+Tu amigo [#1] ha ingresado al juego.|12|1
+Tu amigo #1 ha dejado el juego.|12|1
+El usuario no está en tu lista de amigos.|12|1
+Tu lista de amigos está llena.|12|1
+No tenes a nadie en tu lista de amigos.|12|1
+[#1] te agregó a su lista de amigos.|12|1
+[#1] fue agregado a tu lista de amigos.|12|1
+[#1] fue eliminado de tu lista de amigos.|12|1
+Has recibido un nuevo mensaje de [#1], ve a un correo local para leerlo.|12|1
+¡No puedes salir del mapa en este momento!|12|1
+No tenes suficiente vida.|12|1
+El usuario ya está en tu lista de amigos.|12|1
+El mensaje fue enviado correctamente.|12|1
+#1, tiene #2 mensaje(s) sin leer, puede leerlos en cualquier correo local.|12|1
+No puedes montar aquí.|12|1
+No podes controlar mas criaturas.|12|1
+Ya has creado un portal.|12|1
+Desde aquí no puedes crear un teleport.|12|1
+No puedes crear un teleport allí.|12|1
+No puedes crear el objeto allí.|12|1
+No puedes desinvocar a tu familiar en este momento.|12|1
+No puedes tirar el objeto.|12|1
+No hay nada aqui.|12|1
+No hay espacio en el piso.|12|1
+No puedes usar un arma a dos manos con ese escudo equipado.|12|1
+No puedes usar este objeto mientras tengas un arma a dos manos.|12|1
+Tu clase no puede usar este objeto.|12|1
+Tu raza no puede usar este objeto.|12|1
+Tu género no puede usar este objeto.|12|1
+Tu nivel debe ser #1 o superior para usar este objeto.|12|1
+Tienes que estar navegando para poder usar este objeto.|12|1
+Este es un beneficio único de las cuentas premium. Para acceder a tu cuenta premium ingresá a http://coverao.com.ar/donador y seguí las instrucciones.|12|1
+Ya tenés un pedido de ayuda pendiente. Por favor, espere.|12|1
+Para realizar esa acción debes convertirte en renegado. Para hacerlo, escribe /RETIRAR.|12|1
+Tu mensaje ha sido filtrado por el servidor ya que enviaste demasiados mensajes seguidos. No podrás hablar durante los próximos #1 segundos. No envie tantos mensajes seguidos.|12|1
+Evento> ¡La captura de fuertes ha comenzado! Durante los próximos ^1 minutos, la facción que logre capturar todos los fuertes ganará acceso al Fuerte Central.|12|1
+Evento> La captura de fuertes finalizó.|12|1
+Evento> La República ha capturado todos los fuertes, ganando acceso al Fuerte Central. El evento ha finalizado.|12|1
+Evento> El Imperio ha capturado todos los fuertes, ganando acceso al Fuerte Central. El evento ha finalizado.|12|1
+Evento> Las Fuerzas del Caos han capturado todos los fuertes, ganando acceso al Fuerte Central. El evento ha finalizado.|12|1
+Evento> La República ha recuperado el Fuerte Republicano.|12|1
+Evento> El Imperio ha capturado el Fuerte Republicano.|12|1
+Evento> Las Fuerzas del Caos han capturado el Fuerte Republicano.|12|1
+Evento> La República ha capturado el Fuerte Caótico.|12|1
+Evento> El Imperio ha capturado el Fuerte Caótico.|12|1
+Evento> Las Fuerzas del Caos han recuperado el Fuerte Caótico.|12|1
+Evento> La República ha capturado el Fuerte Imperial.|12|1
+Evento> El Imperio ha recuperado el Fuerte Imperial.|12|1
+Evento> Las Fuerzas del Caos han capturado el Fuerte Imperial.|12|1
+Evento> ¡La República está recuperando el Fuerte Republicano!|12|1
+Evento> ¡El Imperio está capturando el Fuerte Republicano!|12|1
+Evento> ¡Las Fuerzas del Caos estan capturando el Fuerte Republicano!|12|1
+Evento> ¡La República está capturando el Fuerte Caótico!|12|1
+Evento> ¡El Imperio está capturando el Fuerte Caótico!|12|1
+Evento> ¡Las Fuerzas del Caos estan recuperado el Fuerte Caótico!|12|1
+Evento> ¡La República está capturando el Fuerte Imperial!|12|1
+Evento> ¡El Imperio está recupernado el Fuerte Imperial!|12|1
+Evento> ¡Las Fuerzas del Caos estan capturando el Fuerte Imperial!|12|1
+Deberás abandonar tu facción antes de convertirte en renegado.|12|1
+Objetivo inválido.|12|1
+No puedes enviar ese objeto.|12|1
+No puedes domar esa criatura.|12|1
+No puedes enviarle correo a un administrador.|12|1
+No podés tocar instrumentos estando transformado.|12|1
+Antes de usar el instrumento deberías equipartelo.|12|1
+Has dejado de ser <NEWBIE>. Pierdes todos tus items iniciales.|12|1
+Tu mensaje ha sido filtrado por hablar en mayúsculas. Por favor no hable en mayusculas.|12|1
+El administrador no puede recibir mensajes privados de usuarios que no estén bajo consulta con el mismo. Por favor, en caso de necesitar ayuda utilice el comando /GM y espere a ser atendido.|12|1
+Has vuelto a ser visible.|12|1
+El mensaje fue filtrado por el servidor por contener caracteres ilegales.|12|1
+Los renegados no pueden formar parte de grupos.|12|1
+No puedes robar aquí.|12|1
+No puedes vender ese objeto.|12|1
+#1 está ocupado.|12|1
+Evento> ¡"Experiencia X#1, Oro X#2" ha dado comienzo, durante los próximos #3 minutos la experiencia y el oro ganado será aumentado en todo el mundo!|12|1
+Evento> "Experiencia X#1, Oro X#2" ha finalizado.|12|1
+Evento> ¡"Invasiones" ha dado comienzo! Malvadas criaturas acechan #1.|12|1
+Evento> "Invasiones" ha finalizado.|12|1
+No tenes suficientes objetos.|12|1
+No podés ofertar en tu propia subasta.|12|1
+La subasta ya ha finalizado.|12|1
+No podés subastar ese objeto.|12|1
+La cantidad minima para subastar ese objeto es #1.|12|1
+Estás fuera del área de visión del objetivo.|12|1
+Solo los usuarios donadores pueden ingresar a esta zona. Para enterarte como hacer, ingresá a http://www.coverao.com.ar/ o comunicate con algún Administrador.|12|1
+Portal a #1.|12|1
+No está permitido realizar más de un perdon por nivel. Deberá avanzar al próximo nivel para pedir uno.|12|1
+Ya está bajo efecto de ese modificador.|12|1
+#1, tenés un mensaje de soporte pendiente. Para editarlo o cancelarlo usa el comando /DM.|12|1
+El inventario esta lleno.|12|1
+Este objeto solo puede ser utilizado en ciudades.|12|1
+El personaje que acabas de matar no ha sido contado como una muerte válida ya que su nivel es mucho menor al tuyo.|12|1
+¡#1 está siendo atacada!|12|1
+Esta es una zona neutral y no está permitido el combate entre jugadores.|12|1
+Esta es una zona regida por el Imperio. Aténgase a sus reglas. Ciudadanos no podrán ser atacados sin haber iniciado acciones hostiles antes. Los ciudadanos y comerciantes solo interactuan con miembros de su alianza.|12|1
+Esta es una zona regida por la República. Aténgase a sus reglas. Republicanos no podrán ser atacados sin haber iniciado acciones hostiles antes. Los ciudadanos y comerciantes solo interactuan con miembros de su alianza.|12|1
+Esta es una zona regida por las Fuerzas del Caos. Aténgase a sus reglas. Miembros no podrán ser atacados sin haber iniciado acciones hostiles antes. Los ciudadanos y comerciantes solo interactuan con miembros de su alianza.|12|1
+No tienes motivos para arrestarlo.|12|1
+Debes estar al lado del objetivo.|12|1
+¡Has sido expulsado de las hordas del caos!|12|1
+¡Has sido expulsado del gremio!|12|1
+¡Has sido expulsado de las legiones reales!|12|1
+¡El comercio seguro solo puede llevarse acabo en zonas seguras!|12|1
+¡El personaje objetivo no debe estar en modo combate!|12|1
+¡Has sido expulsado de la milicia de la República!|12|1
+¡El personaje ha logrado resistirse al arresto!|12|1
+Tu familiar está muerto. Llévalo lo antes posible a un templo para que sea resucitado.|15|1
+¡Estás en combate!|12|1
+Esta acción no puede ser realizada en combate.|12|1
+¡Hay otra acción en progreso!|12|1
+#1 ha sido afectado por el #2 de #3|2|0
+#1 ha sido afectado por el #2 de #3|2|0
+#1 dañó a #2 por #3 puntos|2|0
+#1 dañó a #2 por #3 puntos|2|0
+#1 curó a #2 por #3 puntos|2|0
+#1 curó a #2 por #3 puntos|2|0
+#1 comienza a lanzar #2|2|0
+El hechizo fue cancelado|2|0
+No cumples los requisitos mínimos para entrar a la arena.|12|1
+Algún integrante no cumple los requisitos mínimos para entrar a la arena.|12|1
+Cancelaste la arena.|12|1
+Un integrante de tu grupo canceló la arena.|12|1
+Ya estás en cola para la arena.|12|1
+No estás en grupo o tu grupo tiene un número incorrecto de miembros.|12|1
+Esperando confirmación de los otros miembros del grupo.|12|1
+El otro grupo u oponente cancelo, serás re-encolado con máxima prioridad|12|1
+Entraste a la cola de espera para las arenas.|12|1
+No tienes nivel suficiente para entrar a las arenas.|12|1
+No puedes estar en un duelo para entrar a las arenas.|12|1
+No puedes estar muerto para entrar a las arenas.|12|1
+No puedes estar silenciado para entrar a las arenas.|12|1
+Las entradas para las arenas están agotadas, vuelve más tarde.|12|1
+Último minuto de lucha, si no gana alguno de los equipos empatarán.|12|1
+Tiempo de batalla excedido, empate.|12|1
+Tiempo de espera para confirmación excedido, cola cancelada.|12|1
+Felicitaciones, ganaste la batalla.|12|1
+Mala suerte, perdiste, segui participando.|12|1
+Personajes Grabados.|12|1
+Solo los usuarios donadores pueden acceder a está caracteristica. Para enterarte como hacer comunicate con algún Game Master o contacta al Staff por soporte, ingresá a http://coverao.com.ar/.|12|1
+Tienes el máximo de oro permitido, por lo tanto no has obtenido oro.|12|1
+Ver esta linea de código, log|12|1
+Vacío.|12|1
+¡Están atacando a tu mascota!|12|1
+[#1] ha sido echado.|12|1
+Necesitas #1 monedas de oro para pagar tu perdón|12|1
+¡Has abandonado tu facción!|12|1
+¡La magia no funciona aquí!|12|1
+Se te ha otorgado una particula, la perderas al morir.|12|1
+Ya estás comerciando.|12|1
+No estás comerciando.|12|1
+Has sanado.|12|1
+El personaje ya está baneado.|12|1
+Antes de usar este objeto deberías equipartelo.|12|1
+No hay agua allí.|12|1
+No tienes conocimientos en las artes mágicas.|12|1
+¡Debes aproximarte al agua para usar el barco!|12|1
+¡No tienes espacio para el hechizo!|12|1
+¡Ya tienes este hechizo!|12|1
+¡No disponible saliendo!|12|1
+¡Ya estás transformado!|12|1
+¡La criatura es inmune a este hechizo!|12|1
+¡Ahí no hay ningún yacimiento!|12|1
+¡No tienes más minerales!|12|1
+¡Ahí no hay ninguna fragua!|12|1
+¡Todos los lugares están ocupados!|12|1
+¡Comentario guardado!|12|1
+¡No hay NPCs en el mapa!|12|1
+Npcs Hostiles en mapa: |12|1
+Otros NPCs: |12|1
+No hay más NPCs |12|1
+Usuarios trabajando: #1 |12|1
+No hay usuarios con este modificador.|12|1
+Utilice /carcel nick@motivo@tiempo.|12|1
+Tiempo inválido.|12|1
+Utilice /advertencia nick@motivo.|12|1
+Dato inexistente.|12|1
+No disponible en zona segura.|12|1
+¡Archivo cargado!|1|1
+¡Mapa guardado!|1|1
+¡Servidor habilitado para todos!|1|1
+¡Servidor habilitado para GMs!|1|1
+No tenes conocimientos de herreria suficientes para trabajar.|12|1
+¡Has domado a la criatura!|12|1
+Necesitas clickear sobre leña para hacer ramitas.|12|1
+Creditos insuficientes.|12|1
+¡Acabas de pasar al modo donador!, ya puedes acceder a lugares únicos y disfrutar de muchos beneficios que el juego tiene para vos.|12|1
+Para realizar esta acción debes ser nivel #1 o superior.|12|1
+El usuario está en un mapa inseguro, por favor, se le enviará su respuesta a su casilla de correo de la ciudad..|12|1
+Ya has enviado un soporte, espera a ser atendido por un Administrador.|12|1
+Deberás desequipar tu arma antes.|12|1
+¡Estás meditando!|12|1
+¡Debes estar cerca de una costa para bajar de tu barca.!|12|1
+¡Has construido el objeto!|12|1
+¡Has obtenido el #1 % de los lingotes utilizados para la construcción del objeto!|12|1
+Tu cuerpo comienza a tomar forma... serás revivido en #1 segundos.|12|1
+#1|11|1
+¡YA!|11|1
+¡Acción realizada!|12|1
+Servidor> ¡No se dejen engañar!, ningun miembro del staff pedirá jamas datos privados de los usuarios, todo jugador tiene la obligación de negar de este tipo de datos a cualquier persona.|12|1
+www.coverao.com.ar/donador - ¡Apoyá al servidor!, CoverAO es un servidor gratuito, sin embargo, vos podes colaborar al mantenimiento del servidor a cambio de increibles beneficios exclusivos. Más información y novedades en la página oficial.|23|1
+Tu alineación no puede usar este objeto.|12|1
+Para poder utilizar este hechizo debes poseer un Anillo Espectral o un Anillo de las Penumbras.|12|1
+Para poder utilizar este hechizo debes poseer un Anillo de las Penumbras.|12|1
+Le has quitado #1 puntos de vida a #2.|2|0
+#1 te ha quitado #2 puntos de energía.|2|0
+Le has quitado #1 puntos de energía a #2.|2|0
+Le has restaurado #1 puntos de vida a #2.|2|0
+Has creado #1 (#2).|12|1
+¡No puedes ocultarte aquí!|12|1
+¡Esta acción no está disponible aquí!|12|1
+¡No puedes beneficiar a usuarios de opuesta facción!|12|1
+#1 está intentando revivirte, desactiva el seguro si quieres ser resucitado.|12|1
+El objetivo no está bajo el efecto de ese modificador.|12|1
+Has lanzado #1 sobre #2|2|0
+#1 te ha lanzado #2|2|0
+¡Has mejorado tu skill #1 en un punto. Ahora tienes #2 puntos!|4|1
+¡Hechizo temporalmente deshabilitado!|12|1
+#1 comienza a lanzar #2|2|0
+Debes esperar #1 segundos para realizar esta acción.|12|1
+El Game Master #1 ejecutó a #2|24|1
+Prueba de #1 tambien #2 y por ultimo #3|24|1
+¡#1 te atacó y fallo!|2|0
+Creaste la particula sobre #1|12|1
+Haz click derecho sobre el agua.|12|1
+Haz click derecho sobre algún mineral.|12|1
+Haz click derecho sobre un Árbol|12|1
+Haz click derecho sobre una Fragua.|12|1
+Haz click derecho sobre un Yunque.|12|1
+Debes tener un martillo de herrero para trabajar con lingotes.|12|1
+Debes estar muerto o en una zona segura para utilizar este objeto.|12|1
+¡Debes esperar unos momentos para tomar otra poción!|4|1
+¡Has abierto cofre de #1 creditos, ahora tienes #2 creditos!|11|1
+¡Has abierto #1, obtienes #2 monedas de oro!|12|1
+¡Has abierto la puerta!|12|1
+¡La llave no sirve!|12|1
+¡Has cerrado con llave la puerta!|12|1
+¡La llave no sirve!|12|1
+¡Está cerrada!|12|1
+Para usar este objeto necesitas #1 puntos en #2.|12|1
+Has hecho donador a la cuenta de #1.|12|1
+Has quitado el donador a la cuenta de #1.|12|1
+Ya no eres usuario donador.|12|1
+El personaje #1 esta offline, pero ha sido baneado.|12|1
+#1 ha baneado a #2.|12|1
+#1 ha sido baneado por banear a un Administrador.|12|1
+No puedes banear a un personaje con mayor rango que el tuyo.|12|1
+#1 ha sido desbaneado.|12|1
+El personaje no está baneado, imposible unbanear.|12|1
+#1 transportado.|12|1
+¡No puedes salir del mapa en este momento, debes esperar #1 segundos!|12|1
+Game Master> [#1] se ha conectado.|12|1
+Game Master> [#1] se ha desconectado.|12|1
+En #1 segundos cerrará el juego...|12|1
+¡No puedes casarte contigo mismo!|12|1
+Primero tienes que seleccionar al sacerdote, haz click izquierdo sobre él.|12|1
+Estas muy lejos del sacerdote.|12|1
+Le has mandado una propuesta de casamiento a #1, espera su respuesta...|12|1
+El objetivo está muy lejos...|12|1
+Has lanzado #1 sobre #2 por #3 puntos de vida.|2|0
+#1 ha lanzado #2 sobre ti por #3 puntos de vida.|2|0
+Has lanzado #1 sobre tí por #2 puntos de vida.|2|0
+Game Master> [#1] ha enviado un soporte, por favor, revisa el estado del mismo /SHOW.|12|1
+Has respondido al soporte de [#1] via correo.|12|1
+[#1] no posee espacio en su casilla, por favor, resuelva su consulta pronto.|12|1
+[#1] está offline y no posee espacio en su casilla, por favor, resuelva su consulta pronto.|12|1
+[#1] está offline, has respondido a su consulta.|12|1
+[#1] no tiene consultas pendientes, un Administrador ya acudió a él.|12|1
+El objeto "#1" no posee actualmente Skins disponibles.|12|1
+No tienes los permisos suficientes para ejecutar esta acción.|12|1
+[#1] está offline, charfile editado.|12|1
+El personaje [#1] ya es nivel máximo.|12|1
+Has enviado #1 monedas de oro a [#2].|12|1
+Los Administradores te han premiado con #1 monedas de oro por ayudar a reportar errores, podras retirarlos en el banco de la ciudad.|12|1
+Jugadores en línea: #1 (Este mundo) - #2 (Totales).|26|1
+No hay agua donde pescar. Busca un lago, rio o mar.|12|1
+[#1] fue agregado a tu lista de amigos, espere confirmación.|12|1
+[#1] te agregó a su lista de amigos, para aceptarlo ingrese /FADD #2.|12|1
+La lista de amigos del jugador está llena.|12|1
+Ya has mandado una solicitud a #1, espera confirmación.|12|1
+#1 (Offline)|8|1
+[#1] (#2)|8|1
+Recuerden el uso de programas externos está penado con tolerancia cero al usuario, El servidor notificará el uso de programas externos no autorizados.|17|1
+El jugador no te tiene en su lista, error código 0220|12|1
+#1 está jugando en Mohurall (Argentina).|12|1
+#1 salió del juego.|12|1
+Tu amigo [#1] (#2) ha ingresado al juego.|12|1
+Tu amigo #1 (#2) ha dejado el juego.|12|1
+El objetivo no está bajo ningun efecto.|12|1
+Escuchas el llamado de un compañero que proviene del #1.|17|1
+Has hecho #1 fogatas.|12|1
+#1 no posee más objetos robables.|12|1
+Usuarios ocultandose: #1|12|1
+Has advertido a #1.|12|1
+#1 te ha resucitado.|12|1
+#1 te ha curado.|12|1
+#1 abrió un #2 y obtuvo... ¡#3!(#4).|14|1
+Este objeto posee Skins disponibles, para visualizarlas ingresa /SKIN.|12|1
+Para utilizar Skins debes ser nivel 50. Los donadores no tienen límite de nivel para utilizar Skins, más info en www.coverao.com.ar/donador|12|1
+[Chat GM - #1] #2|26|1
+El personaje no tiene amigos en su lista.|12|1
+Desconectaste a #1.|12|1
+No puedes desconectarte a ti mismo.|12|1
+¡#1 te ha pegado en la cabeza por #2!|2|0
+¡#1 te ha pegado en el brazo izquierdo #2!|2|0
+¡#1 te ha pegado en el brazo derecho por #2!|2|0
+¡#1 te ha pegado en la pierna izquierda por #2!|2|0
+¡#1 te ha pegado en la pierna derecha por #2!|2|0
+¡#1 te ha pegado en el torso por #2!|2|0
+¡#1 te atacó y falló!|2|0
+El item es decorativo, no se puede agarrar ni sobreponer.|12|1
+El bloqueo pertenece al mapa, no se puede retirar.|12|1
+El personaje que acabas de matar [#1] no ha sido contado como una muerte válida ya que lo has matado recientemente, debes esperar #2 minutos para que vuelva a contabilizar.|12|1
+¡No has robado nada!|2|0
+¡El usuario no posee oro!|2|0
+¡El item solo es disponible para clases no-magicas!|12|1
+¡Has obtenido raices!|12|1
+¡No tienes esa cantidad!|12|1
+Has recibido una respuesta de [CoverAO Staff], ve a un correo local para leerlo.|12|1
+Has recibido un nuevo mensaje de [#1], ve a un correo local para leerlo.|12|1
+¡¿ESTÁS SEGURO QUE VAS A BORRAR EL SERVIDOR?!, VOLVE A TIPEAR PARA CONFIRMAR|2|1
+BORRANDO SERVIDOR...|2|1
+SERVIDOR BORRADO...|2|1
+ERROR AL BORRAR SERVIDOR...|2|1
+Para poder utilizar este hechizo debes poseer un #1.|12|1
+¡No puedes silenciar a #1 por tanto tiempo!|12|1
+¡No puedes silenciar a un Game Master!|12|1
+¡Has sido silenciado por el Game Master #1 por #2 minutos, motivo: #3.|12|1
+¡#1 ha finalizado con tu silencio!|12|1
+El personaje no está silenciado.|12|1
+¡El usuario no está muerto!|12|1
+Servidor> #1 ha premiado a #2 con #3 monedas de oro, el mismo se encuentra disponible dentro de su boveda, ¡FELICIDADES!.|1|1
+#1 ha enviado #2 monedas de oro a [#3].|8|1
+Hay un problema con tu boveda, habla con algun Administrador.|12|1
+Error al transferir, demasiado oro.|12|1
+Transferencia realizada.|12|1
+¡Has recibido un nuevo mensaje de Finanzas Goliath, ve a un correo local para leerlo.|12|1
+¡Has silenciado a #1.|12|1
+#1 ha silenciado a #2 por motivo #3.|8|1
+#1 ha quitado el silencio a #2.|8|1
+¡Limpieza del mundo realizada!, Monedas de oro recolectadas: #1. (sorteo en 1 minuto...)|12|1
+¡#1 ha sido limpiado!|12|1
+Realizando limpieza del mundo, esto puede demorar unos minutos...|12|1
+Realizando limpieza...|12|1
+No posee ninguna pena.|12|1
+Nombre de cuenta: #1|4|1
+Clase: #1|4|1
+Estadisticas de: #1|4|1
+Salud: #1|4|1
+Nivel: #1|4|1
+Maná: #1|4|1
+Energía: #1|4|1
+Experiencia: #1|4|1
+Fuerza del golpe: #1|4|1
+Defensa (Cuerpo): #1|4|1
+Defensa (Cabeza): #1|4|1
+Oro/Banco: #1|4|1
+Personajes matados:|4|1
+Renegados: #1|4|1
+Ciudadanos: #1|4|1
+Republicanos: #1|4|1
+Caóticos: #1|4|1
+Armadas: #1|4|1
+Milicianos: #1|4|1
+Logeado hace: #1|4|1
+Atributos: #1|4|1
+Ambos jugadores deben estar en la arena de Rinkel.|12|1
+No disponible si alguno de los jugadores se encuentra preso.|12|1
+¡Ya estás en duelo!|12|1
+El duelo comenzará en #1 segundos...|29|1
+¡El duelo ha dado comienzo!|29|1
+¡#1 y #2 se enfrentaran en duelo!|11|1
+#1 ha derrotado a #2 en un duelo por abandono.|11|1
+Has perdido el duelo por abandonar.|11|1
+#1 ha derrotado a #2 en un duelo.|11|1
+#1 y #2 han empatado en un desafio por superar el tiempo máximo de un duelo.|11|1
+Tiempo restante de duelo: #1 minutos.|12|1
+#1 está ofreciendote iniciar un duelo por #2 monedas de oro. Haz click en él y luego escribe /DUELO si deseas aceptar.|12|1
+Denuncia de #1: #2|1|1
+Para realizar esta acción no debes estar en modo combate|12|1
+Ya has mandado una solicitud, espera confirmación.|12|1
+¡El personaje objetivo debe tener el seguro desactivado!|12|1
+¡Las invocaciones están temporalmente deshabilitadas!|12|1
+El chat global ha sido desactivado.|12|1
+El chat global ha sido activado.|12|1
+El global se encuentra desactivado.|12|1
+Ver conectados habilitado.|12|1
+Ver conectados deshabilitado.|12|1
+Estás intentando acceder a un mapa inválido, si crees que es un error, comunicate con un Administador.|12|1
+¡Limpieza del mundo realizada!|12|1
+Evento> "Recolección de oro" obtuvo un ganador: [#1], obtiene #2 monedas de oro.|12|1
+Evento> "Recolección de oro" ¡Mala suerte!, [#1] no pudo obtener oro ya que su billetera está al máximo de oro permitido dentro del juego, ¡Tendrás más chances en el próximo sorteo!|12|1
+Evento> ¡"Drop Global" ha dado comienzo! Malvadas criaturas acechan, y muchas pueden entregarte increibles objetos. Tiempo: Indefinido.|12|1
+Evento> "Drop Global" ha finalizado.|12|1
+Evento> "Recolección de oro" ha finalizado.|12|1
+Evento> ¡"Recolección de oro" ha dado comienzo! En las limpiezas del mundo, se sorteará el oro y objetos que fueron eliminados, el ganador será un usuario al azar, ¡atentos!. Tiempo: Indefinido.|12|1
+No hay eventos en curso.|12|1
+"Recolección de oro" está en curso. Tiempo restante: Indefinido.|12|1
+"Oro y experiencia x#1" está en curso. Tiempo restante: #2 minutos.|12|1
+"Experiencia x#1" está en curso. Tiempo restante: #2 minutos.|12|1
+"Oro x#1" está en curso. Tiempo restante: #2 minutos.|12|1
+"Drop global" está en curso. Tiempo restante: Indefinido.|12|1
+Evento> ¡Oro X#1" ha dado comienzo, durante los próximos #2 minutos el oro ganado será aumentado en todo el mundo!|12|1
+Evento> "Oro X#1" ha finalizado.|12|1
+Evento> ¡Experiencia X#1" ha dado comienzo, durante los próximos #2 minutos la experiencia ganada será aumentada en todo el mundo!|12|1
+Evento> "Experiencia X#1" ha finalizado.|12|1
+¡Estás preso!|12|1
+No puedes viajar a una ciudad enemiga.|12|1
+#1 ya es tu hogar.|12|1
+Ciudad inválida.|12|1
+No puedes ejecutar esta acción en una ciudad enemiga.|12|1
+La criatura ya está maldita.|12|1
+Una maldición impide que la criatura te ataque.|12|1
+El mapa donde estabas ya no es un lugar donde alguien de tu nivel puede estar, te regresamos a tu hogar.|12|1
+Alguno de los participantes no tiene oro suficiente para inciar el duelo.|12|1
+La cantida de oro del premio supera el máximo permitido.|12|1
+Tu billetera o la de tu oponente con la suma de la apuesta superan el máximo de oro permitido.|12|1
+¡#1 y #2 se enfrentaran en duelo por #3 monedas de oro!|11|1
+¡Debes esperar que la cuenta regresiva termine!|12|1
+Le diste #1 (#2) a #3.|12|1
+El chat ha sido desactivado.|12|1
+El chat ha sido activado.|12|1
+El chat se encuentra desactivado.|12|1
+El drop de items al morir ha sido desactivado.|12|1
+El drop de items al morir ha sido activado.|12|1
+El mapa ahora es zona insegura.|12|1
+El mapa ahora es zona segura.|12|1
+Se activó la invisibilidad en el mapa.|12|1
+Se desactivó la invisibilidad en el mapa.|12|1
+Se activaron los trigger de resucitar.|12|1
+Se desactivaron los trigger de resucitar.|12|1
+Se activó la mágia en el mapa.|12|1
+Se desactivó la mágia en el mapa.|12|1
+(GRUPO) [#1] ha muerto.|20|1
+Cambiaste tu intervalo de ataque, volveras a la normalidad en 5 minutos o relogeando.|12|1
+Cambiaste tu intervalo de velocidad.|12|1
+Espere por favor, realizando acción, esto puede demorar unos minutos.|12|1
+Servidor> #1 cambió su nombre a [#2].|29|1
+#1 te otorgó #2 unidad de '#3'|12|1
+#1 no puede tener más objetos.|12|1
+¡No estas casado!|12|1
+¡No estas casado con #1!|12|1
+¡La persona no está casado contigo!|12|1
+Te has divorciado de tu pareja.|12|1
+#1 se ha divorciado de ti.|12|1
+Servidor> El usuario #1 tiró #2 hechizos consecutivos a #3 mientras está invisible.|17|1
+Servidor> El usuario #1 tiró #2 hechizos consecutivos a #3 mientras sin estar invisible.|17|1
+Nombre inválido.|12|1
+El nombre es muy corto.|12|1
+El nombre es muy largo.|12|1
+El nombre ya está en uso.|12|1
+¡Felicidades, has obtenido #1 unidad de #2!|11|1
+Evento> ¡Drop X#1" ha dado comienzo, durante los próximos #2 minutos el drop de las criaturas será aumentada en todo el mundo!|12|1
+Evento> "Drop X#1" ha finalizado.|12|1
+"Drop x#1" está en curso. Tiempo restante: #2 minutos.|12|1
+Evento> ¡Frag X#1" ha dado comienzo, durante los próximos #2 minutos los asesinatos a usuarios serán aumentados en todo el mundo!|12|1
+Evento> "Frag X#1" ha finalizado.|12|1
+"Frag x#1" está en curso. Tiempo restante: #2 minutos.|12|1
+Debes pertenecer a alguna facción para realizar esta acción.|12|1
+No hay mapas cargados para esta acción.|12|1
+No disponible comerciando.|12|1
+Ya te encuentras en el mapa donde deseas viajar.|12|1
+No has podido transportarte porque un usuario acaba de transportarse, vuelve a intentarlo.|12|1
+El usuario tiene el inventario y boveda vacios.|12|1
+Evento> "Recolección de oro" el ganador no aceptó el oro, el pozo se acumulará para el próximo sorteo. Total: #1 monedas de oro.|12|1
+Para ejecutar esta acción ingresa al menú de tu personaje, manten presionada la tecla '#1' y selecciona tu opción.|12|1
+¡Unite a nuestro Discord!, te invitamos a ser parte de nuestra comunidad. Además de ser nuestro principal canal de comunicación, también donde podrás encontrar todo tipo de información respecto al juego. www.coverao.com.ar/discord|23|1
+¡Has usado un Scroll de Skills!, ahora tienes #1 puntos en #2.|11|1
+¡El usuario ya está comerciando!.|12|1
+#1 canceló el comercio.|12|1
+Cancelaste el comercio con #1.|12|1
+Tu o el objetivo ya están comerciando.|12|1
+El usuario está teniendo un comercio.|12|1
+Uno de los usuarios superará el máximo de oro permitido en el juego, comercio cancelado.|12|1
+No puedes comerciar este objeto.|12|1
+Comerciar activado.|12|1
+Comerciar desactivado.|12|1

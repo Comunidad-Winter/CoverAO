@@ -1,14 +1,14 @@
 VERSION 5.00
 Begin VB.Form frmMain 
-   BackColor       =   &H00C0C0C0&
-   BorderStyle     =   3  'Fixed Dialog
-   Caption         =   "Argentum Online"
-   ClientHeight    =   1770
+   BackColor       =   &H00E0E0E0&
+   BorderStyle     =   4  'Fixed ToolWindow
+   Caption         =   "CoverAO - Servidor  - Versión 1.0"
+   ClientHeight    =   6180
    ClientLeft      =   1950
-   ClientTop       =   1815
-   ClientWidth     =   5190
+   ClientTop       =   1515
+   ClientWidth     =   7680
    ControlBox      =   0   'False
-   FillColor       =   &H00C0C0C0&
+   FillColor       =   &H00E0E0E0&
    BeginProperty Font 
       Name            =   "Arial"
       Size            =   8.25
@@ -18,175 +18,38 @@ Begin VB.Form frmMain
       Italic          =   0   'False
       Strikethrough   =   0   'False
    EndProperty
-   ForeColor       =   &H80000004&
+   ForeColor       =   &H00E0E0E0&
    Icon            =   "frmMain.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    PaletteMode     =   1  'UseZOrder
-   ScaleHeight     =   1770
-   ScaleWidth      =   5190
+   ScaleHeight     =   6180
+   ScaleWidth      =   7680
+   ShowInTaskbar   =   0   'False
    StartUpPosition =   2  'CenterScreen
    WindowState     =   1  'Minimized
-   Begin VB.Timer tPiqueteC 
+   Begin VB.CommandButton Command4 
+      Caption         =   "IDs"
       Enabled         =   0   'False
-      Interval        =   6000
-      Left            =   480
-      Top             =   540
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   5520
+      TabIndex        =   23
+      Top             =   2880
+      Width           =   1935
    End
-   Begin VB.Timer packetResend 
-      Interval        =   10
-      Left            =   480
-      Top             =   60
-   End
-   Begin VB.Timer securityTimer 
-      Enabled         =   0   'False
-      Interval        =   10000
-      Left            =   960
-      Top             =   60
-   End
-   Begin VB.CheckBox SUPERLOG 
-      Caption         =   "log"
-      Height          =   255
-      Left            =   3120
-      TabIndex        =   9
-      Top             =   480
-      Width           =   615
-   End
-   Begin VB.CommandButton CMDDUMP 
-      Caption         =   "dump"
-      Height          =   255
-      Left            =   3720
-      TabIndex        =   8
-      Top             =   480
-      Width           =   1215
-   End
-   Begin VB.Timer FX 
-      Enabled         =   0   'False
-      Interval        =   4000
-      Left            =   1440
-      Top             =   540
-   End
-   Begin VB.Timer Auditoria 
-      Enabled         =   0   'False
-      Interval        =   1000
-      Left            =   1440
-      Top             =   1020
-   End
-   Begin VB.Timer GameTimer 
-      Enabled         =   0   'False
-      Interval        =   40
-      Left            =   1440
-      Top             =   60
-   End
-   Begin VB.Timer tLluviaEvent 
-      Enabled         =   0   'False
-      Interval        =   60000
-      Left            =   960
-      Top             =   1020
-   End
-   Begin VB.Timer tLluvia 
-      Enabled         =   0   'False
-      Interval        =   500
-      Left            =   960
-      Top             =   540
-   End
-   Begin VB.Timer AutoSave 
-      Enabled         =   0   'False
-      Interval        =   60000
-      Left            =   480
-      Top             =   1020
-   End
-   Begin VB.Timer npcataca 
-      Enabled         =   0   'False
-      Interval        =   4000
-      Left            =   1920
-      Top             =   1020
-   End
-   Begin VB.Timer KillLog 
-      Enabled         =   0   'False
-      Interval        =   60000
-      Left            =   1920
-      Top             =   60
-   End
-   Begin VB.Timer TIMER_AI 
-      Enabled         =   0   'False
-      Interval        =   100
-      Left            =   1935
-      Top             =   540
-   End
-   Begin VB.Frame Frame1 
-      Caption         =   "BroadCast"
-      Height          =   1095
-      Left            =   120
-      TabIndex        =   2
-      Top             =   600
-      Width           =   4935
-      Begin VB.CommandButton Command2 
-         Caption         =   "Broadcast consola"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   2520
-         TabIndex        =   6
-         Top             =   720
-         Width           =   2295
-      End
-      Begin VB.CommandButton Command1 
-         Caption         =   "Broadcast clientes"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   120
-         TabIndex        =   5
-         Top             =   720
-         Width           =   2295
-      End
-      Begin VB.TextBox BroadMsg 
-         Height          =   315
-         Left            =   1080
-         TabIndex        =   4
-         Top             =   240
-         Width           =   3735
-      End
-      Begin VB.Label Label1 
-         Caption         =   "Mensaje"
-         Height          =   255
-         Index           =   0
-         Left            =   120
-         TabIndex        =   3
-         Top             =   240
-         Width           =   855
-      End
-   End
-   Begin VB.Label Escuch 
-      Caption         =   "Label2"
-      Height          =   255
-      Left            =   3240
-      TabIndex        =   7
-      Top             =   240
-      Width           =   1335
-   End
-   Begin VB.Label CantUsuarios 
-      Appearance      =   0  'Flat
-      AutoSize        =   -1  'True
-      BackColor       =   &H00C0C0C0&
-      BackStyle       =   0  'Transparent
-      Caption         =   "Numero de usuarios:"
+   Begin VB.Frame Frame2 
+      BackColor       =   &H00E0E0E0&
+      Caption         =   "Mensajes todos los clientes (Solo testeo)"
       BeginProperty Font 
          Name            =   "Tahoma"
          Size            =   8.25
@@ -196,33 +59,526 @@ Begin VB.Form frmMain
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00000000&
-      Height          =   195
+      Height          =   3135
       Left            =   120
-      TabIndex        =   1
-      Top             =   240
-      Width           =   1725
+      TabIndex        =   14
+      Top             =   50
+      Width           =   4935
+      Begin VB.CommandButton Command2 
+         Caption         =   "Consola"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   2520
+         TabIndex        =   20
+         Top             =   720
+         Width           =   1815
+      End
+      Begin VB.CommandButton Command1 
+         Caption         =   "Pop Up"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   600
+         TabIndex        =   19
+         Top             =   720
+         Width           =   1815
+      End
+      Begin VB.TextBox BroadMsg 
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   315
+         Left            =   600
+         TabIndex        =   18
+         Top             =   360
+         Width           =   3735
+      End
+      Begin VB.TextBox txtChat 
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   1575
+         Left            =   240
+         MultiLine       =   -1  'True
+         TabIndex        =   17
+         Top             =   1080
+         Width           =   4455
+      End
+      Begin VB.CheckBox chkServerHabilitado 
+         BackColor       =   &H00E0E0E0&
+         Caption         =   "Solo Game Masters"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   360
+         TabIndex        =   16
+         Top             =   2760
+         Width           =   1815
+      End
+      Begin VB.CommandButton CMDDUMP 
+         Caption         =   "Crear Log critico de usuarios"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   2280
+         TabIndex        =   15
+         Top             =   2760
+         Width           =   2295
+      End
    End
-   Begin VB.Label txStatus 
-      AutoSize        =   -1  'True
-      BackStyle       =   0  'Transparent
-      ForeColor       =   &H000000FF&
-      Height          =   210
+   Begin VB.Timer TIMER_AI 
+      Interval        =   380
+      Left            =   7080
+      Top             =   0
+   End
+   Begin VB.Timer GameTimer 
+      Interval        =   40
+      Left            =   5640
+      Top             =   0
+   End
+   Begin VB.Timer Auditoria 
+      Enabled         =   0   'False
+      Interval        =   1000
+      Left            =   6120
+      Top             =   0
+   End
+   Begin VB.Timer packetResend 
+      Enabled         =   0   'False
+      Interval        =   10
+      Left            =   5160
+      Top             =   0
+   End
+   Begin VB.Timer AutoSave 
+      Enabled         =   0   'False
+      Interval        =   60000
+      Left            =   6600
+      Top             =   0
+   End
+   Begin VB.CommandButton mnuSystray 
+      Caption         =   "Systray"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   5520
+      TabIndex        =   13
+      Top             =   1440
+      Width           =   1935
+   End
+   Begin VB.CommandButton mnuCerrar 
+      Caption         =   "Apagar SIN BackUp"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   5520
+      TabIndex        =   12
+      Top             =   2400
+      Width           =   1935
+   End
+   Begin VB.CommandButton Command5 
+      Caption         =   "Configuración"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   5520
+      TabIndex        =   11
+      Top             =   960
+      Width           =   1935
+   End
+   Begin VB.CommandButton Command6 
+      Caption         =   "Apagar CON BackUp"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   5520
+      TabIndex        =   10
+      Top             =   1920
+      Width           =   1935
+   End
+   Begin VB.Frame Frame1 
+      BackColor       =   &H00E0E0E0&
+      Caption         =   "Dates"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2775
       Left            =   120
+      TabIndex        =   6
+      Top             =   3240
+      Width           =   4935
+      Begin VB.CommandButton Command9 
+         Caption         =   "Clean Log"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   3960
+         TabIndex        =   27
+         Top             =   600
+         Width           =   855
+      End
+      Begin VB.CommandButton Command8 
+         Caption         =   "Save Log"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   3000
+         TabIndex        =   26
+         Top             =   600
+         Width           =   855
+      End
+      Begin VB.TextBox txtStatus 
+         Alignment       =   2  'Center
+         Height          =   1755
+         Left            =   240
+         MultiLine       =   -1  'True
+         ScrollBars      =   2  'Vertical
+         TabIndex        =   25
+         Top             =   960
+         Width           =   4575
+      End
+      Begin VB.Label lblHora 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Hora del servidor:"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   2760
+         TabIndex        =   24
+         Top             =   240
+         Width           =   1290
+      End
+      Begin VB.Label Label2 
+         Alignment       =   2  'Center
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Logs"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   9
+         Top             =   720
+         Width           =   390
+      End
+      Begin VB.Label CantUsuarios 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Numero de usuarios:"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   8
+         Top             =   240
+         Width           =   1485
+      End
+      Begin VB.Label Label1 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Record de usuarios:"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   7
+         Top             =   480
+         Width           =   1440
+      End
+   End
+   Begin VB.CommandButton Command3 
+      Caption         =   "Reload MD5"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   5520
+      TabIndex        =   5
+      Top             =   480
+      Width           =   1935
+   End
+   Begin VB.Frame Frame3 
+      BackColor       =   &H00E0E0E0&
+      Caption         =   "Timing Minuts:"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2655
+      Left            =   5160
       TabIndex        =   0
-      Top             =   5520
-      Width           =   45
-   End
-   Begin VB.Menu mnuControles 
-      Caption         =   "Argentum"
-      Begin VB.Menu mnuServidor 
-         Caption         =   "Configuracion"
+      Top             =   3240
+      Width           =   2415
+      Begin VB.Label Label7 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "MSG 2: Loading"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   22
+         Top             =   2040
+         Width           =   1110
       End
-      Begin VB.Menu mnuSystray 
-         Caption         =   "Systray Servidor"
+      Begin VB.Label Label6 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "MSG 1: Loading"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   21
+         Top             =   1680
+         Width           =   1110
       End
-      Begin VB.Menu mnuCerrar 
-         Caption         =   "Cerrar Servidor"
+      Begin VB.Label lblCharSave 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Save Char: Loading"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   4
+         Top             =   240
+         Width           =   1410
+      End
+      Begin VB.Label Label3 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Evento Experiencia: Loading"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   3
+         Top             =   600
+         Width           =   2040
+      End
+      Begin VB.Label Label4 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Evento Oro: Loading"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   2
+         Top             =   960
+         Width           =   1485
+      End
+      Begin VB.Label Label5 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Evento Drop: Loading"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   1
+         Top             =   1320
+         Width           =   1560
       End
    End
    Begin VB.Menu mnuPopUp 
@@ -271,16 +627,20 @@ Attribute VB_Exposed = False
 
 Option Explicit
 
+Public Lineas As Long
+
 Public ESCUCHADAS As Long
 
 Private Type NOTIFYICONDATA
+
     cbSize As Long
-    hWnd As Long
+    hwnd As Long
     uID As Long
     uFlags As Long
     uCallbackMessage As Long
     hIcon As Long
     szTip As String * 64
+
 End Type
    
 Const NIM_ADD = 0
@@ -293,560 +653,390 @@ Const WM_MOUSEMOVE = &H200
 Const WM_LBUTTONDBLCLK = &H203
 Const WM_RBUTTONUP = &H205
 
-Private Declare Function GetWindowThreadProcessId Lib "user32" (ByVal hWnd As Long, lpdwProcessId As Long) As Long
-Private Declare Function Shell_NotifyIconA Lib "SHELL32" (ByVal dwMessage As Long, lpData As NOTIFYICONDATA) As Integer
+Private Declare Function GetWindowThreadProcessId _
+                Lib "user32" (ByVal hwnd As Long, _
+                              lpdwProcessId As Long) As Long
+Private Declare Function Shell_NotifyIconA _
+                Lib "SHELL32" (ByVal dwMessage As Long, _
+                               lpData As NOTIFYICONDATA) As Integer
+                               
+                               
 
-Private Function setNOTIFYICONDATA(hWnd As Long, ID As Long, flags As Long, CallbackMessage As Long, Icon As Long, Tip As String) As NOTIFYICONDATA
+
+Private Function setNOTIFYICONDATA(hwnd As Long, _
+                                   id As Long, _
+                                   flags As Long, _
+                                   CallbackMessage As Long, _
+                                   Icon As Long, _
+                                   Tip As String) As NOTIFYICONDATA
     Dim nidTemp As NOTIFYICONDATA
 
     nidTemp.cbSize = Len(nidTemp)
-    nidTemp.hWnd = hWnd
-    nidTemp.uID = ID
+    nidTemp.hwnd = hwnd
+    nidTemp.uID = id
     nidTemp.uFlags = flags
     nidTemp.uCallbackMessage = CallbackMessage
     nidTemp.hIcon = Icon
     nidTemp.szTip = Tip & Chr$(0)
 
     setNOTIFYICONDATA = nidTemp
-End Function
 
-Sub CheckIdleUser()
-    Dim iUserIndex As Long
+End Function
+ 
+Sub CheckIdleUser(ByVal iUserIndex As Integer)
+ 
     
-    For iUserIndex = 1 To MaxUsers
-       'Conexion activa? y es un usuario loggeado?
-       If UserList(iUserIndex).ConnID <> -1 And UserList(iUserIndex).flags.UserLogged Then
-            'Actualiza el contador de inactividad
-            UserList(iUserIndex).Counters.IdleCount = UserList(iUserIndex).Counters.IdleCount + 1
-            If UserList(iUserIndex).Counters.IdleCount >= 5 Then
-                Call WriteShowMessageBox(iUserIndex, "Demasiado tiempo inactivo. Has sido desconectado..")
-                'mato los comercios seguros
-                If UserList(iUserIndex).ComUsu.DestUsu > 0 Then
-                    If UserList(UserList(iUserIndex).ComUsu.DestUsu).flags.UserLogged Then
-                        If UserList(UserList(iUserIndex).ComUsu.DestUsu).ComUsu.DestUsu = iUserIndex Then
-                            Call WriteConsoleMsg(1, UserList(iUserIndex).ComUsu.DestUsu, "Comercio cancelado por el otro usuario.", FontTypeNames.FONTTYPE_TALK)
-                            Call FinComerciarUsu(UserList(iUserIndex).ComUsu.DestUsu)
-                            Call FlushBuffer(UserList(iUserIndex).ComUsu.DestUsu) 'flush the buffer to send the message right away
-                        End If
-                    End If
-                    Call FinComerciarUsu(iUserIndex)
+    On Error GoTo hayerror
+
+    With UserList(iUserIndex)
+    
+        'Conexion activa? y es un usuario loggeado?
+        If .ConnID <> -1 And .flags.UserLogged Then
+        
+        .Counters.IdleCount = .Counters.IdleCount + 1
+            'If Not EsGm(iUserIndex) Then
+                If .Counters.IdleCount >= IdleLimit Then
+                    
+                    Call WriteShowMessageBox(iUserIndex, 33)
+    
+                    Call Cerrar_Usuario(iUserIndex)
+                
                 End If
-                Call Cerrar_Usuario(iUserIndex)
-            End If
+                
+            'End If
+            
         End If
-    Next iUserIndex
+
+    End With
+    
+    Exit Sub
+ 
+hayerror:
+156     Call RegistrarError(Err.Number, Err.description, "frmMain.CheckIdleUser", Erl)
+158     Resume Next
 End Sub
 
 Private Sub Auditoria_Timer()
-On Error GoTo errhand
-Static centinelSecs As Byte
 
-centinelSecs = centinelSecs + 1
-
-If centinelSecs = 5 Then
-    'Every 5 seconds, we try to call the player's attention so it will report the code.
-    Call modCentinela.CallUserAttention
-    
-    centinelSecs = 0
-End If
-
-Call PasarSegundo 'sistema de desconexion de 10 segs
-
-Call ActualizaEstadisticasWeb
-
-Exit Sub
-
-errhand:
-
-Call LogError("Error en Timer Auditoria. Err: " & Err.description & " - " & Err.Number)
-Resume Next
+Call mMainLoop.Auditoria
 
 End Sub
 
 Private Sub AutoSave_Timer()
+ 
+    On Error GoTo ErrHandler
 
-On Error GoTo Errhandler
-'fired every minute
-Static Minutos As Long
-Static MinutosLatsClean As Long
-Static MinsPjesSave As Long
-
-Dim i As Integer
-Dim num As Long
-
-Minutos = Minutos + 1
-
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-Call ModAreas.AreasOptimizacion
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-
-'Actualizamos el centinela
-Call modCentinela.PasarMinutoCentinela
-
-If Minutos = MinutosWs - 1 Then
-    Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg(1, "Worldsave en 1 minuto ...", FontTypeNames.FONTTYPE_VENENO))
-End If
-
-If Minutos >= MinutosWs Then
-    Call DoBackUp
-    Call aClon.VaciarColeccion
-    Minutos = 0
-End If
-
-If MinutosLatsClean >= 15 Then
-    MinutosLatsClean = 0
-    Call ReSpawnOrigPosNpcs 'respawn de los guardias en las pos originales
-    Call LimpiarMundo
-Else
+    'fired every minuto
+    Static MinutosLatsClean As Long
+    Static MinsPJesSave     As Long
+    
+    Static MensajeSpamUno   As Long
+    Static MensajeSpamDos   As Long
+    Static hora As String
+    
+    Dim i As Long
+    
+    MinsPJesSave = MinsPJesSave + 1
+    MensajeSpamUno = MensajeSpamUno + 1
+    MensajeSpamDos = MensajeSpamDos + 1
     MinutosLatsClean = MinutosLatsClean + 1
-End If
 
-Call PurgarPenas
-Call CheckIdleUser
+    '¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
+    Call ModAreas.AreasOptimizacion
+    '¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
 
-'<<<<<-------- Log the number of users online ------>>>
-Dim N As Integer
-N = FreeFile()
-Open App.Path & "\logs\numusers.log" For Output Shared As N
-Print #N, NumUsers
-Close #N
-'<<<<<-------- Log the number of users online ------>>>
+    'Actualizamos el centinela
+    'Call modCentinela.PasarMinutoCentinela
 
-Exit Sub
-Errhandler:
+    'Actualizamos la lluvia
+    'Call tLluviaEvent
+
+    If MensajeSpamUno >= IntervaloMensajeAutomatico1 Then
+        Call SendData(SendTarget.ToAll, 0, PrepareMessageLocaleMsg(437))
+        MensajeSpamUno = 0
+    End If
+
+    If MensajeSpamDos >= IntervaloMensajeAutomatico2 Then
+        Call SendData(SendTarget.ToAll, 0, PrepareMessageLocaleMsg(438))
+        MensajeSpamDos = 0
+    End If
+    
+    'If MinutosLatsClean >= 15 Then
+        'Call ReSpawnOrigPosNpcs 'respawn de los guardias en las pos originales
+        'MinutosLatsClean = 0
+    'End If
+    
+    If MinsPJesSave >= MinutosGuardarUsuarios Then
+    
+        For i = 1 To LastUser
+            Call GuardarUsuarios
+        Next i
+        
+        MinsPJesSave = 0
+        
+    End If
+ 
+    'Mermas, mejor juntar todos los last User porque pensa que cada procedimiento revisa los user uno por uno, cuando podes hacer el loop una vez
+    For i = 1 To LastUser
+        
+        Call PurgarPenas(i)
+ 
+        Call CheckIdleUser(i)
+        
+    Next i
+ 
+    Call CargarLabelsMain(MinsPJesSave, MensajeSpamUno, MensajeSpamDos)
+
+    'Call seguridad_clones_limpiar
+ 
+
+    Exit Sub
+ErrHandler:
     Call LogError("Error en TimerAutoSave " & Err.Number & ": " & Err.description)
+
     Resume Next
+
 End Sub
 
+ 
+
 Private Sub CMDDUMP_Click()
-On Error Resume Next
 
-Dim i As Integer
-For i = 1 To MaxUsers
-    Call LogCriticEvent(i & ") ConnID: " & UserList(i).ConnID & ". ConnidValida: " & UserList(i).ConnIDValida & " Name: " & UserList(i).name & " UserLogged: " & UserList(i).flags.UserLogged)
-Next i
+    On Error Resume Next
 
-Call LogCriticEvent("Lastuser: " & LastUser & " NextOpenUser: " & NextOpenUser)
+    Dim i As Integer
+
+    For i = 1 To MaxUsers
+        Call LogCriticEvent(i & ") ConnID: " & UserList(i).ConnID & ". ConnidValida: " & UserList(i).ConnIDValida & _
+                " Name: " & UserList(i).Name & " UserLogged: " & UserList(i).flags.UserLogged)
+    Next i
+
+    Call LogCriticEvent("Lastuser: " & LastUser & " NextOpenUser: " & NextOpenUser)
 
 End Sub
 
 Private Sub Command1_Click()
-Call SendData(SendTarget.ToAll, 0, PrepareMessageShowMessageBox(BroadMsg.Text))
+    Call SendData(SendTarget.ToAll, 0, PrepareMessageShowMessageBox(BroadMsg.Text & vbCrLf & "<CoverAO Staff>"))
+
+    txtChat.Text = txtChat.Text & vbNewLine & "Servidor> " & BroadMsg.Text
+    
 End Sub
 
 Public Sub InitMain(ByVal f As Byte)
 
-If f = 1 Then
-    Call mnuSystray_Click
-Else
-    frmMain.Show
-End If
+    If f = 1 Then
+        Call mnuSystray_Click
+    Else
+        frmMain.Show
+
+    End If
 
 End Sub
 
 Private Sub Command2_Click()
-Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg(1, "Servidor> " & BroadMsg.Text, FontTypeNames.FONTTYPE_SERVER))
+    Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg("Servidor> " & BroadMsg.Text, _
+            FontTypeNames.FONTTYPE_SERVER))
+    ''''''''''''''''SOLO PARA EL TESTEO'''''''
+    ''''''''''SE USA PARA COMUNICARSE CON EL SERVER'''''''''''
+    txtChat.Text = txtChat.Text & vbNewLine & "Servidor> " & BroadMsg.Text
+
+End Sub
+
+Private Sub Command3_Click()
+   Call MD5sCarga
+
+End Sub
+
+Private Sub Command4_Click()
+frmRecibeDatos.Show
+End Sub
+
+Private Sub Command5_Click()
+    frmServidor.Visible = True
 End Sub
 
 
+Private Sub Command8_Click()
+
+    Dim n As Integer
+    Dim hora As String
+    Dim texto As String
+ 
+    hora = Format(Time, "hh:mm")
+        
+    texto = "---------" & hora & "---------" & vbCrLf & frmMain.txtStatus.Text
+    
+    n = FreeFile()
+    Open App.Path & "\Documentacion\ & Log (" & Day(Now) & "-" & Month(Now) & "-" & Year(Now) & ")" & ".log" For Output Shared As n
+    Print #n, texto
+    Close #n
+    
+End Sub
+
+Private Sub Command9_Click()
+frmMain.txtStatus.Text = ""
+Lineas = 0
+End Sub
+
 Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-On Error Resume Next
+
+    On Error Resume Next
    
-   If Not Visible Then
+    If Not Visible Then
+
         Select Case X \ Screen.TwipsPerPixelX
                 
             Case WM_LBUTTONDBLCLK
                 WindowState = vbNormal
                 Visible = True
                 Dim hProcess As Long
-                GetWindowThreadProcessId hWnd, hProcess
+                GetWindowThreadProcessId hwnd, hProcess
                 AppActivate hProcess
+
             Case WM_RBUTTONUP
                 hHook = SetWindowsHookEx(WH_CALLWNDPROC, AddressOf AppHook, App.hInstance, App.ThreadID)
                 PopupMenu mnuPopUp
+
                 If hHook Then UnhookWindowsHookEx hHook: hHook = 0
+
         End Select
-   End If
+        
+    Else
+    
+        Select Case X \ Screen.TwipsPerPixelX
+                
+            Case WM_LBUTTONDBLCLK
+                frmMain.Visible = True
+                Me.Show
+        End Select
+        
+    End If
    
 End Sub
 
 Private Sub QuitarIconoSystray()
-On Error Resume Next
 
-'Borramos el icono del systray
-Dim i As Integer
-Dim nid As NOTIFYICONDATA
+    On Error Resume Next
 
-nid = setNOTIFYICONDATA(frmMain.hWnd, vbNull, NIF_MESSAGE Or NIF_ICON Or NIF_TIP, vbNull, frmMain.Icon, "")
+    'Borramos el icono del systray
+    Dim i   As Integer
+    Dim nid As NOTIFYICONDATA
 
-i = Shell_NotifyIconA(NIM_DELETE, nid)
-    
+    nid = setNOTIFYICONDATA(frmMain.hwnd, vbNull, NIF_MESSAGE Or NIF_ICON Or NIF_TIP, vbNull, frmMain.Icon, "")
+
+    i = Shell_NotifyIconA(NIM_DELETE, nid)
 
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
-On Error Resume Next
 
-'Save stats!!!
-Call Statistics.DumpStatistics
+    On Error Resume Next
 
-Call QuitarIconoSystray
 
-#If UsarQueSocket = 1 Then
-Call LimpiaWsApi
-#ElseIf UsarQueSocket = 0 Then
-Socket1.Cleanup
-#ElseIf UsarQueSocket = 2 Then
-Serv.Detener
-#End If
+    Call QuitarIconoSystray
 
-Dim LoopC As Integer
+        Call LimpiaWsApi
 
-For LoopC = 1 To MaxUsers
-    If UserList(LoopC).ConnID <> -1 Then Call CloseSocket(LoopC)
-Next
+    Dim loopc As Integer
 
-'Log
-Dim N As Integer
-N = FreeFile
-Open App.Path & "\logs\Main.log" For Append Shared As #N
-Print #N, Date & " " & time & " server cerrado."
-Close #N
+    For loopc = 1 To MaxUsers
 
-End
+        If UserList(loopc).ConnID <> -1 Then Call CloseSocket(loopc)
+    Next
+    
+    'Log
+    Dim n As Integer
+    n = FreeFile
+    Open App.Path & "\logs\Main.log" For Append Shared As #n
+    Print #n, Date & " " & Time & " server cerrado."
+    Close #n
+    Call seguridad_clones_destruir
+    End
 
-Set SonidosMapas = Nothing
-
-End Sub
-
-Private Sub FX_Timer()
-On Error GoTo hayerror
-
-Call SonidosMapas.ReproducirSonidosDeMapas
-
-Exit Sub
-hayerror:
+    Set SonidosMapas = Nothing
 
 End Sub
 
 Private Sub GameTimer_Timer()
-    Dim iUserIndex As Long
-    Dim bEnviarStats As Boolean
-    Dim bEnviarAyS As Boolean
-    
-On Error GoTo hayerror
-    
-    '<<<<<< Procesa eventos de los usuarios >>>>>>
-    For iUserIndex = 1 To MaxUsers 'LastUser
-        With UserList(iUserIndex)
-           'Conexion activa?
-           If .ConnID <> -1 Then
-                '¿User valido?
-                
-                If .ConnIDValida And .flags.UserLogged Then
-                    
-                    '[Alejo-18-5]
-                    bEnviarStats = False
-                    bEnviarAyS = False
-                    
-                    Call DoTileEvents(iUserIndex, .Pos.map, .Pos.X, .Pos.Y)
-                    
-                    
-                    If .flags.Paralizado = 1 Then Call EfectoParalisisUser(iUserIndex)
-                    If .flags.Ceguera = 1 Or .flags.Estupidez Then Call EfectoCegueEstu(iUserIndex)
-                    
-                    
-                    If .flags.Muerto = 0 Then
-                        
-                        '[Consejeros]
-                        If (.flags.Privilegios And PlayerType.User) Then Call EfectoLava(iUserIndex)
-                        If .flags.Desnudo <> 0 And (.flags.Privilegios And PlayerType.User) <> 0 Then Call EfectoFrio(iUserIndex)
-                        If .flags.Meditando Then Call DoMeditar(iUserIndex)
-                        If .flags.Envenenado <> 0 And (.flags.Privilegios And PlayerType.User) <> 0 Then Call EfectoVeneno(iUserIndex)
-                        If .flags.AdminInvisible <> 1 Then
-                            If .flags.invisible = 1 Then Call EfectoInvisibilidad(iUserIndex)
-                            If .flags.Oculto = 1 Then Call DoPermanecerOculto(iUserIndex)
-                        End If
-                        
-                        Call DuracionPociones(iUserIndex)
-                        
-                        Call HambreYSed(iUserIndex, bEnviarAyS)
-                        
-                        If .flags.Hambre = 0 And .flags.Sed = 0 Then
-                            If Lloviendo Then
-                                If Not Intemperie(iUserIndex) Then
-                                    If Not .flags.Descansar Then
-                                    'No esta descansando
-                                        Call Sanar(iUserIndex, bEnviarStats, SanaIntervaloSinDescansar)
-                                        If bEnviarStats Then
-                                            Call WriteUpdateHP(iUserIndex)
-                                            bEnviarStats = False
-                                        End If
-                                        Call RecStamina(iUserIndex, bEnviarStats, StaminaIntervaloSinDescansar)
-                                        If bEnviarStats Then
-                                            Call WriteUpdateSta(iUserIndex)
-                                            bEnviarStats = False
-                                        End If
-                                    Else
-                                    'esta descansando
-                                        Call Sanar(iUserIndex, bEnviarStats, SanaIntervaloDescansar)
-                                        If bEnviarStats Then
-                                            Call WriteUpdateHP(iUserIndex)
-                                            bEnviarStats = False
-                                        End If
-                                        Call RecStamina(iUserIndex, bEnviarStats, StaminaIntervaloDescansar)
-                                        If bEnviarStats Then
-                                            Call WriteUpdateSta(iUserIndex)
-                                            bEnviarStats = False
-                                        End If
-                                        'termina de descansar automaticamente
-                                        If .Stats.MaxHP = .Stats.MinHP And .Stats.MaxSta = .Stats.MinSta Then
-                                            Call WriteRestOK(iUserIndex)
-                                            Call WriteConsoleMsg(1, iUserIndex, "Has terminado de descansar.", FontTypeNames.FONTTYPE_INFO)
-                                            .flags.Descansar = False
-                                        End If
-                                        
-                                    End If
-                                End If
-                            Else
-                                If Not .flags.Descansar Then
-                                'No esta descansando
-                                    
-                                    Call Sanar(iUserIndex, bEnviarStats, SanaIntervaloSinDescansar)
-                                    If bEnviarStats Then
-                                        Call WriteUpdateHP(iUserIndex)
-                                        bEnviarStats = False
-                                    End If
-                                    Call RecStamina(iUserIndex, bEnviarStats, StaminaIntervaloSinDescansar)
-                                    If bEnviarStats Then
-                                        Call WriteUpdateSta(iUserIndex)
-                                        bEnviarStats = False
-                                    End If
-                                    
-                                Else
-                                'esta descansando
-                                    
-                                    Call Sanar(iUserIndex, bEnviarStats, SanaIntervaloDescansar)
-                                    If bEnviarStats Then
-                                        Call WriteUpdateHP(iUserIndex)
-                                        bEnviarStats = False
-                                    End If
-                                    Call RecStamina(iUserIndex, bEnviarStats, StaminaIntervaloDescansar)
-                                    If bEnviarStats Then
-                                        Call WriteUpdateSta(iUserIndex)
-                                        bEnviarStats = False
-                                    End If
-                                    'termina de descansar automaticamente
-                                    If .Stats.MaxHP = .Stats.MinHP And .Stats.MaxSta = .Stats.MinSta Then
-                                        Call WriteRestOK(iUserIndex)
-                                        Call WriteConsoleMsg(1, iUserIndex, "Has terminado de descansar.", FontTypeNames.FONTTYPE_INFO)
-                                        .flags.Descansar = False
-                                    End If
-                                    
-                                End If
-                            End If
-                        End If
-                        
-                        If bEnviarAyS Then Call WriteUpdateHungerAndThirst(iUserIndex)
-                        
-                        If .NroMascotas > 0 Then Call TiempoInvocacion(iUserIndex)
-                    Else
-                        If .flags.Resucitando = True Then Call DoResucitar(iUserIndex)
-                    End If 'Muerto
-                Else 'no esta logeado?
-                    'Inactive players will be removed!
-                    .Counters.IdleCount = .Counters.IdleCount + 1
-                    If .Counters.IdleCount > IntervaloParaConexion Then
-                        .Counters.IdleCount = 0
-                        Call CloseSocket(iUserIndex)
-                    End If
-                End If 'UserLogged
-                
-                'If there is anything to be sent, we send it
-                Call FlushBuffer(iUserIndex)
-            End If
-        End With
-    Next iUserIndex
-Exit Sub
-
-hayerror:
-    LogError ("Error en GameTimer: " & Err.description & " UserIndex = " & iUserIndex)
+    Call mMainLoop.GameTimer
 End Sub
 
 Private Sub mnuCerrar_Click()
+    If MsgBox( _
+            "¡¡Atencion!! Si cierra el servidor puede provocar la perdida de datos. ¿Desea hacerlo de todas maneras?", _
+            vbYesNo) = vbYes Then
+        Dim f
 
+        For Each f In Forms
 
-If MsgBox("¡¡Atencion!! Si cierra el servidor puede provocar la perdida de datos. ¿Desea hacerlo de todas maneras?", vbYesNo) = vbYes Then
-    Dim f
-    For Each f In Forms
-        Unload f
-    Next
-End If
+            Unload f
+        Next
 
+    End If
 End Sub
+
 
 Private Sub mnusalir_Click()
     Call mnuCerrar_Click
+
 End Sub
 
 Public Sub mnuMostrar_Click()
-On Error Resume Next
+
+    On Error Resume Next
+
     WindowState = vbNormal
     Form_MouseMove 0, 0, 7725, 0
+
 End Sub
 
-Private Sub KillLog_Timer()
-On Error Resume Next
-If FileExist(App.Path & "\logs\connect.log", vbNormal) Then Kill App.Path & "\logs\connect.log"
-If FileExist(App.Path & "\logs\haciendo.log", vbNormal) Then Kill App.Path & "\logs\haciendo.log"
-If FileExist(App.Path & "\logs\stats.log", vbNormal) Then Kill App.Path & "\logs\stats.log"
-If FileExist(App.Path & "\logs\Asesinatos.log", vbNormal) Then Kill App.Path & "\logs\Asesinatos.log"
-If FileExist(App.Path & "\logs\HackAttemps.log", vbNormal) Then Kill App.Path & "\logs\HackAttemps.log"
-If Not FileExist(App.Path & "\logs\nokillwsapi.txt") Then
+Private Sub KillLog()
+
+    On Error Resume Next
+
+    If FileExist(App.Path & "\logs\connect.log", vbNormal) Then Kill App.Path & "\logs\connect.log"
+    If FileExist(App.Path & "\logs\haciendo.log", vbNormal) Then Kill App.Path & "\logs\haciendo.log"
+    If FileExist(App.Path & "\logs\stats.log", vbNormal) Then Kill App.Path & "\logs\stats.log"
+    If FileExist(App.Path & "\logs\Asesinatos.log", vbNormal) Then Kill App.Path & "\logs\Asesinatos.log"
+    If FileExist(App.Path & "\logs\HackAttemps.log", vbNormal) Then Kill App.Path & "\logs\HackAttemps.log"
+    If Not FileExist(App.Path & "\logs\nokillwsapi.txt") Then
     If FileExist(App.Path & "\logs\wsapi.log", vbNormal) Then Kill App.Path & "\logs\wsapi.log"
-End If
+
+    End If
 
 End Sub
 
-Private Sub mnuServidor_Click()
-frmServidor.Visible = True
-End Sub
 
+ 
 Private Sub mnuSystray_Click()
+    Dim i   As Integer
+    Dim S   As String
+    Dim nid As NOTIFYICONDATA
 
-Dim i As Integer
-Dim S As String
-Dim nid As NOTIFYICONDATA
-
-S = "ARGENTUM-ONLINE"
-nid = setNOTIFYICONDATA(frmMain.hWnd, vbNull, NIF_MESSAGE Or NIF_ICON Or NIF_TIP, WM_MOUSEMOVE, frmMain.Icon, S)
-i = Shell_NotifyIconA(NIM_ADD, nid)
+    S = "CoverAO - Server - Versión 1.0"
+    nid = setNOTIFYICONDATA(frmMain.hwnd, vbNull, NIF_MESSAGE Or NIF_ICON Or NIF_TIP, WM_MOUSEMOVE, frmMain.Icon, S)
+    i = Shell_NotifyIconA(NIM_ADD, nid)
     
-If WindowState <> vbMinimized Then WindowState = vbMinimized
-Visible = False
-
-End Sub
-
-Private Sub npcataca_Timer()
-
-On Error Resume Next
-Dim npc As Long
-
-For npc = 1 To LastNPC
-    Npclist(npc).CanAttack = 1
-Next npc
-
-End Sub
-
-Private Sub packetResend_Timer()
-'***************************************************
-'Autor: Juan Martín Sotuyo Dodero (Maraxus)
-'Last Modification: 04/01/07
-'Attempts to resend to the user all data that may be enqueued.
-'***************************************************
-On Error GoTo Errhandler:
-    Dim i As Long
+    If WindowState <> vbMinimized Then WindowState = vbMinimized
+    Visible = False
     
-    For i = 1 To MaxUsers
-        If UserList(i).ConnIDValida Then
-            If UserList(i).outgoingData.length > 0 Then
-                Call EnviarDatosASlot(i, UserList(i).outgoingData.ReadASCIIStringFixed(UserList(i).outgoingData.length))
-            End If
-        End If
-    Next i
-
-Exit Sub
-
-Errhandler:
-    LogError ("Error en packetResend - Error: " & Err.Number & " - Desc: " & Err.description)
-    Resume Next
+    If frmRecibeDatos.Visible = True Then frmRecibeDatos.Show
 End Sub
 
-Private Sub securityTimer_Timer()
-
-#If SeguridadAlkon Then
-    Call Security.SecurityCheck
-#End If
-
+Private Sub PacketResend_Timer()
+    Call mMainLoop.packetResend
 End Sub
+
+
+
 
 Private Sub TIMER_AI_Timer()
+Call mMainLoop.TIMER_AI
+ End Sub
 
-On Error GoTo ErrorHandler
-Dim NpcIndex As Long
-Dim X As Integer
-Dim Y As Integer
-Dim UseAI As Integer
-Dim mapa As Integer
-Dim e_p As Integer
 
-'Barrin 29/9/03
-If Not haciendoBK And Not EnPausa Then
-    'Update NPCs
-    For NpcIndex = 1 To LastNPC
-        
-        If Npclist(NpcIndex).flags.NPCActive Then 'Nos aseguramos que sea INTELIGENTE!
-            If Npclist(NpcIndex).flags.Paralizado = 1 Then
-                Call EfectoParalisisNpc(NpcIndex)
-            Else
-                e_p = esPretoriano(NpcIndex)
-                If e_p > 0 Then
-                    Select Case e_p
-                        Case 1  ''clerigo
-                            Call PRCLER_AI(NpcIndex)
-                        Case 2  ''mago
-                            Call PRMAGO_AI(NpcIndex)
-                        Case 3  ''cazador
-                            Call PRCAZA_AI(NpcIndex)
-                        Case 4  ''rey
-                            Call PRREY_AI(NpcIndex)
-                        Case 5  ''guerre
-                            Call PRGUER_AI(NpcIndex)
-                    End Select
-                Else
-                    'Usamos AI si hay algun user en el mapa
-                    If Npclist(NpcIndex).flags.Inmovilizado = 1 Then
-                       Call EfectoParalisisNpc(NpcIndex)
-                    End If
-                    
-                    mapa = Npclist(NpcIndex).Pos.map
-                    
-                    If mapa > 0 Then
-                        If MapInfo(mapa).NumUsers > 0 Then
-                            If Npclist(NpcIndex).Movement <> TipoAI.ESTATICO Then
-                                Call NPCAI(NpcIndex)
-                            End If
-                        End If
-                    End If
-                End If
-            End If
-        End If
-    Next NpcIndex
-End If
 
-Exit Sub
-
-ErrorHandler:
-    Call LogError("Error en TIMER_AI_Timer " & Npclist(NpcIndex).name & " mapa:" & Npclist(NpcIndex).Pos.map)
-    Call MuereNpc(NpcIndex, 0)
-End Sub
-
-Private Sub tLluvia_Timer()
-On Error GoTo Errhandler
-
-Dim iCount As Long
-If Lloviendo Then
-   For iCount = 1 To LastUser
-        Call EfectoLluvia(iCount)
-   Next iCount
-End If
-
-Exit Sub
-Errhandler:
-Call LogError("tLluvia " & Err.Number & ": " & Err.description)
-End Sub
-
-Private Sub tLluviaEvent_Timer()
+Private Sub tLluviaEvent()
 
 On Error GoTo ErrorHandler
 Static MinutosLloviendo As Long
@@ -859,25 +1049,25 @@ If Not Lloviendo Then
                 
                 Lloviendo = True
                 MinutosSinLluvia = 0
-                Call SendData(SendTarget.ToAll, 0, PrepareMessageRainToggle())
+                Call SendData(SendTarget.ToAll, 0, PrepareMessageRainToggle(Queclima))
             End If
     ElseIf MinutosSinLluvia >= 1440 Then
                 Lloviendo = True
                 MinutosSinLluvia = 0
-                Call SendData(SendTarget.ToAll, 0, PrepareMessageRainToggle())
+                Call SendData(SendTarget.ToAll, 0, PrepareMessageRainToggle(Queclima))
     End If
 Else
     MinutosLloviendo = MinutosLloviendo + 1
     If MinutosLloviendo >= 5 Then
             Lloviendo = False
-            Call SendData(SendTarget.ToAll, 0, PrepareMessageRainToggle())
+            Call SendData(SendTarget.ToAll, 0, PrepareMessageRainToggle(Queclima))
             MinutosLloviendo = 0
     Else
             If RandomNumber(1, 100) <= 2 Then
                 
                 Lloviendo = False
                 MinutosLloviendo = 0
-                Call SendData(SendTarget.ToAll, 0, PrepareMessageRainToggle())
+                Call SendData(SendTarget.ToAll, 0, PrepareMessageRainToggle(Queclima))
             End If
     End If
 End If
@@ -888,159 +1078,39 @@ Call LogError("Error tLluviaTimer")
 
 End Sub
 
-Private Sub tPiqueteC_Timer()
-    Dim NuevaA As Boolean
-    Dim NuevoL As Boolean
-    Dim GI As Integer
-    
-    Dim i As Long
-    
-On Error GoTo Errhandler
-    For i = 1 To LastUser
-        With UserList(i)
-            If .flags.UserLogged Then
-                If MapData(.Pos.map, .Pos.X, .Pos.Y).Trigger = eTrigger.ANTIPIQUETE Then
-                    .Counters.PiqueteC = .Counters.PiqueteC + 1
-                    Call WriteConsoleMsg(1, i, "¡¡¡Estás obstruyendo la vía pública, muévete o serás encarcelado!!!", FontTypeNames.FONTTYPE_INFO)
-                    
-                    If .Counters.PiqueteC > 23 Then
-                        .Counters.PiqueteC = 0
-                        Call Encarcelar(i, TIEMPO_CARCEL_PIQUETE)
-                    End If
-                Else
-                    .Counters.PiqueteC = 0
-                End If
-                
-                'ustedes se preguntaran que hace esto aca?
-                'bueno la respuesta es simple: el codigo de AO es una mierda y encontrar
-                'todos los puntos en los cuales la alineacion puede cambiar es un dolor de
-                'huevos, asi que lo controlo aca, cada 6 segundos, lo cual es razonable
-        
-                GI = .GuildIndex
-                If GI > 0 Then
-                    NuevaA = False
-                    NuevoL = False
-                    If Not modGuilds.m_ValidarPermanencia(i, True, NuevaA, NuevoL) Then
-                        Call WriteConsoleMsg(1, i, "Has sido expulsado del clan. ¡El clan ha sumado un punto de antifacción!", FontTypeNames.FONTTYPE_GUILD)
-                    End If
-                    If NuevaA Then
-                        Call SendData(SendTarget.ToGuildMembers, GI, PrepareMessageConsoleMsg(1, "¡El clan ha pasado a tener alineación neutral!", FontTypeNames.FONTTYPE_GUILD))
-                        Call LogClanes("El clan cambio de alineacion!")
-                    End If
-                    If NuevoL Then
-                        Call SendData(SendTarget.ToGuildMembers, GI, PrepareMessageConsoleMsg(1, "¡El clan tiene un nuevo líder!", FontTypeNames.FONTTYPE_GUILD))
-                        Call LogClanes("El clan tiene nuevo lider!")
-                    End If
-                End If
-                
-                Call FlushBuffer(i)
-            End If
-        End With
-    Next i
-Exit Sub
+Public Sub CargarLabelsMain(Optional ByVal MinsPJesSave As Long = 0, Optional ByVal MensajeSpamUno As Long = 0, Optional ByVal MensajeSpamDos As Long = 0)
+     
+    frmMain.lblCharSave.Caption = "Próximo CharSave: " & MinutosGuardarUsuarios - MinsPJesSave
 
-Errhandler:
-    Call LogError("Error en tPiqueteC_Timer " & Err.Number & ": " & Err.description)
+    frmMain.Label6.Caption = "Mensaje automatico 1: " & IntervaloMensajeAutomatico1 - MensajeSpamUno
+    
+    frmMain.Label7.Caption = "Mensaje automatico 2: " & IntervaloMensajeAutomatico2 - MensajeSpamDos
+    
+  
+    
 End Sub
+Public Function AgregarConsola(ByVal texto As String)
 
+Lineas = Lineas + 1
 
+texto = "(" & Lineas & ") " & texto & " (" & Time & ")"
 
+If Len(frmMain.txtStatus.Text) = 0 Then
+    frmMain.txtStatus.Text = texto
+Else
+    frmMain.txtStatus.Text = frmMain.txtStatus.Text & vbCrLf & texto
+End If
 
+End Function
+Private Sub txtStatus_Change()
 
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'''''''''''''''''USO DEL CONTROL TCPSERV'''''''''''''''''''''''''''
-'''''''''''''Compilar con UsarQueSocket = 3''''''''''''''''''''''''
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-
-#If UsarQueSocket = 3 Then
-
-Private Sub TCPServ_Eror(ByVal Numero As Long, ByVal Descripcion As String)
-    Call LogError("TCPSERVER SOCKET ERROR: " & Numero & "/" & Descripcion)
-End Sub
-
-Private Sub TCPServ_NuevaConn(ByVal ID As Long)
-On Error GoTo errorHandlerNC
-
-    ESCUCHADAS = ESCUCHADAS + 1
-    Escuch.Caption = ESCUCHADAS
+If Lineas >= 500 Then
+    Call Command8_Click
     
-    Dim i As Integer
+    Lineas = 0
+    frmMain.txtStatus.Text = ""
     
-    Dim NewIndex As Integer
-    NewIndex = NextOpenUser
-    
-    If NewIndex <= MaxUsers Then
-        'call logindex(NewIndex, "******> Accept. ConnId: " & ID)
-        
-        TCPServ.SetDato ID, NewIndex
-        
-        If aDos.MaxConexiones(TCPServ.GetIP(ID)) Then
-            Call aDos.RestarConexion(TCPServ.GetIP(ID))
-            Call ResetUserSlot(NewIndex)
-            Exit Sub
-        End If
-
-        If NewIndex > LastUser Then LastUser = NewIndex
-
-        UserList(NewIndex).ConnID = ID
-        UserList(NewIndex).ip = TCPServ.GetIP(ID)
-        UserList(NewIndex).ConnIDValida = True
-        Set UserList(NewIndex).CommandsBuffer = New CColaArray
-        
-        For i = 1 To BanIps.Count
-            If BanIps.Item(i) = TCPServ.GetIP(ID) Then
-                Call ResetUserSlot(NewIndex)
-                Exit Sub
-            End If
-        Next i
-
-    Else
-        Call CloseSocket(NewIndex, True)
-        LogCriticEvent ("NEWINDEX > MAXUSERS. IMPOSIBLE ALOCATEAR SOCKETS")
-    End If
-
-Exit Sub
-
-errorHandlerNC:
-Call LogError("TCPServer::NuevaConexion " & Err.description)
-End Sub
-
-Private Sub TCPServ_Close(ByVal ID As Long, ByVal MiDato As Long)
-    On Error GoTo eh
-    '' No cierro yo el socket. El on_close lo cierra por mi.
-    'call logindex(MiDato, "******> Remote Close. ConnId: " & ID & " Midato: " & MiDato)
-    Call CloseSocket(MiDato, False)
-Exit Sub
-eh:
-    Call LogError("Ocurrio un error en el evento TCPServ_Close. ID/miDato:" & ID & "/" & MiDato)
-End Sub
-
-Private Sub TCPServ_Read(ByVal ID As Long, Datos As Variant, ByVal Cantidad As Long, ByVal MiDato As Long)
-On Error GoTo errorh
-
-With UserList(MiDato)
-    Datos = StrConv(StrConv(Datos, vbUnicode), vbFromUnicode)
-    
-    Call .incomingData.WriteASCIIStringFixed(Datos)
-    
-    If .ConnID <> -1 Then
-        Call HandleIncomingData(MiDato)
-    Else
-        Exit Sub
-    End If
-End With
-
-Exit Sub
-
-errorh:
-Call LogError("Error socket read: " & MiDato & " dato:" & RD & " userlogged: " & UserList(MiDato).flags.UserLogged & " connid:" & UserList(MiDato).ConnID & " ID Parametro" & ID & " error:" & Err.description)
+End If
 
 End Sub
-
-#End If
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-''''''''''''''FIN  USO DEL CONTROL TCPSERV'''''''''''''''''''''''''
-'''''''''''''Compilar con UsarQueSocket = 3''''''''''''''''''''''''
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
+ 

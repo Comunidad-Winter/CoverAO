@@ -9,6 +9,7 @@ Begin VB.Form FrmStat
    ClientWidth     =   5625
    ClipControls    =   0   'False
    ControlBox      =   0   'False
+   Icon            =   "FrmStat.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
@@ -83,4 +84,3 @@ Attribute VB_Exposed = False
 'Pablo Ignacio Márquez
 
 Option Explicit
-

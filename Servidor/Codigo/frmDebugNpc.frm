@@ -94,20 +94,22 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Sub Command1_Click()
-Dim i As Integer, k As Integer
+    Dim i As Integer, k As Integer
 
-For i = 1 To LastNPC
-    If Npclist(i).flags.NPCActive Then k = k + 1
-Next i
+    For i = 1 To LastNPC
 
-Label1.Caption = "Npcs Activos:" & k
-Label2.Caption = "Npcs Libres:" & MAXNPCS - k
-Label3.Caption = "LastNpcIndex:" & LastNPC
-Label4.Caption = "MAXNPCS:" & MAXNPCS
+        If Npclist(i).flags.NPCActive Then k = k + 1
+    Next i
+
+    Label1.Caption = "Npcs Activos:" & k
+    Label2.Caption = "Npcs Libres:" & MAXNPCS - k
+    Label3.Caption = "LastNpcIndex:" & LastNPC
+    Label4.Caption = "MAXNPCS:" & MAXNPCS
 
 End Sub
 
 Private Sub Command2_Click()
-Unload Me
+    Unload Me
+
 End Sub
 

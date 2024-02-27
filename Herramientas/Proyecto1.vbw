@@ -1,0 +1,7 @@
+frmDescomprensor = 52, 52, 1415, 639, , 78, 78, 1441, 665, C
+modResources = 52, 52, 963, 433, 
+frmMain = 156, 156, 1089, 501, , 130, 130, 1063, 475, C
+frmConversor = 26, 26, 959, 371, , 130, 130, 1063, 475, C
+clsIniReader = 156, 156, 1089, 501, 
+modConversion = 0, 0, 933, 345, 
+modMapas = 26, 26, 975, 346, 

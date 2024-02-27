@@ -37,6 +37,12 @@ Attribute VB_Name = "modHexaStrings"
 Option Explicit
 
 Public Function hexMd52Asc(ByVal MD5 As String) As String
+    '***************************************************
+    'Author: Unknown
+    'Last Modification: -
+    '
+    '***************************************************
+
     Dim i As Long
     Dim L As String
     
@@ -46,13 +52,27 @@ Public Function hexMd52Asc(ByVal MD5 As String) As String
         L = mid$(MD5, (2 * i) - 1, 2)
         hexMd52Asc = hexMd52Asc & Chr$(hexHex2Dec(L))
     Next i
+
 End Function
 
 Public Function hexHex2Dec(ByVal hex As String) As Long
+    '***************************************************
+    'Author: Unknown
+    'Last Modification: -
+    '
+    '***************************************************
+
     hexHex2Dec = val("&H" & hex)
+
 End Function
 
 Public Function txtOffset(ByVal Text As String, ByVal off As Integer) As String
+    '***************************************************
+    'Author: Unknown
+    'Last Modification: -
+    '
+    '***************************************************
+
     Dim i As Long
     Dim L As String
     
@@ -60,4 +80,5 @@ Public Function txtOffset(ByVal Text As String, ByVal off As Integer) As String
         L = mid$(Text, i, 1)
         txtOffset = txtOffset & Chr$((Asc(L) + off) And &HFF)
     Next i
+
 End Function

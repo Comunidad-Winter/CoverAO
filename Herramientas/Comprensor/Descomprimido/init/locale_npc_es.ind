@@ -1,0 +1,627 @@
+Aldeano||¡Hola forastero! Bienvenido a nuestra humilde aldea, Ullathrope. Este es el único pueblo en esta remota zona. Si viajas a hacia el Sur, encontrarás más poblaciones.|0|10000|10000|0|0|100|0|0|0|0|0|0|18|0|0|0|3|1|0
+Lobo|||0|350|350|32|50|100|0|0|12|55|110|0|10|0|0|0|3|1|0
+Esqueleto|||0|300|300|40|90|100|0|0|10|40|105|0|12|0|0|0|3|1|0
+Zombie|||0|400|400|128|128|100|0|0|15|80|200|0|11|0|0|0|3|1|0
+Sacerdote||Hola hijo mío. Soy el sacerdote de este pueblo. Si quieres ser resucitado, sólo pídelo.|0|80000|80000|0|0|100|0|0|0|0|0|3|49|0|0|0|3|1|0
+Guerrero|Sagrada Orden|Protegeré la ciudad de cualquier amenaza.|0|40000|40000|250|280|50|0|0|40|260|320|303|241|30|5|5|3|6|0
+HerreriaGeneral||Filosas, brillantes... Todo tipo de hojas con excelentes empuñaduras harán de cualquier combatiente un verdadero oponente.|0|10000|10000|0|0|100|0|0|0|0|0|0|16|0|0|0|3|1|0
+Comidas||¡Hola! Sólo aquí conseguirás las mejores provisiones de todas estas tierras.|0|10000|10000|0|0|100|0|0|0|0|0|4|3|0|0|0|3|1|0
+Granjero Norte Ullathorpe||¡Bienvenido a mi huerta! Tengo las mejores frutas de la zona. No podrás encontrarlas de mejor calidad.|0|10000|10000|0|0|100|0|0|0|0|0|4|3|0|0|0|3|1|0
+Bardo||¡Hola! ¿Os gustaría oir una hermosa melodía?|0|315|315|35|80|100|0|0|0|25|120|0|17|0|0|0|3|1|0
+Aldeana||¡Bienvenido! Ullathrope es un pequeño pueblo, pero la hospitalidad de sus habitantes lo hace sobresalir de entre otros. ¡Que tu estadía sea placentera!|0|10000|10000|0|0|100|0|0|0|0|0|0|19|0|0|0|3|1|0
+SastreGeneral||Confeccionamos vestimentas para el ciudadano promedio. ¡Nuestros precios son los mejores!|0|10000|10000|0|0|100|0|0|0|0|0|0|19|0|0|0|3|1|0
+Guerrero|Fuerzas del Caos|¡Que las sombras reinen en estas tierras es nuestro deber!|0|40000|40000|250|280|50|0|0|40|260|320|311|117|22|22|5|3|4|0
+Alquimista||Todo aventurero necesita una buena dotación de pociones para un largo viaje. Aquí podrás encontrar las mejores.|0|10000|10000|0|0|100|0|0|0|0|0|189|120|0|0|0|3|1|0
+Tabernero||¡Bienvenido a mi taberna, viajero!|0|10000|10000|0|0|100|0|0|0|0|0|17|388|0|0|0|3|1|0
+Herrero Armas Ullathorpe|Armas|Bienvenido a mi Herrería. Tengo todo tipo de armas que pueden ser de tu interés. Te recomiendo que pruebes nuestras poderosas hachas.|0|10000|10000|0|0|100|0|0|0|0|0|5|281|0|0|0|3|1|0
+SastreRinkel||Desde el más simple de los atuendos hasta la más exquisita prenda. Puedes confiar en nuestra experiencia.|0|10000|10000|0|0|100|0|0|0|0|0|13|260|0|0|0|3|1|0
+Herrero General Orac||Lleva el destino a tu enemigo utilizando estas armas malditas.|0|10000|10000|0|0|100|0|0|0|0|0|303|110|0|0|0|3|1|0
+Herrero Armaduras Rinkel|Armaduras|Mis armaduras están elaboradas con la precisión de un maestro artesano.|0|10000|10000|0|0|100|0|0|0|0|0|305|7|0|0|0|3|1|0
+Herrero Armas Rinkel|Armas|Es increíble... cada día que transcurre veo más y más violencia. ¡Qué bueno! ¡El negocio no podría ir mejor!|0|10000|10000|0|0|100|0|0|0|0|0|304|254|0|0|0|3|1|0
+SastreBanderbill||La realeza de Banderbill confía su apariencia en nuestros hilos y agujas. ¿No lo harás tú?|0|10000|10000|0|0|100|0|0|0|0|0|171|395|0|0|0|3|1|0
+Herrero Armas Suramei|Armas|Armamento. Eso te ofrezco yo. Ni más, ni menos. ¡Visítame seguido y puede que te haga una rebaja! *ríe entre dientes*|0|10000|10000|0|0|100|0|0|0|0|0|8|22|0|0|0|3|1|0
+Herrero Armaduras Suramei|Armaduras|Nada... ¡Nada! ¡Nada podrá penetrar estas armaduras!|0|10000|10000|0|0|100|0|0|0|0|0|14|58|0|0|0|3|1|0
+Banquero||Bienvenido a la cadena de finanzas Goliath. Somos la más grande cadena de finanzas en estas tierras. Contamos con bancos en las ciudades más importantes. En nosotros puede confiar.|0|40000|40000|0|0|100|0|0|0|0|0|22|385|0|0|0|3|1|0
+Herrero Armas Nueva Esperanza|Armas|Lo último que tu enemigo verá será el haz de luz que reflejará la hoja de una de estas espadas sobre tu rostro.|0|10000|10000|0|0|100|0|0|0|0|0|15|281|0|0|0|3|1|0
+Herrero Armaduras Nueva Esperanza|Armaduras|Nada podrá penetrar estas corazas indestructibles.|0|10000|10000|0|0|100|0|0|0|0|0|11|22|0|0|0|3|1|0
+Sastre Tiama||La confección de vestimentas es un arte. Somos los artistas de Tiama. ¿Tienes alguna duda? ¡Pruébate estas vestimentas!|0|10000|10000|0|0|100|0|0|0|0|0|9|268|0|0|0|3|1|0
+SastreArghal||¡Hola, forastero! Confeccionamos las mejores ropas de la zona de Arghal.|0|10000|10000|0|0|100|0|0|0|0|0|172|97|0|0|0|3|1|0
+SastreLindos||¡Quita ese sucio calzado inmediatamente de mi propiedad! A menos... claro... que traigas algo de dinero contigo...|0|10000|10000|0|0|100|0|0|0|0|0|107|401|0|0|0|3|1|0
+SastreOrac||La maldad también sabe vestirse bien.|0|10000|10000|0|0|100|0|0|0|0|0|72|400|0|0|0|3|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+Propiedades Ullathorpe||Compramos y vendemos las mejores propiedades de la gloriosa Ullathorpe.|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+Propiedades Nix||Las propiedades de Nix se caracterizan por su amplitud y materiales de primer calidad. ¿Tienes el dinero? No te arrepentirás.|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+Herrero General Lindos||Entras con la mirada baja... como si hubieses sido víctima del peor maleficio. Compra uno de mis artículos y vete con la frente en alto.|0|10000|10000|0|0|100|0|0|0|0|0|10|93|0|0|0|3|1|0
+ArmadurasGeneral|Armaduras|¡Bienvenido! Todo lo que puedas desear en armaduras, podrás conseguirlo aquí.|0|10000|10000|0|0|100|0|0|0|0|0|306|54|0|0|0|3|1|0
+SastreNix||Nix no sería la misma sin nuestros atuendos. ¡Tenemos 135 años de experiencia!|0|10000|10000|0|0|100|0|0|0|0|0|473|123|0|0|0|3|1|0
+Herrero Armaduras Ullathorpe|||0|10000|10000|0|0|100|0|0|0|0|0|301|110|0|0|0|3|1|0
+Pescador||¡Aquí conseguirás lo mejor que el mar puede ofrecer!|0|10000|10000|0|0|100|0|0|0|0|0|2|3|0|0|0|3|1|0
+Comidas Newbie Dungeon|Provisiones|¡Hola aventurero! Si estais hambriento habeis venido al lugar apropiado. Tengo todo tipo de frutas.|0|10000|10000|0|0|100|0|0|0|0|0|4|3|0|0|0|3|1|0
+Tabernero Newbie Dungeon|Provisiones|¿¡Estais sediento!?|0|10000|10000|0|0|100|0|0|0|0|0|17|388|0|0|0|3|1|0
+Carpintero||¡Hola muchacho! Bienvenido a mi humilde carpintería.|0|10000|10000|0|0|100|0|0|0|0|0|2|22|0|0|0|3|1|0
+Espiritu||¡Huye de aquí mientras puedas!|0|10000|10000|0|0|100|0|0|0|0|0|500|8|0|0|0|3|1|0
+Mago de Ullathorpe||Ullathorpe es bien conocida por sus excelentes Magos. ¿Acaso eres uno? ¡Compra aquí para demostrarlo!|0|10000|10000|0|0|100|0|0|0|0|0|3|50|0|0|0|3|1|0
+Hechicero||Solo los más poderosos hechiceros pueden manipular los conocimientos que estos pergaminos esconden. Soberbio eres al acercarte a mi comercio.|0|10000|10000|0|0|100|0|0|0|0|0|6|268|15|0|6|1|1|0
+Minero||Poseo los mejores metales y herramientas de todas estas tierras.|0|10000|10000|0|0|100|0|0|0|0|0|2|100|0|0|0|3|1|0
+Cazador|Sagrada Orden|Protegeré la ciudad de cualquier amenaza.|0|20000|20000|0|0|50|0|0|25|300|0|104|156|0|15|7|3|6|0
+Tabernero Mesón Hostigado||¡Hola! Bienvenido al Mesón Hostigado. ¿Qué deseas beber?|0|10000|10000|0|0|100|0|0|0|0|0|17|388|0|0|0|3|1|0
+Hechicero||¡Bienvenido, gran viajero! Aquí tienes todo lo que puedas necesitar para acabar con los más poderosos enemigos.|0|10000|10000|0|0|100|0|0|0|0|0|116|270|0|0|6|3|1|0
+Propiedades Banderbill||¡Hola, forastero! Vendemos las mejores propiedades de la gloriosa ciudad del Imperio, Banderbill.|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+SastreUllathorpe||Nuestras vestimentas van de lo más simple a lo más intrincado que hay estos días. Ullathorpe siempre ha confiado su apariencia a nuestras manos.|0|10000|10000|0|0|100|0|0|0|0|0|472|356|0|0|0|3|1|0
+Herrero Armas Banderbill|Armas|Todo imperio necesita de héroes. ¡Pero todo héroe necesita de armamento! Recoge aquí tu equipo y parte en una nueva aventura.|0|10000|10000|0|0|100|0|0|0|0|0|6|22|0|0|0|3|1|0
+Herrero Armaduras Banderbill|Armaduras|¡Protégete con las más elaboradas escamas de acero que existen!|0|10000|10000|0|0|100|0|0|0|0|0|12|94|0|0|0|3|1|0
+Santa|CoverAO Staff|¡Jojojo aventurero!, tengo a la venta unas pequeñas prendas que pueden ser de tu agrado|0|10000|10000|0|0|100|0|0|0|0|0|622|457|0|0|0|3|5|0
+Pescador||¡Poseo los pescados más frescos que puedas conseguir!|0|10000|10000|0|0|100|0|0|0|0|0|101|3|0|0|0|3|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+Entrenador||¡Hola amigo! Soy el maestro de armas de la Milicia de Banderbill. Si deseas que traiga una criatura sólo debes pedírmelo.|0|10000|10000|0|0|100|0|0|0|0|0|6|57|0|0|0|3|1|0
+Guerrero||Aprende a focalizar tu ira y controlar tu espíritu. Estos pergaminos te ayudarán a convertirte en el temor de tus adversarios.|0|10000|10000|0|0|100|0|0|0|0|0|307|339|30|9|5|2|1|0
+Propiedades Lindos||La zona de Lindos cuenta con amplias casas con vista al mar. Si tienes el dinero suficiente, ¡esta es la mejor elección!|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+Hechicero|||0|10000|10000|0|0|100|0|0|0|0|0|117|270|0|0|6|3|1|0
+Mercenario||Protegeré la ciudad de cualquier amenaza.|0|35000|35000|250|260|50|0|0|35|280|300|206|156|30|5|10|3|1|0
+Gallo|||0|50|50|0|0|100|0|0|0|0|0|0|5|0|0|0|3|1|0
+Cerdo|||0|120|120|0|0|100|0|0|0|0|0|0|6|0|0|0|3|1|0
+Vaca|||0|200|200|0|0|100|0|0|0|0|0|0|366|0|0|0|3|1|0
+Mago|Sagrada Orden|Protegeré la ciudad de cualquier amenaza.|0|6000|6000|0|0|50|0|0|5|150|0|401|215|0|0|0|3|6|0
+Bardo|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|10000|10000|160|160|50|0|0|10|300|280|106|155|15|31|0|3|4|0
+Herrero armaduras Illiandor|Armaduras|Sólo aquellos equipados con lo mejor podrán alcanzar la gloria. Dentro... y fuera. ¡Deja que nosotros nos preocupemos por tu exterior!|0|10000|10000|0|0|100|0|0|0|0|0|11|93|0|0|0|3|1|0
+Herrero Armas Illiandor|Armas|Illiandor te ofrece las mejores armas de estas tierras. No podrás conseguir nada mejor al mismo precio.|0|10000|10000|0|0|100|0|0|0|0|0|306|254|0|0|0|3|1|0
+Jerek|Emperador|Bienvenido al Palacio Real. Soy Jerek, el ayudante de nuestro rey. Mi deber es enlistar a nuevos soldados para unirse a nuestra lucha, y preservar el Orden y la Seguridad en todo el Imperio.|0|1000000|1000000|250|300|100|0|0|0|250|380|306|409|0|0|5|3|2|0
+Druida|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|10000|10000|0|0|50|0|0|10|230|0|209|155|0|15|7|3|4|0
+Nigromante|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|9000|9000|0|0|50|0|0|12|200|0|205|155|15|17|6|3|4|0
+Paladín|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|18000|18000|220|240|50|0|0|30|240|290|10|232|10|9|4|3|4|0
+Mago|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|6000|6000|0|0|50|0|0|5|150|0|20|165|0|0|0|3|4|0
+Mago|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|6000|6000|0|0|50|0|0|5|150|0|404|242|0|0|0|3|4|0
+Asesino|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|13000|13000|90|350|50|0|0|15|300|295|211|232|0|7|8|3|4|0
+Tortuga gigante|||0|100|100|0|0|100|0|0|0|0|0|0|74|0|0|0|3|1|0
+Vendedor General||¡Intercambio cualquier tipo de exóticas mercaderías, aventurero!|0|10000|10000|0|0|100|0|0|0|0|0|9|350|0|0|0|3|1|0
+Clérigo|Sagrada Orden|¡Estoy aquí para mantener el orden en nombre del Consejo!|0|12000|12000|180|180|50|0|0|15|220|250|4|164|0|23|1|3|6|0
+Bardo|Sagrada Orden|¡Estoy aquí para mantener el orden en nombre del Consejo!|0|10000|10000|160|160|50|0|0|10|300|280|5|164|15|31|0|3|6|0
+Druida|Sagrada Orden|¡Estoy aquí para mantener el orden en nombre del consejo!|0|10000|10000|0|0|50|0|0|10|230|0|101|164|0|15|7|3|6|0
+Nigromante|Sagrada Orden|¡Estoy aquí para mantener el orden en nombre del consejo!|0|9000|9000|0|0|50|0|0|12|200|0|202|164|15|19|6|3|6|0
+Paladín|Sagrada Orden|¡Estoy aquí para mantener el orden en nombre del consejo!|0|18000|18000|220|240|50|0|0|30|240|290|15|156|25|11|4|3|6|0
+Mago|Sagrada Orden|¡Estoy aquí para mantener el orden en nombre del consejo!|0|6000|6000|0|0|50|0|0|5|150|0|6|163|0|0|0|3|6|0
+Asesino|Sagrada Orden|¡Estoy aquí para mantener el orden en nombre del consejo!|0|13000|13000|90|350|50|0|0|15|300|295|201|156|0|21|8|3|6|0
+Gladiador|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|28000|28000|240|255|50|0|0|30|250|350|510|232|22|22|0|3|4|0
+Mercenario|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|35000|35000|250|260|50|0|0|35|280|300|208|232|22|22|10|3|4|0
+Alma de Morgolock|||0|29550|29550|100|100|100|0|0|0|1500|1500|0|144|0|0|0|3|1|0
+Cazador|Milicia Republicana|Esta ciudad esta bajo mi custodia, procura no alterar la paz y el orden de esta región.|0|20000|20000|0|0|50|0|0|25|300|0|107|220|0|15|7|3|3|0
+Elemental de agua|||0|550|550|190|210|100|0|0|20|120|180|0|154|0|0|0|3|1|0
+Elemental de fuego|||0|400|400|0|0|100|0|0|0|50|0|0|153|0|0|0|3|1|0
+Elemental de tierra|||0|300|300|0|0|100|0|0|0|70|0|0|152|0|0|0|3|1|0
+Clérigo|Milicia Republicana|Esta ciudad esta bajo mi custodia, procura no alterar la paz y el orden de esta región.|0|12000|12000|180|180|50|0|0|15|220|250|109|217|0|3|1|3|3|0
+Bardo|Milicia Republicana|Esta ciudad esta bajo mi custodia, procura no alterar la paz y el orden de esta región.|0|10000|10000|160|160|50|0|0|10|300|280|203|217|15|31|0|3|3|0
+Pato|||0|80|80|0|0|100|0|0|0|0|0|0|88|0|0|0|3|1|0
+Demonio|Líder de las Hordas del Caos|¡Maldita escoria! Mi momento ha llegado al fin. De mi mano vienen las Hordas del Caos... ¿Acaso no comprendes, mortal? ¡El Caos es el comienzo! Seres como tú, susceptibles ante mi llamada, me servirán para cumplir mis designios...|0|1000000|1000000|450|480|100|0|0|0|250|400|0|402|0|0|0|3|4|0
+SastreNuevaEsperanza||Haremos que Nueva Esperanza exhiba las mejores ropas del mundo. ¿Acaso serás tú uno de nuestros portadores?|0|10000|10000|0|0|100|0|0|0|0|0|472|123|0|0|0|3|1|0
+Druida|Milicia Republicana|¡Os estoy vigilando detenidamente!|0|10000|10000|0|0|50|0|0|10|230|0|2|217|0|15|7|3|3|0
+Sacerdote Malvado||¡Bienvenido al infierno! Si quieres que levante de aquí tu apestoso cadáver, pídemelo.|0|80000|80000|0|0|100|0|0|0|0|0|401|135|0|0|0|3|1|0
+SastreIlliandor||La más finas sedas hacen de nuestras vestimentas las mejores. Sólo trabajamos en Illiandor.|0|10000|10000|0|0|100|0|0|0|0|0|471|331|0|0|0|3|1|0
+ArmadurasEnanos|Armaduras|Si eres un mediano... ¡Has venido al lugar indicado!|0|10000|10000|0|0|100|0|0|0|0|0|301|110|0|0|0|3|1|0
+Druida||Bienvenido, joven aprendiz. Aquí encontrarás los mejores conjuros para relacionarte con la naturaleza.|0|10000|10000|0|0|100|0|0|0|0|0|101|56|15|15|7|1|1|0
+Nigromante|Milicia Republicana|¡Os estoy vigilando detenidamente!|0|9000|9000|0|0|50|0|0|12|200|0|9|217|15|18|6|3|3|0
+PirataBanderbill|Banderbill|¡Preparen naves! Salimos del puerto de Banderbill en cualquier momento. ¡Compra un pase rápido o zarparemos sin ti!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|4|1|0
+PirataNix|Nix|¡Preparen naves! Salimos del puerto de Nix en cualquier momento. ¡Compra un pase rápido o zarparemos sin ti!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|3|1|0
+PirataArghal|Arghal|¡Preparen naves! Salimos del puerto de Arghal en cualquier momento. ¡Compra un pase rápido o zarparemos sin ti!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|4|1|0
+PirataNuevaEsperanza|Nueva Esperanza|¡Preparen naves! Salimos del puerto de Nueva Esperanza en cualquier momento. ¡Compra un pase rápido o zarparemos sin ti!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|2|1|0
+Cazador|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|20000|20000|0|0|50|0|0|25|300|0|103|232|0|15|7|3|4|0
+Clérigo|Fuerzas del Caos|¡El caos reinará en estas tierras!|0|12000|12000|180|180|50|0|0|15|220|250|205|155|0|7|1|3|4|0
+Galeón|||0|10000|10000|0|0|100|0|0|0|0|0|0|86|0|0|0|3|1|0
+Propiedades Arghâl||Os puedo ofrecer las amplias propiedades de Arghal.|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+Paladín|Milicia Republicana|¡Os estoy vigilando detenidamente!|0|18000|18000|220|240|50|0|0|30|240|290|205|220|38|23|4|3|3|0
+Propiedades Rinkel||Os doy la bienvenida. Poseemos los mejores condominios de la zona de Rinkel.|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+PirataRinkel|Rinkel|¡Preparen naves! Salimos del puerto de Rinkel en cualquier momento. ¡Compra un pase rápido o zarparemos sin ti!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|2|1|0
+Mago|Milicia Republicana|¡Os estoy vigilando detenidamente!|0|6000|6000|0|0|50|0|0|5|150|0|211|217|0|0|0|3|3|0
+Propiedades Orac||Aquí vendemos las mejores propiedades de la ciudad de Orac.|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+Propiedades Suramei||¡Oh próspera ciudad de Suramei! ¡Qué privilegio es tener la posibilidad de vivir aquí! Disfrútalo también: compra una propiedad, no te arrepentirás.|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+Propiedades Illiandor||Os doy la bienvenida. Aquí vendemos las residencias mejor ubicadas en el pueblo de Illiandor.|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+Veterinaria||Si tu familiar o mascota se encuentra en mal estado, acércamelo y veré lo que puedo hacer por él.|0|10000|10000|0|0|100|0|0|0|0|0|72|101|0|0|0|3|1|0
+Herrero Armas Nix|Armas|Bienvenido a Nix, pequeña rata... Sé lo que buscas... ¡problemas! En caso de que también busques armamento, déjame ofrecerte algunas cosas.|0|10000|10000|0|0|100|0|0|0|0|0|306|254|0|0|0|3|1|0
+Herrero Armaduras Nix|Armaduras|Armaduras de la más alta calidad aquí en Nix, ¿dónde más?|0|10000|10000|0|0|100|0|0|0|0|0|304|253|0|0|0|3|1|0
+Herrero Armaduras Arghal|Armaduras|He perdido mi refinado martillo de herrero. Sin él, no podré continuar trabajando. ¡Necesito dinero para comprar otro! ¿Estás interesado en mis armaduras?|0|10000|10000|0|0|100|0|0|0|0|0|14|22|0|0|0|3|1|0
+Herrero Armas Arghal|Armas|Podrás dar una honorable muerte a tu enemigo, utilizando estas poderosas armas.|0|10000|10000|0|0|100|0|0|0|0|0|7|93|0|0|0|3|1|0
+Fuego fatuo|||0|7|7|5|10|100|0|0|0|20|15|0|144|0|0|0|3|1|0
+Elemental de agua|||0|10|10|7|20|100|0|0|0|10|25|0|154|0|0|0|3|1|0
+Elemental de fuego|||0|10|10|5|15|100|0|0|0|20|20|0|153|0|0|0|3|1|0
+Elemental de tierra|||0|10|10|5|15|100|0|0|0|5|30|0|152|0|0|0|3|1|0
+Tigre|||0|15|15|10|20|100|0|0|0|20|35|0|147|0|0|0|3|1|0
+Oso pardo|||0|20|20|5|30|100|0|0|0|5|30|0|73|0|0|0|3|1|0
+Ely|||0|15|15|5|20|100|0|0|0|30|15|0|143|0|0|0|3|1|0
+Lobo|||0|20|20|10|20|100|0|0|0|15|25|0|10|0|0|0|3|1|0
+Torre Imperial|Sagrada Orden||0|100000|100000|0|0|50|0|0|70|100|0|0|238|0|0|0|3|6|0
+Mago|Milicia Republicana|¡Os estoy vigilando detenidamente!|0|6000|6000|0|0|50|0|0|5|150|0|410|216|0|0|0|3|3|0
+Asesino|Milicia Republicana|¡Os estoy vigilando detenidamente!|0|13000|13000|90|350|50|0|0|15|300|295|13|220|0|20|8|3|3|0
+Gladiador|Milicia Republicana|¡Os estoy vigilando detenidamente!|0|28000|28000|240|255|50|0|0|30|250|350|503|220|12|3|0|3|3|0
+Guerrero|Milicia Republicana|Esta ciudad esta bajo mi custodia, procura no alterar la paz y el orden de esta región.|0|40000|40000|250|280|50|0|0|40|260|320|309|218|12|3|5|3|3|0
+PirataTiama|Tiama|¡Preparen naves! Salimos del puerto de Tiama en cualquier momento. ¡Compra un pase rápido o zarparemos sin ti!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|2|1|0
+Mercenario|Milicia Republicana|¡Os estoy vigilando detenidamente!|0|35000|35000|250|260|50|0|0|35|280|300|312|218|12|3|5|3|3|0
+PirataIlliandor|Illiandor|¡Preparen naves! Salimos del puerto de Illiandor en cualquier momento. ¡Compra un pase rápido o zarparemos sin ti!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|2|1|0
+PirataLindos|Lindos|¡Preparen naves! Salimos del puerto de Lindos en cualquier momento. ¡Compra un pase rápido o zarparemos sin ti!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|2|1|0
+PirataSuramei|Suramei|¡Preparen naves! Salimos del puerto de Suramei en cualquier momento. ¡Compra un pase rápido o zarparemos sin ti!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|2|1|0
+Timbero||Si deseas apostar, escribe /APOSTAR e ingresa la cantidad con la que jugarás.|0|10000|10000|0|0|100|0|0|0|0|0|9|47|0|0|0|3|1|0
+Ent|||0|15|15|5|20|100|0|0|0|30|15|0|273|0|0|0|3|1|0
+Fuego fatuo|||0|600|600|0|0|100|0|0|0|220|0|0|144|0|0|0|3|1|0
+Vendedor de Caballos||¡Aquí podrás encontrar las mejores monturas que te ayudarán a explorar estas hermosas tierras!|0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|0|3|1|0
+Herrero Armas Tiama|Armas|Si crees que eres lo suficientemente acaudalado como para comprar uno de mis artículos... ¡compra varios!|0|10000|10000|0|0|100|0|0|0|0|0|4|281|0|0|0|3|1|0
+Herrero Armaduras Tiama|Armaduras|Sólo por hoy, estoy haciendo una rebaja de precios. Espero que la aproveches, ¡pues no creo en las rebajas permanentes! No me gusta engañar a la gente. *Ríe entre dientes*|0|10000|10000|0|0|100|0|0|0|0|0|6|93|0|0|0|3|1|0
+PirataOrac|||0|10000|10000|0|0|100|0|0|0|0|0|301|133|0|0|7|4|1|0
+Guardia Imperial|Sagrada Orden|Protegeré la ciudad de cualquier amenaza.|0|10000|10000|0|0|100|0|0|0|0|0|15|156|25|5|5|3|6|0
+Guardia Republicano|Milicia Republicana|Esta ciudad esta bajo mi custodia, procura no alterar la paz y el orden de esta región.|0|10000|10000|0|0|100|0|0|0|0|0|15|220|12|3|5|3|3|0
+Sastre|||0|30000|30000|0|0|100|0|0|0|0|0|401|356|0|0|0|3|1|0
+Clérigo||Ilumina tu camino y el de tus aliados hacia la victoria. Explota al máximo tu poder celestial aprendiendo estos poderosos conjuros.|0|10000|10000|0|0|100|0|0|0|0|0|3|307|35|9|4|4|1|0
+Ent|||0|500|500|155|160|100|0|0|20|50|180|0|273|0|0|0|3|1|0
+Paladín||Acércate si eres un paladín deseoso de conocer los secretos de la sagrada magia. Tengo varias cosas que mostrarte.|0|10000|10000|0|0|100|0|0|0|0|0|5|94|7|11|4|4|1|0
+Bardo||¡Soltad ese laúd y aprended de estos antiguos pergaminos!|0|10000|10000|0|0|100|0|0|0|0|0|4|269|15|31|0|2|1|0
+Herrero Armas|||0|30000|30000|0|0|100|0|0|0|0|0|9|106|0|0|0|3|1|0
+Herrero Armaduras|||0|30000|30000|0|0|100|0|0|0|0|0|306|479|0|0|0|3|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+Bardo|||0|400|400|100|150|100|0|0|20|25|165|0|17|0|0|0|3|1|0
+Subastador||¡Bienvenido al Centro de Subastas!|0|10000|10000|0|0|100|0|0|0|0|0|9|270|0|0|0|3|1|0
+Guardia del vaticano||Bienvenido, joven peregrino, a las frías tierras de Tiama. Nosotros velaremos por tu seguridad.|0|10000|10000|0|0|100|0|0|0|0|0|12|265|0|0|0|3|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+SastreSuramei||Aún no logro comprender cómo estamos vendiendo estas vestimentas a estos precios... ¡Aprovecha y compra antes de que lo comprenda!|0|10000|10000|0|0|100|0|0|0|0|0|402|356|0|0|0|3|1|0
+Propiedades Tiama||Aprovecha la oportunidad y cómpranos una propiedad aquí, en Tiama.|0|10000|10000|0|0|100|0|0|0|0|0|4|1|0|0|0|3|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+Demedor Falentus|Ciudadano de la Sagrada Orden|Soy Demedor Falentus, el encargado de limpiar la reputación de aquellos que desean obtener su ciudadanía. Si realmente tienes interés en esto, serás perdonado.|0|100000|100000|0|0|100|0|0|0|0|0|9|128|0|0|0|3|2|0
+Barinke Fauster|Enlistador de la Milicia|¡Nuestra patria es joven aún! Necesitamos todos los voluntarios para defender nuestra querida Libertad.|0|1000000|1000000|350|380|100|0|0|0|250|350|5|220|0|0|5|3|3|0
+Halinte Ganre|Ciudadano de la República|Mi nombre es Halinte Ganre, y el mismísimo Fausto me ha delegado la responsabilidad de sumar gente a nuestra causa. Si el Pueblo te acepta, serás uno de nosotros.|0|100000|100000|0|0|100|0|0|0|0|0|12|420|0|0|0|3|3|0
+Enlistador de Piratas|Enlistador de Piratas|¡Argh! ¡Botines, cerveza y mujeres! Las aguas se teñirán de rojo en nuestro avance. ¡Las Flotas del Mal reinarán en los mares! ¡El Demonio es nuestro capitán!|0|100000|100000|0|0|100|0|0|0|0|0|17|22|0|0|0|3|1|0
+Enlistador de Corsarios del Imperio|Sagrada Orden|El mar no debe ser divergente al Honor y la Justicia. Dar fin a los malhechores marinos no es una vocación, es un Deber.|0|100000|100000|0|0|100|0|0|0|0|0|72|142|0|0|0|3|2|0
+Enlistador de Corsarios de la República|Milicia Republicana|Toda Patria joven necesita de rutas comerciales para mantenerse viva y creciente. Seremos los encargados de controlar nuestras riquezas. ¡Por la República!|0|100000|100000|0|0|100|0|0|0|0|0|409|254|0|0|0|3|3|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+|||0|0|0|0|0|100|0|0|0|0|0|0|0|0|0|0|0|1|0
+Murciélago|||1|15|15|1|1|5|0|20|0|15|15|0|9|0|0|0|3|1|737,1,0.5
+Lobo|||1|75|75|12|18|10|50|115|8|50|80|0|10|0|0|0|3|1|414,1,100-976,1,0.8-578,1,1.5
+Zombie|||1|320|320|25|30|17|35|295|12|26|90|0|11|0|0|0|3|1|652,1,0.5
+Esqueleto|||1|50|50|3|9|9|8|66|10|40|45|0|12|0|0|0|3|1|737,1,0.5
+Serpiente|||1|18|18|2|3|6|0|25|0|20|30|0|13|0|0|0|3|1|737,1,0.5
+Goblin|||1|110|110|15|20|11|24|160|15|70|50|0|14|0|0|0|3|1|652,1,0.6
+Gallo Salvaje|||1|10|10|1|2|5|0|16|0|16|12|0|5|0|0|0|3|1|26,1,100-737,1,0.5
+Lord Zombie|||1|550|550|55|65|19|200|700|20|50|160|0|11|0|0|0|3|1|652,1,1
+Esqueleto Guerrero|||1|200|200|20|25|14|24|270|19|80|90|0|405|0|0|0|3|1|858,1,0.6
+Ogro Líder|||1|15000|15000|160|205|40|3000|20000|30|200|260|0|429|0|0|0|3|1|707,1,5
+Araña Gigante|||1|950|950|70|115|24|380|1450|10|50|130|0|42|0|0|0|3|1|57,1,0.5
+Dragón Legendario|||1|650000|650000|400|420|100|250000|1750000|400|300|350|0|361|0|0|0|3|1|406,1,100-1081,1,10-1081,1,5-1180,1,5-993,1,5-1147,1,5-402,1,5-1601,1,1
+Hechicero de Fuego|||1|30500|30500|140|165|51|5000|125000|10|145|270|0|433|0|0|0|3|1|651,1,10-868,1,5
+Vampiro|||1|9000|9000|80|110|41|6000|27000|20|130|210|0|434|0|0|0|3|1|1147,1,1-1181,1,5
+Vampiresa|||1|7000|7000|75|105|39|5000|22000|15|120|190|0|438|0|0|0|3|1|1181,1,5
+Corruptor|||1|3800|3800|200|250|35|1900|8500|25|110|250|0|439|0|0|0|3|1|1149,1,10
+Hechicero de Agua|||1|27500|27500|120|135|51|5000|112000|10|150|240|0|442|0|0|0|3|1|869,1,5
+Hechicero de Aire|||1|25000|25000|110|130|51|5000|105000|10|160|250|0|443|0|0|0|3|1|1181,1,5
+Hechicero de Tierra|||1|33000|33000|160|185|51|5000|134000|10|130|260|0|444|0|0|0|3|1|1147,1,1-1090,1,1-1092,1,1-993,1,1-1081,1,0.5
+Desertor de las tinieblas|||1|20000|20000|150|230|42|9000|60000|35|60|300|0|445|0|0|0|3|1|708,1,10
+Yeti trucho|||1|100000|100000|150|200|100|100000|500000|0|0|250|0|370|0|0|0|3|1|1497,1,100
+Espectro|||1|6750|6750|0|0|42|4750|32000|120|400|0|0|446|0|0|0|3|1|1143,1,5-755,1,10
+Castigador|||1|25000|25000|150|170|60|15000|80000|20|140|280|0|447|0|0|0|3|1|651,1,5-1147,1,3-993,1,5
+Orco|||1|320|320|15|38|17|65|505|30|75|80|0|43|0|0|0|3|1|858,1,1
+Jefe Orco|||1|1500|1500|100|150|26|2000|3200|30|200|250|0|43|0|0|0|3|1|734,1,5
+Zombie Lóbrego|||1|340|340|55|80|17|250|700|10|70|65|0|448|0|0|0|3|1|0
+Sanguijuela Gigante|||1|2000|2000|160|180|31|600|4050|0|60|250|0|449|0|0|0|3|1|1139,1,5
+Hombre Lobo|||1|7500|7500|160|180|39|3250|19000|30|140|230|0|450|0|0|0|3|1|707,1,5-578,1,20
+Fantasma|||1|3000|3000|0|0|30|2200|6700|100|400|0|0|451|0|0|0|3|1|992,1,5-993,1,2
+Escorpión|||1|32|32|3|6|7|3|40|0|10|25|0|51|0|0|0|3|1|737,1,0.5
+Bandido|||1|350|350|36|60|17|220|680|0|75|100|2|424|0|0|0|3|1|735,1,1-736,1,1-974,1,2
+Asesino|||1|850|850|40|130|25|450|1550|35|150|200|201|48|0|0|0|3|1|735,1,1.5-739,1,0.5-654,1,1
+Águila|||1|20|20|3|2|6|5|18|0|30|15|0|59|0|0|0|3|1|976,1,0.6-542,1,4
+Cuervo|||1|30|30|4|10|6|5|53|0|35|25|0|68|0|0|0|3|1|654,1,0.5
+Señor de las sombras|||1|400|400|60|75|18|100|550|10|70|70|0|423|0|0|0|3|1|1006,1,1-755,1,3
+Hormiga|||1|5|5|1|1|5|0|6|0|3|5|0|70|0|0|0|3|1|976,1,0.25
+Rata|||1|15|15|2|4|5|2|21|0|20|10|0|71|0|0|0|3|1|976,1,0.6
+Beholder|||1|1100|1100|65|290|26|490|2020|0|300|350|0|72|0|0|0|3|1|752,1,1
+Oso Pardo|||1|920|920|100|135|28|0|1350|0|75|90|0|73|0|0|0|3|1|415,1,100-738,1,0.6-976,1,2.24-585,1,6
+Tortuga Gigante|||1|480|480|60|80|20|0|550|10|10|70|0|74|0|0|0|3|1|404,1,65-738,1,0.3-976,1,1-579,1,2
+Duende|||1|210|210|25|35|14|45|268|0|80|60|0|75|0|0|0|3|1|654,1,0.5
+Ogro|||1|2200|2200|130|145|26|650|2900|20|110|260|0|76|0|0|0|3|1|707,1,0.5-858,1,1
+Gran Dragón Negro|||1|380000|380000|380|400|100|85000|450000|300|300|350|0|362|0|0|0|3|1|406,1,30-1180,1,8-993,1,8-1147,1,8-1081,1,10-586,1,40-1601,1,3
+Demonio|||1|15000|15000|110|270|42|4500|40000|20|170|210|0|365|0|0|0|3|1|1149,1,0.5-868,1,0.5
+Adosador de la Muerte|||1|28000|28000|210|265|49|20000|90000|25|50|400|0|458|0|0|0|3|1|0
+Lobo|||1|300|300|12|20|16|0|230|30|55|200|0|10|0|0|0|3|1|0
+Zombie|||1|350|350|40|50|18|0|230|30|80|200|0|11|0|0|0|3|1|0
+Alma Cautiva|||1|10000|10000|130|190|50|10000|36000|15|220|260|0|459|0|0|0|3|1|1180,1,1
+Leviatán|||1|7000|7000|80|250|38|4000|20000|0|150|220|0|99|0|0|0|3|1|0
+Orco brujo|||1|1200|1200|0|0|30|800|3000|25|60|200|0|43|0|0|0|3|1|653,1,0.5-651,1,0.5-706,1,1
+Bruja|||1|4200|4200|0|0|35|2800|10000|20|200|200|271|125|0|0|0|3|1|706,1,2-653,1,1-651,1,1-992,1,1
+Mago protector|||1|2600|2600|0|0|32|2400|6000|20|150|200|401|135|0|0|0|3|1|653,1,0.5-651,1,0.5-706,1,1-1143,1,1
+Golem de piedra|||1|46500|46500|300|480|45|24000|80000|40|60|400|0|371|0|0|0|3|1|708,1,15-649,1,5
+Medusa|||1|7000|7000|95|140|38|4800|20000|20|130|200|0|367|0|0|0|3|1|993,1,0.2-1147,1,0.15-992,1,0.5
+Liche|||1|1600|1600|120|250|30|1300|3500|30|190|230|0|149|0|0|0|3|1|1139,1,0.6
+Lord Orco|||1|1420|1420|200|200|20|1280|3200|30|100|170|0|148|0|0|0|3|1|858,1,1.25
+Lacayo del Mal|||1|2400|2400|140|170|32|1250|5000|10|80|200|0|460|0|0|0|3|1|0
+Jabalí Salvaje|||1|1000|1000|100|130|22|280|1600|40|40|250|0|406|0|0|0|3|1|976,1,3
+Mano Peluda|||1|90|90|15|18|11|23|142|0|60|70|0|461|0|0|0|3|1|0
+Rata Gigante|||1|130|130|18|22|12|45|220|6|40|55|0|462|0|0|0|3|1|0
+Gran Hechicero Garveloth|||1|200000|200000|260|290|100|0|1250000|20|190|450|0|480|0|0|0|3|1|1601,1,2-1180,1,2-1090,1,1-1092,1,1-1081,1,5
+Saqueador de minas|||1|8000|8000|150|180|35|2400|12000|30|200|250|401|425|0|0|0|3|1|974,1,4
+Sierpe|||1|28|28|2|5|6|2|44|0|30|30|0|464|0|0|0|3|1|0
+Goblin|||1|110|110|5|12|12|0|130|15|45|60|0|14|0|0|0|3|1|0
+Escorpion|||1|32|32|1|3|7|0|38|0|10|30|0|51|0|0|0|3|1|0
+Serpiente|||1|20|20|1|1|6|0|20|0|10|10|0|13|0|0|0|3|1|0
+Murcielago|||1|10|10|1|1|5|0|15|0|10|15|0|9|0|0|0|3|1|0
+Arquero Pirata|||1|4000|4000|0|0|36|1600|6000|20|150|300|301|110|0|0|7|3|1|479,1,100-480,100,100-738,1,1
+Guerrero Pirata|||1|6500|6500|180|210|36|2800|10000|30|180|350|301|110|0|0|1|3|1|858,1,1.8-652,1,1.5
+Fuego elemental '(amarillo)|||1|350|350|0|0|20|0|330|50|120|0|0|467|0|0|0|3|1|0
+Gran Dragón Verde|||1|80000|80000|300|350|100|20000|125000|0|250|320|0|360|0|0|0|3|1|406,1,4-1180,1,1-586,1,2-1601,1,1
+Fango|||1|1900|1900|80|110|30|480|3800|0|50|80|0|173|0|0|0|3|1|736,1,1.5
+Demonio Abisal|||1|40000|40000|200|250|45|16000|78000|30|200|230|0|363|0|0|0|3|1|868,1,2
+Basilisco|||1|1100|1100|20|150|30|640|2600|0|75|120|0|167|0|0|0|3|1|736,1,1
+Ogro Guerrero|||1|2800|2800|130|285|36|950|6400|30|200|280|0|237|0|0|0|3|1|707,1,0.75-734,1,4
+Golem de oro|||1|100000|100000|400|510|60|50000|150000|60|180|450|0|373|0|0|0|3|1|708,1,30-1081,1,10-410,1,5
+Momia|||1|8000|8000|80|150|37|4800|19000|10|110|140|0|369|0|0|0|3|1|1139,1,1
+Golem de bronce|||1|30000|30000|120|210|50|14000|45000|30|50|250|0|373|0|0|0|3|1|708,1,20
+Medusa Matriarch|||1|21000|21000|110|160|44|10500|56000|20|140|200|0|368|0|0|0|3|1|993,1,0.35-1147,1,0.3-992,1,0.75-1092,1,1-1090,1,1-1091,1,3
+Golem de plata |||1|72000|72000|400|490|60|20000|110000|30|160|400|0|375|0|0|0|3|1|708,1,25-409,1,5
+Lobo Invernal|||1|225|225|15|40|16|150|560|12|50|90|0|284|0|0|0|3|1| 1145,1,100-976,1,1
+Golem infernal|||1|150000|150000|440|530|60|60000|200000|45|230|500|0|374|0|0|0|3|1|868,1,20-408,1,5
+Gran Dragón Azul|||1|140000|140000|360|380|100|60000|280000|0|300|350|0|359|0|0|0|3|1|406,1,20-1180,1,5-993,1,8-1147,1,10-586,1,20-1601,1,1
+Fuego elemental '(gris)|||1|350|350|0|0|20|0|330|50|120|0|0|468|0|0|0|3|1|0
+Cíclope|||1|1600|1600|50|130|30|1040|3000|0|60|290|0|166|0|0|0|3|1|1139,1,0.5
+Yeti|||1|68000|68000|460|550|50|30000|210000|20|180|500|0|370|0|0|0|3|1|1180,1,0.25-869,1,0.75
+Aparición|||1|3500|3500|40|80|32|2000|8000|20|70|200|0|245|0|0|0|3|1|755,1,0.5-1006,1,0.5
+Golem de hielo|||1|175000|175000|450|540|60|80000|260000|40|238|500|0|377|0|0|0|3|1|869,1,8
+Crako|||1|4000|4000|150|380|38|2800|10500|0|250|350|0|219|0|0|0|3|1|752,1,1.2
+Protector|||1|1000|1000|80|120|35|400|2500|0|150|350|0|172|0|0|0|3|1|708,1,5
+Rey Dragón|||1|900000|900000|400|430|100|360000|2200000|650|300|350|0|432|0|0|0|3|1|406,1,95-1180,1,20-993,1,20-1147,1,20-869,1,20-707,1,20-868,1,20-1081,1,20-586,1,75-1601,1,1
+Fuego elemental '(marrón)|||1|350|350|0|0|20|0|330|50|120|0|0|469|0|0|0|3|1|0
+Ent|||1|650|650|40|90|24|200|1200|30|30|80|0|273|0|0|0|3|1|57,1,1-583,1,1
+Gladiador|||1|3000|3000|120|282|37|1200|7000|10|190|280|0|364|0|0|0|3|1|975,1,4-1149,1,0.5
+Gallina Salvaje|||1|27|27|1|2|6|0|28|0|20|15|0|278|0|0|0|3|1| 26,1,100-737,1,0.5
+Sirena|||1|8000|8000|80|250|40|4000|23500|35|200|220|0|277|0|0|0|3|1|0
+Fuego elemental '(azul)|||1|350|350|0|0|20|0|330|50|120|0|0|470|0|0|0|3|1|0
+Fuego elemental '(verde)|||1|550|550|0|0|22|250|1075|50|220|0|0|471|0|0|0|3|1|0
+Fuego fatuo|||1|2500|2500|0|0|32|240|1500|0|250|700|0|144|0|0|0|3|1|0
+Tigre|||1|700|700|70|90|26|250|1000|0|150|250|0|147|0|0|0|3|1|976,1,1-584,1,6
+Fuego elemental '(fucsia)|||1|400|400|0|0|20|150|700|50|200|0|0|472|0|0|0|3|1|0
+Fuego elemental '(verde oscuro)|||1|700|700|0|0|24|400|1450|50|250|0|0|473|0|0|0|3|1|0
+Dark Mermas|||1|30000|30000|100|50|100|0|0|0|150|500|11|270|40|0|5|3|1|0
+Chamán Ártico|||1|3500|3500|110|150|36|1200|6000|15|150|200|0|418|0|0|0|3|1|653,1,1-651,1,1-1143,1,1-706,1,1.5
+Yuan Ti|||1|2500|2500|130|160|38|1100|4600|15|160|220|0|417|0|0|0|3|1|1139,1,0.9-57,1,1
+Huargo de Nieve|||1|800|800|110|120|28|350|1070|20|100|280|0|414|0|0|0|3|1|975,1,2
+Hombre Lagarto|||1|4000|4000|140|250|39|1900|8600|30|190|280|0|223|0|0|0|3|1|1139,1,0.9
+El Abominable Grinch|||1|900000|900000|500|670|100|500000|3900000|500|300|350|0|370|0|0|0|3|1|406,1,100-1081,1,100-1081,1,100-1180,1,100-993,1,100-1147,1,100-402,1,100-662,1,100-669,1,100-662,1,100-669,1,100
+Vampiro Transformado|||1|80000|80000|260|280|100|50000|275000|30|200|280|0|463|0|0|0|3|1|1025,1,3-1088,1,2-1180,1,1
+Cría Arácnida|||1|55|55|5|10|10|12|70|0|40|50|0|465|0|0|0|3|1|0
+Murciélago|||1|18|18|1|2|6|0|30|0|18|32|0|466|0|0|0|3|1|0
+Turbador Sombrío|||1|5500|5500|120|230|40|1800|13500|30|150|260|0|441|0|0|0|3|1|0
+Esqueleto Guardián|||1|1700|1700|70|120|28|650|3600|20|55|75|0|440|0|0|0|3|1|377,1,0.2
+Sertlac|||1|35|35|3|6|9|7|56|0|35|40|0|478|0|0|0|3|1|0
+Guardián|||1|90000|90000|200|320|100|15000|550000|25|200|400|0|477|0|0|0|3|1|1081,1,3
+Murciélago|||1|12|12|1|1|5|0|18|0|10|14|0|476|0|0|0|3|1|0
+Esqueleto|||1|150|150|20|22|12|50|255|12|52|65|0|475|0|0|0|3|1|0
+Profeta Arcano|||1|80000|80000|200|220|100|0|350000|20|190|380|0|474|0|0|0|3|1|1081,1,1-1090,1,1-1091,1,1-1092,1,1
+Archne|||1|55|55|5|10|10|12|70|0|40|50|0|465|0|0|0|3|1|0
+Blanco de Arquería|Sagrada Orden||1|100000|100000|0|0|1|0|0|0|10|0|0|481|0|0|0|3|6|0
+Blanco de Combate|Sagrada Orden||1|100000|100000|0|0|1|0|0|0|10|0|0|482|0|0|0|3|6|0
+Lheremir|CoverAO Staff|¿Ey Tienes algunos créditos?, ¡Creo que podemos hacer negocio!|0|10000|10000|0|0|100|0|0|0|0|0|617|270|37|11|31|3|5|0
+Centinela|CoverAO Staff|Soy el Centinela, guardián de los recursos. Hazme click derecho si estás trabajando y me ves cerca, corres riesgo de perder tu personaje. Mantente atento.|0|10000|10000|0|0|100|0|0|0|0|0|116|270|0|0|7|3|5|0
+Centinela|CoverAO Staff|Soy el Centinela, guardián de los recursos. Hazme click derecho si estás trabajando y me ves cerca, corres riesgo de perder tu personaje. Mantente atento.|0|10000|10000|0|0|100|0|0|0|0|0|0|86|0|0|0|3|5|0
+Herrero Armaduras|Armaduras Avanzadas|¡Aquí podrás encontrar todo el equipamiento más poderoso para guerreros avanzados!|0|10000|10000|0|0|100|0|0|0|0|0|305|7|0|0|0|3|1|0
+Herrero Armas|Armas Avanzadas|¡Aquí podrás encontrar todo el equipamiento más poderoso para guerreros avanzados!|0|10000|10000|0|0|100|0|0|0|0|0|304|254|0|0|0|3|1|0
+Carpintero|Carpinteria Avanzada|¡Aquí podrás encontrar todo el equipamiento más poderoso para guerreros avanzados!|0|10000|10000|0|0|100|0|0|0|0|0|2|22|0|0|0|3|1|0
+Sastre|Sastreria Avanzada|¡Aquí podrás encontrar todo el equipamiento más poderoso para guerreros avanzados!|0|10000|10000|0|0|100|0|0|0|0|0|304|254|0|0|0|3|1|0

@@ -1,0 +1,85 @@
+*Agregado Aura al pendiente del sacrificio, Collar de Rykan y Nudillos de oro.
+**Fix luces en objetos y agregado faltantes
+*Frms fixeados
+ -frmSpawnList
+ -frmRecuperarCuenta
+ -frmConnect
+ -frmInformacion
+ -frmCustomKeys
+ -frmOpciones
+ -frmGuildAdm
+ -frmBindKey
+ -frmCharInfo
+ -frmGuildMember
+*Fix sistema de cuentas.
+*Fix conteo al deslogear.
+*fix mensaje en consola al salir de zonas seguras
+*fix dialogos de npcs al teletrasportar algun usuario
+*Al dejar de ser Newbie es expulsado del dungeon newbie
+*fix posicionamiento de la extrella de donador, ahora nunca interviene con el Nick
+*fix Montar en dungeons
+*fix /exp y /oro solo GMs
+*fix meditacion para clases sin mana
+*fix al pegar un Npcs se va la invisibilidad
+*Nuevo sistema de niveles cargados desde un .dat
+*fix dialogos de npcs
+*fix Palabras Magicas
+*fix y cambios sistema de Clanes
+*fix portal planar
+*fix y cambios Boveda, comercio y inventario
+*fix Sistema de Macros
+*fix Npcs Ataca usuarios invisibles
+*fix no se puede tirar inmovilizar a NPCS en estado paralizado
+*Optimizicaion RenderScreen
+ -Separe Layer 1 y Layer 2
+ -Fixs Carteles
+ -Fixs Layers 2
+ -Fix Screenmove
+*fix particulas varias
+*agregado aura, sonido y luz a items faltantes
+*arreglado MiniEscu y Arma DosManos
+*modificaciones varias al crear personajes, runas y posiciones
+
+nernas *
+10/7
+
+agergado hogar con /Hogar
+
+*Nacer con cualquier faccion en Dungeon Newbie
+*Al salir del dungeon newbie te lleva a tu ciudad
+*Arreglado hogar
+*Arreglado conexión
+*Arreglado textos de salir a insegura y segura, solo aparece cuando es necesario
+*Arreglado ladrón
+
+20/720 MERMAS
+*Agregado frmMap style IAO
+*Alpha de INVI style IAO
+*Arreglado si cerras o salis del personaje no te deja volver a entrar
+*Inteligencia artifical style IAO
+*optimizado el renderscreen, arreglado el invi y todos las variables
+*Agregafdo nombre de mapa
+*carga de mapa enrender
+*sacada la transparncia y puesta la d eiao
+nuevo mgsbox con frm, msgbox_ok
+*grupo style iao
+*anti trucheo
+*nacimiento atributo predeterinado
+fix dag drop
+equipar con clicjk
+   antichet extraido de iao
+  
+*arregle la cantidad d numeros de paquetes de cada una
+*saque paquetes fuerza y agilidady  puse el que carga los dos
+*sacado el sstema de foros
+*sacados paquetes que son inutilizables, el dia de noche de ao 
+Arreglado edl sistema de pariculas 
+*arreglado sistema e cuenta con paqeetes
+*optimizado un poco
+*borrado procesos ycerra
+solucionado errores de runtime
+clases prohibidas en rojo para todo correctament
+ 
+agregarauo usa objtype pocioens
+ 
+ 

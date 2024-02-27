@@ -30,27 +30,57 @@ Attribute VB_Name = "Matematicas"
 Option Explicit
 
 Public Function Porcentaje(ByVal Total As Long, ByVal Porc As Long) As Long
+    '***************************************************
+    'Author: Unknown
+    'Last Modification: -
+    '
+    '***************************************************
+
     Porcentaje = (Total * Porc) / 100
+
 End Function
 
 Function Distancia(ByRef wp1 As WorldPos, ByRef wp2 As WorldPos) As Long
+    '***************************************************
+    'Author: Unknown
+    'Last Modification: -
+    '
+    '***************************************************
+
     'Encuentra la distancia entre dos WorldPos
-    Distancia = Abs(wp1.X - wp2.X) + Abs(wp1.Y - wp2.Y) + (Abs(wp1.map - wp2.map) * 100)
+    Distancia = Abs(wp1.x - wp2.x) + Abs(wp1.Y - wp2.Y) + (Abs(wp1.map - wp2.map) * 100)
+
 End Function
 
-Function Distance(X1 As Variant, Y1 As Variant, X2 As Variant, Y2 As Variant) As Double
+Function Distance(ByVal X1 As Integer, _
+                  ByVal Y1 As Integer, _
+                  ByVal X2 As Integer, _
+                  ByVal Y2 As Integer) As Double
+    '***************************************************
+    'Author: Unknown
+    'Last Modification: -
+    '
+    '***************************************************
 
-'Encuentra la distancia entre dos puntos
+    'Encuentra la distancia entre dos puntos
 
-Distance = Sqr(((Y1 - Y2) ^ 2 + (X1 - X2) ^ 2))
+    Distance = Sqr(((Y1 - Y2) ^ 2 + (X1 - X2) ^ 2))
 
 End Function
 
 Public Function RandomNumber(ByVal LowerBound As Long, ByVal UpperBound As Long) As Long
-'**************************************************************
-'Author: Juan Martín Sotuyo Dodero
-'Last Modify Date: 3/06/2006
-'Generates a random number in the range given - recoded to use longs and work properly with ranges
-'**************************************************************
+    '**************************************************************
+    'Author: Juan Martín Sotuyo Dodero
+    'Last Modify Date: 3/06/2006
+    'Generates a random number in the range given - recoded to use longs and work properly with ranges
+    '**************************************************************
     RandomNumber = Fix(Rnd * (UpperBound - LowerBound + 1)) + LowerBound
+
+End Function
+Public Function sAbs(ByVal val As Long) As Long
+    If val < 0 Then
+        sAbs = Not val + 1
+    Else
+        sAbs = val
+    End If
 End Function

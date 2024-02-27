@@ -1,0 +1,3 @@
+Línea 20: la propiedad Picture de frmShop tenía una referencia a archivo no válida.
+Línea 38: la propiedad ItemData de lstInv tenía una referencia a archivo no válida.
+Línea 40: la propiedad List de lstInv tenía una referencia a archivo no válida.

@@ -18,7 +18,7 @@
 '4.....Terreno
 
 [INIT]
-NumeroHechizos=124
+NumeroHechizos=114
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -27,14 +27,14 @@ NumeroHechizos=124
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 [HECHIZO1]
-Nombre=Curar veneno
+Nombre=Curar Veneno
 Desc=Cura el envenenamiento
 PalabrasMagicas=Nihil Ved
 HechizeroMsg=Has curado a
 TargetMsg=te ha curado del envenenamiento.
 PropioMsg=Te has curado del envenenamiento.
 Tipo=2
-WAV=87
+WAV=239
 FXgrh=2
 Loops=2
 CuraVeneno=1
@@ -50,21 +50,22 @@ Target=1
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 [HECHIZO2]
-Nombre=Proyectil magico
-Desc=Causa Un Daño Inmenso a la Criatura.
-PalabrasMagicas=                                         Fi'Ge'Lain
-HechizeroMsg=Has lanzado Proyectil magico sobre
-TargetMsg=lanzo Proyectil magico sobre vos.
+Nombre=Proyectil Mágico
+Desc=Causa 2 a 7 puntos daño a la víctima.
+PalabrasMagicas=Rah'Za'Lu
+HechizeroMsg=Has lanzado Proyectil Mágico sobre
+TargetMsg=lanzo Proyectil Mágico sobre vos.
 Tipo=1
-WAV=81
+WAV=233
 Particle=9
 SubeHP=2
-MinHP=30
-MaxHP=10
-MinSkill=0
-ManaRequerido=0
+MinHP=10
+MaxHP=15
+MinSkill=5
+ManaRequerido=12
 StaRequerido=2
-Target=3
+Target=2
+TimeParticula=0.1
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -75,14 +76,14 @@ Target=3
 [HECHIZO3]
 Nombre=Curar heridas leves
 Desc=Curar heridas leves, restaura entre 1 y 5 puntos de salud.
-PalabrasMagicas=                                           Corp Sanc
+PalabrasMagicas=Corp Sanc
 
 HechizeroMsg=Has sanado a
 TargetMsg=te ha curado algunas heridas.
 PropioMsg=Te has curado algunas heridas.
 Particle=12
 Tipo=1
-WAV=17
+WAV=238
 
 SubeHP=1
 MinHP=1
@@ -93,6 +94,7 @@ ManaRequerido=10
 StaRequerido=3
 
 Target=3
+TimeParticula=2
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -103,7 +105,7 @@ Target=3
 [HECHIZO4]
 Nombre=Envenenar
 Desc=Envenenamiento, provoca la muerte si no se contraresta con un antídoto.
-PalabrasMagicas=                                        SERP XON IN
+PalabrasMagicas=SERP XON IN
 
 HechizeroMsg=Has envenenado a
 TargetMsg=te ha envenenado.
@@ -112,7 +114,6 @@ PropioMsg=Te has envenenado.
 Tipo=2
 WAV=16
 Particle=32
-
 Envenena=2
 MinSkill=20
 ManaRequerido=20
@@ -120,6 +121,7 @@ StaRequerido=4
 
 Target=3
 
+TimeParticula=100
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -129,14 +131,14 @@ Target=3
 [HECHIZO5]
 Nombre=Curar heridas graves
 Desc=Curar heridas graves, restaura entre 15 y 25 puntos de salud.
-PalabrasMagicas=                                    EN CORP SANCTIS
+PalabrasMagicas=EN CORP SANCTIS
 
 HechizeroMsg=Has curado a
 TargetMsg=te ha curado.
 PropioMsg=Te has curado.
 
 Tipo=1
-WAV=85
+WAV=240
 FXgrh=9
 loops=0
 
@@ -157,26 +159,26 @@ Target=3
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 [HECHIZO6]
-Nombre=Hame Hame Jhaa
+Nombre=Saeta Ígnea
 Desc=Causa 7 a 14 puntos de daño a la victima.
-PalabrasMagicas=                                          Fogûs Saex
+PalabrasMagicas=Fogûs Saex
 HechizeroMsg=Has lanzado saeta ígnea sobre 
 TargetMsg=lanzó Saeta ígnea sobre vos.
 PropioMsg=Has lanzado Saeta ígnea sobre ti.
 Tipo=1
 WAV=19
-Particle=92
+Particle=35
 
 SubeHP=2
-MinHP=5656
-MaxHP=5565
+MinHP=7
+MaxHP=14
     
 MinSkill=12
 ManaRequerido=20
 StaRequerido=5
 
 Target=3
-
+TimeParticula=15
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -185,13 +187,13 @@ Target=3
 [HECHIZO7]
 Nombre=Proyectil eléctrico
 Desc=Causa 14 a 22 puntos de daño a la victima.
-PalabrasMagicas=                                            SUN VAP
+PalabrasMagicas=SUN VAP
 HechizeroMsg=Has lanzado Proyectil eléctrico sobre
 TargetMsg=lanzó Proyectil eléctrico sobre vos.
 PropioMsg=Has lanzado proyectil eléctrico sobre ti.
 Tipo=1
-WAV=16
-FXgrh=25
+WAV=164
+Particle=86
 
 SubeHP=2
 MinHP=14
@@ -200,7 +202,7 @@ MaxHP=22
 MinSkill=22
 ManaRequerido=35
 StaRequerido=7
-
+TimeParticula=15
 Target=3
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -211,13 +213,13 @@ Target=3
 [HECHIZO8]
 Nombre=Bomba mágica
 Desc=Causa 10 a 30 puntos de daño en un área de dos tiles.
-PalabrasMagicas=                                         VAX IN TAR
+PalabrasMagicas=VAX IN TAR
 HechizeroMsg=Has lanzado Bomba mágica sobre
 TargetMsg=lanzó Bomba mágica sobre vos.
 PropioMsg=Has lanzado Bomba mágica sobre ti.
 Tipo=1
-WAV=88
-FXgrh=10
+WAV=129
+FXgrh=50
 loops=0
 
 SubeHP=2
@@ -228,7 +230,7 @@ MinSkill=38
 ManaRequerido=50
 StaRequerido=20
 
-Target=3
+Target=4
 Afecta=3
 HechizoDeArea=1
 AreaEfecto=2
@@ -242,14 +244,14 @@ AreaEfecto=2
 [HECHIZO9]
 Nombre=Paralizar
 Desc=Impide que la víctima realize todo movimiento.
-PalabrasMagicas=                                         HOAX VORP
+PalabrasMagicas=HOAX VORP
 
 HechizeroMsg=Has paralizado a
 TargetMsg=te ha paralizado.
 PropioMsg=Te has paralizado.
 
 Tipo=2
-WAV=16
+WAV=203
 FXgrh=8
 loops=0
 Paraliza=1
@@ -269,14 +271,14 @@ Target=3
 [HECHIZO10]
 Nombre=Remover paralisis
 Desc=Remueve la paralisis.
-PalabrasMagicas=                                      AN HOAX VORP
+PalabrasMagicas=AN HOAX VORP
 
 HechizeroMsg=Le has removido la paralisis a
 TargetMsg=te ha removido la paralisis.
 PropioMsg=Te has removido la paralisis.
 
 Tipo=2
-WAV=108
+WAV=255
 
 RemoverParalisis=1
 
@@ -295,19 +297,19 @@ Target=3
 [HECHIZO11]
 Nombre=Resucitar
 Desc=Resucitar un usuario muerto.
-PalabrasMagicas=                                        AHIL KNÄ XÄR
+PalabrasMagicas=AHIL KNÄ XÄR
 
 HechizeroMsg=Has resucitado a
 TargetMsg=te ha resucitado.
 PropioMsg=Te has resucitado.
 
 Tipo=2
-WAV=84
+WAV=20
 
 Revivir=1
 
 MinSkill=75
-ManaRequerido=420
+ManaRequerido=800
 StaRequerido=100
 
 Target=1
@@ -328,7 +330,7 @@ TargetMsg=te ha lanzado el hechizo Grito de Igôr.
 PropioMsg=Te has lanzado el hechizo Grito de Igôr.
 
 Tipo=1
-WAV=80
+WAV=92
 
 
 SubeFU=1
@@ -359,7 +361,7 @@ PropioMsg=Te has lanzado Furia de Uhkrul.
 
 Tipo=1
 
-WAV=73
+WAV=102
 Particle=29
 
 SubeFU=1
@@ -369,7 +371,7 @@ MaxFU=16
 SubeAG=1
 MinAG=12
 MaxAG=16
-    
+TimeParticula=20
 MinSkill=85
 ManaRequerido=720
 StaRequerido=250
@@ -387,18 +389,20 @@ Nombre=Invisibilidad
 Desc=Vuelve invisible al objetivo, efecto no permanente.
 HechizeroMsg=Has lanzado Invisibilidad sobre
 TargetMsg=lanzo Invisibilidad sobre vos.
+PalabrasMagicas=Invisibilidad
+PropioMsg=Te has lanzado Invisibilidad.
+
 Tipo=2
-WAV=110
+WAV=123
 FXgrh=46
 
 Invisibilidad=1
-
+autolanzar=1
 MinSkill=87
 ManaRequerido=560
 StaRequerido=60
 
 Target=1
-Area=1
 
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -410,7 +414,7 @@ Area=1
 [HECHIZO15]
 Nombre=Tormenta de fuego
 Desc=Causa 15 a 50 puntos de daño en un área de tres tiles.
-PalabrasMagicas=                                          RAX IN ZAR
+PalabrasMagicas=RAX IN ZAR
 HechizeroMsg=Has lanzado Tormenta de fuego sobre
 TargetMsg=lanzo Tormenta de fuego sobre vos.
 PropioMsg=Has lanzado Tormenta de fuego sobre ti.
@@ -431,7 +435,7 @@ HechizoDeArea=1
 AreaEfecto=3
 Afecta=3
 
-Target=3
+Target=4
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -490,13 +494,13 @@ Target=4
 [HECHIZO18]
 Nombre=Celeridad
 Desc=Aumenta la agilidad del usuario que recibe el spell
-PalabrasMagicas=                                          YUP A'INC
+PalabrasMagicas=YUP A'INC
 HechizeroMsg=Has lanzado Celeridad sobre 
 TargetMsg=ha lanzado Celeridad sobre ti.
 PropioMsg=Has lanzado Celeridad sobre ti.
 
 Tipo=1
-WAV=76
+WAV=230
 
 SubeAG=1
 MinAG=2
@@ -542,13 +546,13 @@ Target=1
 [HECHIZO20]
 Nombre=Fuerza
 Desc=Aumenta la fuerza del objetivo
-PalabrasMagicas=                                            Ar A'kron
+PalabrasMagicas=Ar A'kron
 HechizeroMsg=Has lanzado Fuerza sobre 
 TargetMsg=ha lanzado Fuerza sobre ti.
 PropioMsg=Has lanzado Fuerza sobre ti.
 
 Tipo=1
-WAV=17
+WAV=230
 
 SubeFU=1
 MinFU=2
@@ -599,12 +603,13 @@ HechizeroMsg=Has lanzado Desencantar sobre
 TargetMsg=lanzo Desencantar sobre vos.
 PropioMsg=Has lanzado Desencantar sobre ti.
 Tipo=2
-WAV=
-FXgrh=
-Particle=70
+WAV=59
+Particle=85
 desencantar=1
+autolanzar=1
+TimeParticula=250
 MinSkill=100
-ManaRequerido=1250
+ManaRequerido=900
 StaRequerido=180
 Target=1
 
@@ -617,18 +622,18 @@ Target=1
 [HECHIZO23]
 Nombre=Corriente eléctrica
 Desc=Causa 20 a 70 puntos de daño en un área de cuatro tiles.
-PalabrasMagicas=                                         T'HY KOOOL
+PalabrasMagicas=T'HY KOOOL
 HechizeroMsg=Has lanzado Corriente eléctrica sobre
 TargetMsg=lanzo Corriente eléctrica sobre vos.
 PropioMsg=Has lanzado Corriente eléctrica sobre ti.
 Tipo=1
 WAV=56
-Particle=46
+Particle=48
 loops=1
-
+TimeParticula=5
 SubeHP=2
 MinHP=20
-MaxHP=70
+MaxHP=55
     
 MinSkill=75
 ManaRequerido=300
@@ -638,8 +643,7 @@ HechizoDeArea=1
 AreaEfecto=4
 Afecta=3
 
-Target=3
-
+Target=4
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -650,14 +654,14 @@ Target=3
 [HECHIZO24]
 Nombre=Inmovilizar
 Desc=Impide que la víctima se movilize.
-PalabrasMagicas=                                       Är Prop s'uo
+PalabrasMagicas=Är Prop s'uo
 
 HechizeroMsg=Has inmovilizado a
 TargetMsg=te ha inmovilizado.
 PropioMsg=Te has inmovilizado.
 
 Tipo=2
-WAV=105
+WAV=253
 FXgrh=12
 loops=0
 Inmoviliza=1
@@ -683,19 +687,16 @@ PropioMsg=Has lanzado Apocalipsis sobre ti.
 Tipo=1
 WAV=65
 Particle=45
-
+Anillo=1
 SubeHP=2
-MinHP=85
-MaxHP=80
+MinHP=60
+MaxHP=75
     
 MinSkill=80
 ManaRequerido=950
 StaRequerido=120
-
+TimeParticula=50
 Target=3
-HechizoDeArea=1
-AreaEfecto=4
-Afecta=3
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -705,7 +706,7 @@ Afecta=3
 [HECHIZO26]
 Nombre=Invocar elemental de fuego
 Desc=Invocar elemental de fuego
-PalabrasMagicas=                                             Yur'rax
+PalabrasMagicas=Yur'rax
 HechizeroMsg=Has invocado un elemental de fuego.
 Tipo=4
 WAV=17
@@ -726,7 +727,7 @@ Target=4
 [HECHIZO27]
 Nombre=Invocar elemental de agua
 Desc=Invocar elemental de ague
-PalabrasMagicas=                                          Mantra'rax
+PalabrasMagicas=Mantra'rax
 HechizeroMsg=Has invocado un elemental de agua.
 Tipo=4
 WAV=17
@@ -748,7 +749,7 @@ Target=4
 [HECHIZO28]
 Nombre=Invocar elemental de tierra
 Desc=Invocar elemental de tierra
-PalabrasMagicas=                                          Mantra'rax
+PalabrasMagicas=Mantra'rax
 HechizeroMsg=Has invocado un elemental de tierra.
 Tipo=4
 WAV=17
@@ -769,7 +770,7 @@ Target=4
 [HECHIZO29]
 Nombre=Implorar ayuda
 Desc=Implorar ayuda
-PalabrasMagicas=                                      Ar'Cos Mantra'rax
+PalabrasMagicas=Ar'Cos Mantra'rax
 HechizeroMsg=¡Has implorado ayuda a los dioses!
 Tipo=4
 WAV=17
@@ -824,10 +825,8 @@ PropioMsg=Has lanzado Curacion sobre ti.
 PalabrasMagicas=Me Cureh
 
 Tipo=1
-WAV=55
-Particle=28
-
-Estupidez=1
+WAV=17
+RemoverEstupidez=1
 SubeHP=1
 MinHP=1000
 MaxHP=1000
@@ -844,7 +843,7 @@ Target=1
 [HECHIZO32]
 Nombre=Sanar
 Desc=Restaura entre 60 y 100 de daño al usuario y remueve todos los efectos negativos que éste pueda tener.
-PalabrasMagicas=                                          Nihil Vitae
+PalabrasMagicas=Nihil Vitae
 HechizeroMsg=Has lanzado Sanar sobre
 TargetMsg=lanzó Sanar sobre vos.
 PropioMsg=Has lanzado Sanar sobre ti.
@@ -857,11 +856,14 @@ Sanacion=1
 SubeHP=1
 MinHP=60
 MaxHP=100
-    
+
+RemoverEstupidez=1
+RemoverParalisis=1
+
 MinSkill=80
 ManaRequerido=750
-StaRequerido=150
-
+StaRequerido=270
+TimeParticula=50
 Target=1
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -904,25 +906,24 @@ Target=1
 [HECHIZO34]
 Nombre=Implosión
 Desc=Causa 120 a 150 puntos de daño a la victima.
-PalabrasMagicas=                                       Nihil Mortem
+PalabrasMagicas=Nihil Mortem
 HechizeroMsg=Has lanzado Implosión sobre
 TargetMsg=lanzo Implosión sobre vos.
 PropioMsg=Has lanzado Implosión sobre ti.
 Tipo=1
-WAV=90
+WAV=65
 FXgrh=18
 loops=0
+Anillo=1
 SubeHP=2
-MinHP=90
-MaxHP=90
+MinHP=70
+MaxHP=80
     
 MinSkill=100
 ManaRequerido=1400
 StaRequerido=120
 
 Target=3
-
-011701004814653
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -948,7 +949,7 @@ Ceguera=1
 MinSkill=100
 ManaRequerido=2600
 StaRequerido=300
-
+TimeParticula=150
 Target=1
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -1053,26 +1054,15 @@ asusta=2
 autolanzar=1
 
 [HECHIZO41]
-Nombre=Metamorfosis: Ogro
-Desc=Transforma al usuario en un Ogro, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.
-HechizeroMsg=Has transformado en ogro a
-TargetMsg=te transformó en ogro.
-PropioMsg=Te has transformado en ogro.
+Nombre=Paralizar
+Desc=Hechizo de NPC.
+PalabrasMagicas=HOAX VORP
 Tipo=2
-WAV=57
-fxgrh=30
-metamorfosis=1
-body=76
-head=0
-
-ExtraHIT=30
-ExtraDEF=10
-MinSkill=70
-ManaRequerido=600
-StaRequerido=40
+WAV=203
+FXgrh=8
+loops=0
+Paraliza=1
 Target=1
-asusta=7
-autolanzar=1
 
 [HECHIZO42]
 Nombre=Metamorfosis: Jabalí
@@ -1200,26 +1190,30 @@ Target=1
 asusta=9
 autolanzar=1
 
-[HECHIZO48]
-Nombre=Metamorfosis: Serpiente
-Desc=Transforma al usuario en una Serpiente, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.
-HechizeroMsg=Has transformado en serpiente a
-TargetMsg=te transformó en serpiente.
-PropioMsg=Te has transformado en serpiente.
-Tipo=2
-WAV=57
-fxgrh=30
-metamorfosis=1
-body=13
-head=0
-ExtraHIT=8
-ExtraDEF=16
-MinSkill=5
-ManaRequerido=50
-StaRequerido=10
-Target=1
-asusta=1
-autolanzar=1
+'[HECHIZO48] Lo tira hechizero de fuego
+'Nombre=Castigo Ilusorio
+'PalabrasMagicas=Poen'capti
+'Desc=Hechizo de NPC.
+'Tipo=1
+'WAV=32
+'SubeFU=0
+'MinFU=0
+'MaxFU=0
+'SubeAG=0
+'MinAG=0
+'MaxAG=0
+'SubeHP=2
+'MinHP=40
+'MaxHP=55
+'MinSta=0
+'MaxSta=0
+'MinSkill=100
+'ManaRequerido=1440
+'StaRequerido=100
+'Target=1
+'TimeParticula=50
+'Particle=90
+'WAV=163 
 
 [HECHIZO49]
 Nombre=Metamorfosis: Murciélago
@@ -1290,7 +1284,7 @@ MaxHP=100
 [HECHIZO52]
 Nombre=Juicio final
 Desc=Causa 150 a 180 puntos de daño a la victima.
-PalabrasMagicas=                                         Finis Mortem
+PalabrasMagicas=Finis Mortem
 HechizeroMsg=Has lanzado Juicio final sobre
 TargetMsg=lanzo Juicio final sobre vos.
 PropioMsg=Has lanzado Juicio final sobre ti.
@@ -1298,11 +1292,10 @@ Tipo=1
 WAV=66
 FXgrh=20
 loops=0
-
-
+Anillo=1
 SubeHP=2
-MinHP=90
-MaxHP=95
+MinHP=85
+MaxHP=100
     
 MinSkill=100
 ManaRequerido=1800
@@ -1318,23 +1311,19 @@ Target=3
 
 [HECHIZO53]
 Nombre=Portal planar
-Desc=Crea un portal
-PalabrasMagicas=mentire opericure
-HechizeroMsg=Has creado un portal
-Tipo=4
-WAV=17
-Invoca=1
-NumNpc=611
-Particle=107
-FXgrh=0
-MinSkill=40
-ManaRequerido=120
+Desc=El hechizo Portal planar crea un teleport hacia tu hogar de orígen.
+PalabrasMagicas=Opercure Dimentia
+HechizeroMsg=Has creado un Portal interplanar.
+Tipo=5
+WAV=249
+Particle=52
+loops=0
+TimeParticula=1
+MinSkill=100
+ManaRequerido=2300
+StaRequerido=300
+
 Target=4
-StaRequerido= 16
-Teleport=1
-TeleportMap=2
-TeleportX=50
-TeleportY=1
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -1345,23 +1334,25 @@ TeleportY=1
 [HECHIZO54]
 Nombre=Resurrección
 Desc=Revive completamente a un usuario.
-PalabrasMagicas=                                        HÎC KNÄ XÄR
+PalabrasMagicas=HÎC KNÄ XÄR
 
 HechizeroMsg=Has revivido a
 TargetMsg=te ha revivido.
 PropioMsg=Te has revivido.
 
+Particle=53
 Tipo=2
-WAV=100
-FXgrh=0
+WAV=20
+TimeParticula=-1
+Tipo=2
 
-Resucita=1
+Revivir=1
 
-MinSkill=100
-ManaRequerido=840
-StaRequerido=200
+MinSkill=75
+ManaRequerido=300
+StaRequerido=100
 
-Target=1
+Target=4
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -1384,7 +1375,7 @@ MinSkill=90
 ManaRequerido=500
 StaRequerido=120
 IndiceDeItem=1
-
+TimeParticula=11
 Target=4
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -1396,21 +1387,18 @@ Target=4
 [HECHIZO56]
 Nombre=Incinerar
 Desc=Una llamarada incinerará al objetivo, causando un daño considerable rápidamente.
-PalabrasMagicas=                                         Incinera Corps
+PalabrasMagicas=Incinera Corps
 
 HechizeroMsg=Has incinerado a
 TargetMsg=te ha incinerado.
 PropioMsg=Te has incinerado.
 
-Tipo=1
+Tipo=2
 WAV=123
 Particle=6
 loops=0
-
-SubeHP=2
-MinHP=15
-MaxHP=20
-    
+TimeParticula=20
+Incinera=1
 MinSkill=90
 ManaRequerido=920
 StaRequerido=100
@@ -1426,12 +1414,12 @@ Target=1
 [HECHIZO57]
 Nombre=Tormenta ácida
 Desc=Causa 20 a 70 puntos de daño y envenena en un área de tres tiles.
-PalabrasMagicas=                                         VAX IN XORP
+PalabrasMagicas=VAX IN XORP
 HechizeroMsg=Has lanzado Tormenta ácida sobre
 TargetMsg=lanzo Tormenta ácida sobre vos.
 PropioMsg=Has lanzado Tormenta ácida sobre ti.
 Tipo=1
-WAV=75
+WAV=127
 FXgrh=32
 loops=0
 
@@ -1442,13 +1430,15 @@ MaxHP=70
 MinSkill=80
 ManaRequerido=400
 StaRequerido=100
-Envenena=1
+Envenena=3
+
 
 HechizoDeArea=1
 AreaEfecto=3
 Afecta=3
 
-Target=3
+Target=4
+
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -1519,7 +1509,7 @@ MinSkill=90
 ManaRequerido=500
 StaRequerido=120
 IndiceDeItem=43
-
+TimeParticula=11
 Target=4
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -1547,18 +1537,19 @@ Target=4
 
 [HECHIZO62]
 Nombre=Detectar invisibilidad
-Desc=Detecta la invisibilidad en una area de 8 tiles
-HechizeroMsg=Has Detectado la Invisibilidad a
-TargetMsg=
-PropioMsg=
-Particle=82
-Tipo=2
-WAV=82
-fxgrh=0
-ManaRequerido=950
-StaRequerido=250
+Desc=Detecta todo usuario invisible en el rango de visión del usuario.
+HechizeroMsg=Has lanzado Detectar invisibilidad.
+PalabrasMagicas=Fant Visiblî
+
 Target=4
-RemueveInvisibilidadParcial=1
+Tipo=12
+WAV=254
+Particle=82
+loops=1
+TimeParticula=5
+MinSkill=95
+ManaRequerido=1800
+StaRequerido=300
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -1569,7 +1560,7 @@ RemueveInvisibilidadParcial=1
 [HECHIZO63]
 Nombre=Lamento de la Banshee
 Desc=Causa 90 a 145 puntos de daño en un área de ocho tiles.
-PalabrasMagicas=                                         VÂR NI MÈS
+PalabrasMagicas=VÂR NI MÈS
 HechizeroMsg=Has lanzado Lamento de la Banshee sobre
 TargetMsg=lanzo Lamento de la Banshee sobre vos.
 PropioMsg=Has lanzado Lamento de la Banshee sobre ti.
@@ -1579,17 +1570,17 @@ FXgrh=45
 loops=0
 
 SubeHP=2
-MinHP=75
-MaxHP=90
+MinHP=90
+MaxHP=145
     
 MinSkill=100
-ManaRequerido=1900
+ManaRequerido=3020
 StaRequerido=300
 
 HechizoDeArea=1
 AreaEfecto=8
 Afecta=3
-
+Anillo=2
 Target=3
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -1684,185 +1675,177 @@ Target=1
 [HECHIZO67]
 Nombre=Curar heridas críticas
 Desc=Curar heridas críticas, restaura entre 30 y 60 puntos de salud.
-PalabrasMagicas=                                       CORP CURATIO
+PalabrasMagicas=CORP CURATIO
 
 HechizeroMsg=Has curado a
 TargetMsg=te ha curado.
 PropioMsg=Te has curado.
 
 Tipo=1
-WAV=18
-Particle=119
+WAV=240
+Particle=21
+
 loops=1
 
 SubeHP=1
-MinHP=30
-MaxHP=60
+MinHP=60
+MaxHP=90
     
 MinSkill=65
-ManaRequerido=120
+ManaRequerido=620
 StaRequerido=80
-
+TimeParticula=100
 Target=3
 
 [HECHIZO68] 'Lvl 25 en adelante 
 Nombre=Palabra sagrada
-Desc=Hechizo deshabilitado temporalmente
-'Desc=Paraliza, debilita y atonta a la víctima
-PalabrasMagicas=                                       SACRE ASTAIM
+Desc=Paraliza, debilita y atonta a la víctima
+PalabrasMagicas=SACRE ASTAIM
 
 HechizeroMsg=Has lanzado Palabra sagrada sobre
 TargetMsg=te ha lanzado Palabra sagrada
 PropioMsg=Te has lanzado Palabra sagrada
 
+'Tipo=0
 Tipo=2
-WAV=16
+Target=1
+WAV=100
 Particle=18
-FXgrh=0
-loops=0
-Paraliza=1
 
-Target=3
+'Paraliza=1
+'Estupidez=1
 
+SubeFU=2
+MinFU=25
+MaxFU=30
+TimeParticula=5
 MinSkill=62
 ManaRequerido=900
 StaRequerido=80
 
 [HECHIZO69] 'Lvl 32 en adelante
-Nombre=Descarga flamígera
+Nombre=Descarga Flamígera
 Desc=Castiga al enemigo con el fuego divino, causando entre 80 y 120 puntos de daño e incinerándolo
-PalabrasMagicas=                                          Jâf Rashida
+PalabrasMagicas=Jâf Rashida
 
 HechizeroMsg=Has lanzado Descarga Flamígera sobre
 TargetMsg=te ha lanzado Descarga Flamígera
 PropioMsg=Te has lanzado Descarga Flamígera
-
+Anillo=1
 Tipo=1
-WAV=89
+WAV=27
 Particle=84
 loops=0
 
 SubeHP=2
-MinHP=50
-MaxHP=90
+MinHP=60
+MaxHP=75
 
-
+Incinera=1
+TimeParticula=100
 MinSkill=90
-ManaRequerido=1150
+ManaRequerido=950
 StaRequerido=75
 
 Target=3
+'HechizoDeArea=1
+'AreaEfecto=4
+'Afecta=3
 
 [HECHIZO70] 'Lvl 20 en adelante
 Nombre=Aura sagrada
-Desc=Hechizo deshabilitado temporalmente
-'Desc=Crea momentaneamente un escudo sagrado alrededor del usuario
-PalabrasMagicas=                                     Herinoenous
+'Desc=Hechizo deshabilitado temporalmente
+Desc=Crea momentaneamente un escudo sagrado alrededor del usuario
+PalabrasMagicas=Ajàunis Herinoenous
 PropioMsg=Un aura te protege
-
-Tipo=1
-Particle=27
-WAV=17
-FXgrh=0
-loops=0
-
-SubeFU=1
-MinFU=12
-MaxFU=16
-
-SubeAG=1
-MinAG=12
-MaxAG=16
-    
-MinSkill=85
-ManaRequerido=720
-StaRequerido=250
-
+autolanzar=1
+Tipo=10
 Target=1
+Wav=104
+FxGrh=24
+Particle=27
+Creatipo=2
+TimeParticula=100
+Anim=1
+MinDef=4
+MaxDef=12
+
+MinSkill=50
+ManaRequerido=720
+StaRequerido=150
 
 [HECHIZO71] 'Lvl 28 en adelante
 Nombre=Pregonar la palabra de Dios
 Desc=Cura en un diámetro de 5 tiles entre 75 y 125 puntos de vida
-PalabrasMagicas=                                     Sanctis Espiritum
+PalabrasMagicas=In nómini Pater, Filum, Sanctis Espiritum
 
 HechizeroMsg=La palabra de Dios cura y fortalece
 TargetMsg=te ha curado.
 PropioMsg=Te has curado.
 
 Tipo=1
-WAV=72
+WAV=103
 Particle=5
-loops=0
-Sanacion=1
-
+loops=1
+TimeParticula=5
 SubeHP=1
-MinHP=150
-MaxHP=200
+MinHP=40
+MaxHP=55
     
-MinSkill=80
-ManaRequerido=1400
-StaRequerido=150
+MinSkill=70
+ManaRequerido=1000
+StaRequerido=350
 
-Target=1
+AreaEfecto=5
+HechizoDeArea=1
+
+Target=4 'Efecto área
+Afecta=1
 
 [HECHIZO72] 'Lvl 42 en adelante
 Nombre=Golpe certero
 Desc=El receptor no fallará el próximo golpe
-PalabrasMagicas=                                   Ar'Sen Benerim
+PalabrasMagicas=Ar'Sen Benerim
 HechizeroMsg=Has lanzado Golpe certero sobre
 Targetmsg=te ha lanzado Golpe certero
 PropioMsg=¡Tu próximo golpe no fallará!
 
 Tipo=1
-WAV=71
+WAV=55
+autolanzar=1
+GolpeCertero=1
 Particle=70
-SubeFU=1
-MinFU=15
-MaxFU=25
-
-SubeAG=1
-MinAG=15
-MaxAG=15
-
-SubeHP=1
-MinHP=15
-MaxHP=15
-
+loops=2
+TimeParticula=50
 MinSkill=90
-ManaRequerido=1160
-
-StaRequerido=200
+ManaRequerido=880
+StaRequerido=300
 
 Target=1
 
 [HECHIZO73] 'Lvl 35 en adelante
 Nombre=Poder divino
 Desc=El poder del receptor aumenta considerablemente
-PalabrasMagicas=                                    Ar'Sen Benerim
+PalabrasMagicas=Ar'Sen Benerim
 HechizeroMsg=Has lanzado Poder Divino sobre
 Targetmsg=te ha lanzado Poder Divino
 PropioMsg=Te sientes más fuerte
 
 Tipo=1
-WAV=77
-Particle=10
+WAV=228
+
 SubeFU=1
 MinFU=15
 MaxFU=25
 
 SubeAG=1
 MinAG=15
-MaxAG=15
-
-SubeHP=1
-MinHP=15
-MaxHP=15
-
+MaxAG=25
+Particle=10
 MinSkill=90
-ManaRequerido=1160
-
-StaRequerido=200
-
+ManaRequerido=460
+StaRequerido=80
+TimeParticula=100
 Target=1
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -1891,7 +1874,7 @@ Target=4
 [HECHIZO75] 'Lvl 9 en adelante
 Nombre=Círculo curativo
 Desc=Curar entre 25 y 35 puntos de salud en un diámetro de 3 tiles.
-PalabrasMagicas=                                       AMAÎRI SANCTIS
+PalabrasMagicas=AMAÎRI SANCTIS
 
 HechizeroMsg=Has lanzado círculo curativo sobre
 TargetMsg=te ha curado.
@@ -1901,72 +1884,70 @@ Tipo=1
 WAV=18
 Particle=17
 SubeHP=1
+TimeParticula=50
 MinHP=25
 MaxHP=35
     
 MinSkill=45
-ManaRequerido=300
+ManaRequerido=350
 StaRequerido=90
 
-hechizodearea=1
-areaefecto=3
+HechizoDeArea=1
+AreaEfecto=3
+Afecta=3
 
-Target=1 'Efecto área
-Afecta=1
+Target=4
 
 [HECHIZO76] 'Lvl 30 en adelante
 Nombre=Semillas de fuego
 Desc=Bellotas y bayas se convierten en bolas de fuego, causando 85 a 120 puntos de daño.
-PalabrasMagicas=                                         Samarin Tar
+PalabrasMagicas=Samarin Tar
 HechizeroMsg=Has lanzado Semillas de fuego sobre
 TargetMsg=lanzo Semillas de fuego sobre vos.
 PropioMsg=Has lanzado Semillas de fuego sobre ti.
-
 Tipo=1
-WAV=56
-Particle=43
+WAV=204
 loops=0
-
-
+Particle=43
+TimeParticula=50
 SubeHP=2
-MinHP=100
-MaxHP=130
-    
+MinHP=60
+MaxHP=70
+Anillo=1
 MinSkill=85
 ManaRequerido=1250
 StaRequerido=100
 
 Target=3
 
-
 [HECHIZO77] 'Lvl 35/36 en adelante
 Nombre=Rayo solar
 Desc=Haz de luz que ciega e inflige 50 a 100 puntos de daño.
-PalabrasMagicas=                                       Pelor In bodem
+PalabrasMagicas=Pelor In bodem
 HechizeroMsg=Has lanzado Rayo solar sobre
 TargetMsg=lanzo Rayo solar sobre vos.
 PropioMsg=Has lanzado Rayo solar sobre ti.
 Tipo=1
 WAV=27
-Particle=44
+Particle=50
 loops=0
 
 SubeHP=2
 MinHP=50
-MaxHP=100
+MaxHP=60
 
 Ceguera=1
     
 MinSkill=100
-ManaRequerido=1350
+ManaRequerido=700
 StaRequerido=125
-
+TimeParticula=10
 Target=3
 
 [HECHIZO78] 'Lvl 33 en adelante
 Nombre=Terremoto
 Desc=Causa entre 50 y 75 puntos de daño en un radio de 3 tiles.
-PalabrasMagicas=                                  Nature Obad-Hai Eventî
+PalabrasMagicas=Nature Obad-Hai Eventî
 
 HechizeroMsg=Has lanzado un terremoto
 TargetMsg=te ha atrapado en el terremoto.
@@ -1978,7 +1959,8 @@ WAV=65
 SubeHP=2
 MinHP=50
 MaxHP=75
-    
+Particle=44
+TimeParticula=5
 MinSkill=95
 ManaRequerido=1180
 StaRequerido=200
@@ -1986,7 +1968,7 @@ StaRequerido=200
 Afecta=3
 hechizodearea=1
 areaefecto=3
-Target=4 'Efecto área
+Target=4'4 'Efecto área
 
 [HECHIZO79]
 Nombre=Resucitar familiar o mascota
@@ -1999,6 +1981,7 @@ PropioMsg=Has resucitado tu familiar.
 Tipo=2
 WAV=55
 ResucitaFamiliar=1
+autolanzar=1
 
 MinSkill=70
 ManaRequerido=600
@@ -2050,6 +2033,7 @@ Target=3
 
 [HECHIZO82] 'lvl 32 en adelante
 Nombre=Intimidar al espíritu
+'Desc=Hechizo deshabilitado temporalmente.
 Desc=Reduce la fuerza y el daño del arma del receptor
 PalabrasMagicas=Mortem
 HechizeroMsg=Has intimidado a
@@ -2058,7 +2042,7 @@ PropioMsg=Te has intimidado
 
 Tipo=1
 WAV=17
-Particle=20
+
 SubeFU=2
 MinFU=25
 MaxFU=35
@@ -2085,8 +2069,8 @@ HechizeroMsg=Te sientes protegido
 
 Tipo=1
 WAV=92
-
-Particle=20
+autolanzar=1
+Particle=19
 SubeFU=1
 MinFU=15
 MaxFU=15
@@ -2094,6 +2078,7 @@ MaxFU=15
 SubeTipo=3
 mindef=+40
 maxdef=+40
+TimeParticula=50
     
 MinSkill=55
 ManaRequerido=360
@@ -2104,47 +2089,47 @@ Target=1
 
 [HECHIZO84] 'Lvl 45 en adelante [EDIT deberia ser catidad / 100, en ese lvl debe tener como 2000 muertes]
 Nombre=Lamento de las almas
-Desc=Hechizo deshabilitado temporalmente.
-'Desc=Causa un daño similar a la cantidad de usuarios que el receptor haya matado
-PalabrasMagicas=                                    Espirictum Nifis
+Desc=Causa un daño totalmente catastrófico, levantando un muro de almas perdidas.
+PalabrasMagicas=Espirictum Nifis Mortem
 HechizeroMsg=Has lanzado Lamento de las almas sobre
 TargetMsg=lanzo Lamento de las almas sobre vos.
 PropioMsg=Has lanzado Lamento de las almas sobre ti.
 Tipo=1
-WAV=27
-Particle=120
-loops=0
-
-
+WAV=98
+Particle=30
+Anillo=1
 SubeHP=2
-MinHP=50
-MaxHP=90
+MinHP=60
+MaxHP=95
     
-MinSkill=85
-ManaRequerido=1250
-StaRequerido=100
-
+MinSkill=100
+ManaRequerido=950
+StaRequerido=180
+TimeParticula=100
 Target=3
+HechizoDeArea=1
+AreaEfecto=4
+Afecta=3
 
 [HECHIZO85] 'lvl 25 en adelante
 Nombre=Inspiracion
 Desc=Hechizo de bardo
 'Desc=Cura malos estados y aumenta la agilidad
-PalabrasMagicas=                                                    Inspiratum
+PalabrasMagicas=Inspiratum
 HechizeroMsg=Has inspirado a
 TargetMsg=te ha inspirado
 PropioMsg=Te has inspirado
 
 Tipo=1
-Particle=2
-WAV=74
-FXgrh=0
+autolanzar=1
+WAV=30
+FXgrh=24
 loops=0
 
 SubeFU=1
 MinFU=12
 MaxFU=16
-
+Particle=20
 SubeAG=1
 MinAG=12
 MaxAG=16
@@ -2152,7 +2137,7 @@ MaxAG=16
 MinSkill=85
 ManaRequerido=720
 StaRequerido=250
-
+TimeParticula=100
 Target=1
 
 
@@ -2165,78 +2150,84 @@ Target=1
 
 [HECHIZO86] 'Nivel 30 en adelante
 Nombre=Asistencia divina
-Desc=Invoca 2 angeles
+'Desc=Hechizo deshabilitado temporalmente.
+Desc=Invoca 2 angeles guardianes que te ayudaran a derrotar a cualquier individuo que se interponga en tu camino.
 PalabrasMagicas=In Enterinum Zôrx
 HechizeroMsg=Has recibido la ayuda de los dioses
 Tipo=4
 WAV=17
-FXgrh=7
+Particle=18
 loops=0
 Invoca=1
+'Invoca=0
 NumNpc=134
+TimeParticula=5
 Cant=2
 MinSkill=75
-ManaRequerido=500
+ManaRequerido=880
 StaRequerido=250
 Target=4
-
 
 [HECHIZO87]
 Nombre=Castigo Divino
 Desc=Causa 75 a 100 puntos de daño a la victima.
-PalabrasMagicas=                                         Abra Ainum
+PalabrasMagicas=Abra Ainum
 HechizeroMsg=Has lanzado Castigo Divino sobre
 TargetMsg=lanzo Castigo Divino vos.
 PropioMsg=Has lanzado Castigo Divino sobre ti.
 Tipo=1
-WAV=8
-Particle=118
+WAV=229
+Particle=25
 loops=0
 Resis=1
-
+TimeParticula=50
 SubeHP=2
-MinHP=50
-MaxHP=70
-    
+MinHP=55
+MaxHP=65
+
 MinSkill=80
 ManaRequerido=570
 StaRequerido=300
+
 Target=3
 
 
 [HECHIZO88] 'Nivel 25 en adelante
 Nombre=Fuente de vida
+'Desc=Hechizo deshabilitado temporalmente.
 Desc=La fuente de vida recupera entre 75 y 100 puntos de vida.
-PalabrasMagicas=                                   Abra Ainum
+PalabrasMagicas=Abra Ainum
 HechizeroMsg=Has lanzado Fuente de Vida sobre
 TargetMsg=lanzo Fuente de vida sobre vos.
 PropioMsg=Has lanzado Fuente de Vida sobre ti.
 Tipo=1
-WAV=70
-Particle=78
+WAV=55
+Particle=27
 loops=0
-
+TimeParticula=50
 SubeHP=1
-MinHP=70
-MaxHP=90
+'SubeHP=0
+MinHP=45
+MaxHP=60
     
 MinSkill=60
-ManaRequerido=500
+ManaRequerido=560
 StaRequerido=150
 
 Target=3
 
 [HECHIZO89] 'Lvl 42 en adelante. Hechizo powa
 Nombre=Honor del Paladín
+'Desc=Hechizo deshabilitado temporalmente.
 Desc=El Honor del Paladín cura malos estados, aumenta vida y atributos
-PalabrasMagicas=                                     Ar'Cos Sanctis Hic
+PalabrasMagicas=Ar'Cos Sanctis Hic
 PropioMsg=Te sientes más fuerte
-
+autolanzar=1
 Tipo=1
-WAV=69
+WAV=251
 Particle=19
 loops=0
-
+TimeParticula=100
 SubeFU=1
 MinFU=35
 MaxFU=35
@@ -2246,8 +2237,8 @@ MinAG=35
 MaxAG=35
 
 SubeHP=1
-MinHP=100
-MaxHP=140
+MinHP=40
+MaxHP=60
 
 MinSkill=100
 ManaRequerido=500
@@ -2257,41 +2248,35 @@ Target=1
 
 [HECHIZO90] 'Lvl 20 en adelante
 Nombre=Prevención del mal
-Desc=Hechizo deshabilitado temporalmente.
-'Desc=Aumenta tu agilidad y te vuelves invisible
+'Desc=Hechizo deshabilitado temporalmente.
+Desc=Aumenta tu agilidad y te vuelves invisible
 PalabrasMagicas=Rohl A'Inc
 PropioMsg=Te has prevenido de los ataques
 
 Tipo=2
 Target=1
-wav=69
-fxgrh=46
+wav=123
+Particle=95
 loops=0
+TimeParticula=5
+Invisibilidad=1
 
-Invisibilidad=0
-
-SubeAG=0
-MinAG=0
-MaxAG=0
-
-'Invisibilidad=1
-
-'SubeAG=1
-'MinAG=35
-'MaxAG=35
+SubeAG=1
+MinAG=35
+MaxAG=35
 
 MinSkill=50
-ManaRequerido=9999
+ManaRequerido=780
 StaRequerido=200
 
 [HECHIZO91] 'Lvl 35 en adelante
 Nombre=Arma mágica
-Desc=Hechizo deshabilitado temporalmente.
-'Desc=Crea momentáneamente un arma que inflige un daño considerable
+'Desc=Hechizo deshabilitado temporalmente.
+Desc=Crea momentáneamente un arma que inflige un daño considerable
 PalabrasMagicas=Sarapiens Herinoenous
 PropioMsg=Un arma mágica se blande en tu mano
 
-Tipo=1
+Tipo=10
 Target=1
 
 Creatipo=1
@@ -2304,7 +2289,7 @@ MinHit=14
 MaxHit=21
 
 MinSkill=87
-ManaRequerido=500
+ManaRequerido=9999
 StaRequerido=200
 
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -2314,14 +2299,14 @@ StaRequerido=200
 '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 [HECHIZO92]
-Nombre=Misil mágico
+Nombre=Misil Mágico
 Desc=Causa 25 a 35 puntos de daño a la victima.
-PalabrasMagicas=                                          INX TO RÂ
-HechizeroMsg=Has lanzado misil mágico sobre
-TargetMsg=lanzo misil mágico sobre vos.
-PropioMsg=Has lanzado misil mágico sobre ti.
+PalabrasMagicas=INX TO RÂ
+HechizeroMsg=Has lanzado Misil Mágico sobre
+TargetMsg=lanzo Misil Mágico sobre vos.
+PropioMsg=Has lanzado Misil Mágico sobre ti.
 Tipo=1
-WAV=83
+WAV=27
 FXgrh=10
 loops=0
 
@@ -2343,23 +2328,23 @@ Target=3
 
 [HECHIZO93]
 Nombre=Descarga eléctrica
-Desc=Causa 35 a 55 puntos de daño a la victima.
-PalabrasMagicas=                                         T'HY KOOOL
-HechizeroMsg=Has lanzado Descarga eléctrica sobre
-TargetMsg=lanzo Descarga eléctrica vos.
-PropioMsg=Has lanzado Descarga eléctrica sobre ti.
+Desc=Causa 35 a 60 puntos de daño a la victima.
+PalabrasMagicas=T'HY KOOOL
+HechizeroMsg=Has lanzado Descarga Eléctrica sobre
+TargetMsg=lanzo Descarga Eléctrica sobre vos.
+PropioMsg=Has lanzado Descarga Eléctrica sobre ti.
 Tipo=1
-WAV=109
-Particle=49
+WAV=234
 loops=0
 Resis=1
+Particle=49
 
 SubeHP=2
 MinHP=35
 MaxHP=55
-    
+TimeParticula=40
 MinSkill=65
-ManaRequerido=200
+ManaRequerido=250
 StaRequerido=60
 
 Target=3
@@ -2372,24 +2357,24 @@ Target=3
 
 [HECHIZO94]
 Nombre=Ráfaga ígnea
-Desc=Causa 80 a 110 puntos de daño a la victima.
-PalabrasMagicas=                                          IGNÎS XAR
+Desc=Causa 55 a 70 puntos de daño a la victima.
+PalabrasMagicas=IGNÎS XAR
 HechizeroMsg=Has lanzado Ráfaga ígnea sobre
 TargetMsg=lanzo Ráfaga ígnea vos.
 PropioMsg=Has lanzado Ráfaga ígnea sobre ti.
 Tipo=1
-WAV=83
-Particle=11
+WAV=242
 loops=0
 Resis=1
-
+Particle=11
+TimeParticula=5
 SubeHP=2
 MinHP=55
-MaxHP=55
+MaxHP=65
     
-MinSkill=100
-ManaRequerido=700
-StaRequerido=150
+MinSkill=75
+ManaRequerido=720
+StaRequerido=95
 
 Target=3
 
@@ -2442,13 +2427,13 @@ Target=4
 [HECHIZO97]
 Nombre=Bomba mágica
 Desc=Causa 10 a 30 puntos de daño en un área de dos tiles.
-PalabrasMagicas=                                                                                                                              Drac né Xar
+PalabrasMagicas=Drac né Xar
 HechizeroMsg=Has lanzado Bomba mágica sobre
 TargetMsg=lanzó Bomba mágica sobre vos.
 PropioMsg=Has lanzado Bomba mágica sobre ti.
 Tipo=1
-WAV=138
-FXgrh=50
+WAV=129
+FXgrh=49
 loops=0
 
 
@@ -2460,7 +2445,7 @@ MinSkill=38
 ManaRequerido=50
 StaRequerido=20
 
-Target=4
+Target=3
 Afecta=3
 HechizoDeArea=1
 AreaEfecto=2
@@ -2484,165 +2469,408 @@ MaxHP=110
 Target=3
 
 [HECHIZO99]
-Nombre=Remover Invisibilidad
-Desc=Remueva la invisibilidad en una area de 8 tiles
-HechizeroMsg=Has Removido la Invisibilidad a
+Nombre=Mata Elementales/Bardos
+Desc=Causa 150 a 180 puntos de daño a la victima.
+PalabrasMagicas=Mohil Mortem
+HechizeroMsg=Has lanzado Mata Elementales/Bardos sobre
 TargetMsg=
 PropioMsg=
-Particle=82
-Tipo=2
-WAV=82
-fxgrh=0
-ManaRequerido=950
-StaRequerido=250
-Target=4
-RemueveInvisibilidadParcial=1
+Tipo=1
+WAV=66
+FXgrh=20
+loops=0
 
-'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+SubeHP=2
+MinHP=300
+MaxHP=400
+    
+MinSkill=100
+ManaRequerido=5000
+StaRequerido=0
+
+Target=2
 
 [HECHIZO100]
-Nombre=Llamarada
-Desc=Causa 80 a 110 puntos de daño a la victima.
-PalabrasMagicas=IGNÎS XAR
-HechizeroMsg=Has lanzado Llamarada sobre
-TargetMsg=lanzo Llamarada vos.
-PropioMsg=Has lanzado Llamarada sobre ti.
+Nombre=Curar heridas graves GMs
+Desc=Curar heridas graves, restaura La vida entera.
+PalabrasMagicas=Toma toda la Vida.
+
+HechizeroMsg=Has curado a
+TargetMsg=te ha curado.
+PropioMsg=Te has curado.
+
 Tipo=1
-WAV=26
-Particle=83
+WAV=18
+FXgrh=9
 loops=0
-Resis=1
 
-SubeHP=2
-MinHP=100
-MaxHP=100
+SubeHP=1
+MinHP=5000
+MaxHP=5000
     
-MinSkill=100
-ManaRequerido=700
-StaRequerido=150
-
+MinSkill=0
+ManaRequerido=0
+StaRequerido=5
 Target=3
+
 
 [HECHIZO101]
-Nombre=Tempestad
-Desc=Causa 80 a 110 puntos de daño a la victima.
-PalabrasMagicas=IGNÎS XAR
-HechizeroMsg=Has lanzado Tempestad ígnea sobre
-TargetMsg=lanzo Tempestad vos.
-PropioMsg=Has lanzado Tempestad sobre ti.
+Nombre=Apocalipsis GMs
+Desc=Causa 50 a 90 puntos de daño en un area de cuatro tiles.
+PalabrasMagicas=Rahma Nañarak O'al '^GM^'
+HechizeroMsg=Has lanzado Apocalipsis GM sobre
+TargetMsg=lanzo Apocalipsis GM sobre vos.
+PropioMsg=Has lanzado Apocalipsis GM sobre ti.
 Tipo=1
-WAV=26
-Particle=91
+WAV=65
 loops=0
-Resis=1
-
+Particle=115
+TimeParticula=5
 SubeHP=2
-MinHP=100
-MaxHP=100
+MinHP=500
+MaxHP=900
     
-MinSkill=100
-ManaRequerido=700
-StaRequerido=150
+MinSkill=80
+ManaRequerido=1
+StaRequerido=1
 
 Target=3
+HechizoDeArea=1
+AreaEfecto=4
+Afecta=3
 
-[HECHIZO121]
-Nombre=Campeon De Eventos
-Desc=Furia de Uhkrul, aumenta la fuerza y la agilidad del objetivo criticamente.
-PalabrasMagicas=
+'[HECHIZO102]
+'Nombre=Rayo Arcano
+'Desc=Causa 40 a 55 puntos de daño a la victima.
+'PalabrasMagicas=XÄR NÏ RÖ
+'HechizeroMsg=Has lanzado Rayo Arcano sobre
+'TargetMsg=lanzo Rayo Arcano sobre vos.
+'PropioMsg=Has lanzado Rayo Arcano sobre ti.
+'Tipo=1
+'WAV=163
+'Particle=102
+'loops=0
+'TimeParticula=50
+'SubeHP=2
+'MinHP=40
+'MaxHP=55
+'MinSkill=43
+'ManaRequerido=75
+'StaRequerido=30
+'Target=3
 
-HechizeroMsg=Le has lanzado Campeon De Eventos a
-TargetMsg=te ha lanzado Campeon De Eventos.
-PropioMsg=Te has lanzado Campeon De Eventos.
-
+ 
+[HECHIZO102] 
+Nombre=Fuego elemental ' amarillo
+Desc=Hechizo de NPC.
 Tipo=1
-
-WAV=73
-Particle=97
-
-SubeFU=1
-MinFU=12
-MaxFU=16
-
-SubeAG=1
-MinAG=12
-MaxAG=16
-    
-MinSkill=85
-ManaRequerido=720
-StaRequerido=250
-
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
 Target=1
+TimeParticula=50
+Particle=98
+WAV=163
 
-[HECHIZO122]
-Nombre=Desolucion
-Desc=Causa 80 a 110 puntos de daño a la victima.
-PalabrasMagicas=PreFuk Hu´se
-HechizeroMsg=Has lanzado Desolucion sobre
-TargetMsg=lanzo Desolucion vos.
-PropioMsg=Has lanzado Desolucion sobre ti.
+
+
+[HECHIZO103] 
+Nombre=Fuego elemental '(azul)
+Desc=Hechizo de NPC.
 Tipo=1
-WAV=26
-Particle=116
-loops=0
-Resis=1
-
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
 SubeHP=2
-MinHP=100
-MaxHP=100
-    
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
 MinSkill=100
-ManaRequerido=700
-StaRequerido=150
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=100
+WAV=163 
 
-Target=3
-
-[HECHIZO123]
-Nombre=Azote Lóbrego
-Desc=Causa 80 a 110 puntos de daño a la victima.
-PalabrasMagicas=PreFuk Hu´se
-HechizeroMsg=Has lanzado Azote Lóbrego sobre
-TargetMsg=lanzo Azote Lóbrego vos.
-PropioMsg=Has lanzado Azote Lóbrego sobre ti.
+[HECHIZO104] 
+Nombre=Fuego elemental ' marron
+Desc=Hechizo de NPC.
 Tipo=1
-WAV=26
-Particle=114
-loops=0
-Resis=1
-
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
 SubeHP=2
-MinHP=100
-MaxHP=100
-    
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
 MinSkill=100
-ManaRequerido=700
-StaRequerido=150
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=99
+WAV=163 
 
-Target=3
-
-[HECHIZO124]
-Nombre=Azote
-Desc=Causa 80 a 110 puntos de daño a la victima.
-PalabrasMagicas=
-HechizeroMsg=Has lanzado Azote sobre
-TargetMsg=lanzo Azote vos.
-PropioMsg=Has lanzado Azote sobre ti.
+[HECHIZO105] 
+Nombre=Flama Elemental Gris
+Desc=Hechizo de NPC.
 Tipo=1
-WAV=26
-Particle=122
-loops=0
-Resis=1
-
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
 SubeHP=2
-MinHP=105
-MaxHP=120
-    
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
 MinSkill=100
-ManaRequerido=700
-StaRequerido=150
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=94
+WAV=163 
+ 
 
-Target=3
+[HECHIZO106] 
+Nombre=Fuego elemental '(fucsia)
+Desc=Hechizo de NPC.
+Tipo=1
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=101
+WAV=163
+
+[HECHIZO107] 
+Nombre=Fuego elemental '(verde)
+Desc=Hechizo de NPC.
+Tipo=1
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=102
+WAV=163 
+
+[HECHIZO108] 
+Nombre=Flama Elemental Verde Oscuro
+Desc=Hechizo de NPC.
+Tipo=1
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=103
+WAV=163 
+
+
+[HECHIZO109] 
+Nombre=Hechizo de Garveloth.
+Desc=Hechizo de NPC.
+Tipo=1
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=103
+WAV=163 
+
+
+[HECHIZO110] 
+Nombre=Hechizo de Castigador
+Desc=Hechizo de NPC.
+Tipo=1
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=103
+WAV=163 
+
+
+[HECHIZO111] 
+Nombre=Hechizo de Fantasma.
+Desc=Hechizo de NPC.
+Tipo=1
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=103
+WAV=163 
+
+
+
+[HECHIZO112] 
+Nombre=Castigo Ilusorio
+PalabrasMagicas=Poen'capti
+Desc=Hechizo de NPC.
+Tipo=1
+WAV=32
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=90
+WAV=163 
+
+
+[HECHIZO113] 
+Nombre=Hechizo de Alma cautiva
+Desc=Hechizo de NPC.
+Tipo=1
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=103
+WAV=163 
+
+[HECHIZO114] 
+Nombre=NoName 'Lo tira el vampiro, vampiresa
+PalabrasMagicas=Poen'capti
+Desc=Hechizo de NPC.
+Tipo=1
+WAV=32
+SubeFU=0
+MinFU=0
+MaxFU=0
+SubeAG=0
+MinAG=0
+MaxAG=0
+SubeHP=2
+MinHP=40
+MaxHP=55
+MinSta=0
+MaxSta=0
+MinSkill=100
+ManaRequerido=1440
+StaRequerido=100
+Target=1
+TimeParticula=50
+Particle=90
+WAV=163 
+
+
+''''91,92, 93 hechizero de agua, tierra, aire

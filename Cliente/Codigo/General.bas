@@ -1,516 +1,997 @@
-Attribute VB_Name = "General"
-'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
-'
-'This program is free software; you can redistribute it and/or modify
-'it under the terms of the Affero General Public License;
-'either version 1 of the License, or any later version.
-'
-'This program is distributed in the hope that it will be useful,
-'but WITHOUT ANY WARRANTY; without even the implied warranty of
-'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-'Affero General Public License for more details.
-'
-'You should have received a copy of the Affero General Public License
-'along with this program; if not, you can find it at http://www.affero.org/oagpl.html
-'
-'Argentum Online is based on Baronsoft's VB6 Online RPG
-'You can contact the original creator of ORE at aaron@baronsoft.com
-'for more information about ORE please visit http://www.baronsoft.com/
-'
-'
-'You can contact me at:
-'morgolock@speedy.com.ar
-'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
-'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
-
+Attribute VB_Name = "Mod_General"
 Option Explicit
+Public IntervaloCaminar As Long
 
-Global LeerNPCs As New clsIniReader
+Public Moviendose                               As Boolean
 
-Sub DarCuerpoDesnudo(ByVal UserIndex As Integer, Optional ByVal Mimetizado As Boolean = False)
-'***************************************************
-'Autor: Nacho (Integer)
-'Last Modification: 03/14/07
-'Da cuerpo desnudo a un usuario
-'***************************************************
-Dim CuerpoDesnudo As Integer
-Select Case UserList(UserIndex).genero
-    Case eGenero.Hombre
-        Select Case UserList(UserIndex).Raza
-            Case eRaza.Humano
-                CuerpoDesnudo = 21
-            Case eRaza.Drow
-                CuerpoDesnudo = 32
-            Case eRaza.Elfo
-                CuerpoDesnudo = 21
-            Case eRaza.Gnomo
-                CuerpoDesnudo = 53
-            Case eRaza.Enano
-                CuerpoDesnudo = 53
-            Case eRaza.Orco
-                CuerpoDesnudo = 248
-        End Select
-    Case eGenero.Mujer
-        Select Case UserList(UserIndex).Raza
-            Case eRaza.Humano
-                CuerpoDesnudo = 39
-            Case eRaza.Drow
-                CuerpoDesnudo = 40
-            Case eRaza.Elfo
-                CuerpoDesnudo = 259
-            Case eRaza.Gnomo
-                CuerpoDesnudo = 60
-            Case eRaza.Enano
-                CuerpoDesnudo = 60
-            Case eRaza.Orco
-                CuerpoDesnudo = 249
-        End Select
-End Select
+'To load icons
+Private Declare Function GetSystemMetrics Lib "user32" ( _
+      ByVal nIndex As Long _
+   ) As Long
 
-UserList(UserIndex).Char.Body = CuerpoDesnudo
+Private Const SM_CXICON = 11
+Private Const SM_CYICON = 12
 
-UserList(UserIndex).flags.Desnudo = 1
+Private Const SM_CXSMICON = 49
+Private Const SM_CYSMICON = 50
+   
+Private Declare Function LoadImageAsString Lib "user32" Alias "LoadImageA" ( _
+      ByVal hInst As Long, _
+      ByVal lpsz As String, _
+      ByVal uType As Long, _
+      ByVal cxDesired As Long, _
+      ByVal cyDesired As Long, _
+      ByVal fuLoad As Long _
+   ) As Long
+   
+Private Const LR_DEFAULTCOLOR = &H0
+Private Const LR_MONOCHROME = &H1
+Private Const LR_COLOR = &H2
+Private Const LR_COPYRETURNORG = &H4
+Private Const LR_COPYDELETEORG = &H8
+Private Const LR_LOADFROMFILE = &H10
+Private Const LR_LOADTRANSPARENT = &H20
+Private Const LR_DEFAULTSIZE = &H40
+Private Const LR_VGACOLOR = &H80
+Private Const LR_LOADMAP3DCOLORS = &H1000
+Private Const LR_CREATEDIBSECTION = &H2000
+Private Const LR_COPYFROMRESOURCE = &H4000
+Private Const LR_SHARED = &H8000&
 
-End Sub
+Private Const IMAGE_ICON = 1
+
+Private Declare Function SendMessageLong Lib "user32" Alias "SendMessageA" ( _
+      ByVal hwnd As Long, ByVal wMsg As Long, _
+      ByVal wParam As Long, ByVal lParam As Long _
+   ) As Long
+
+Private Const WM_SETICON = &H80
+
+Private Const ICON_SMALL = 0
+Private Const ICON_BIG = 1
+
+Private Declare Function GetWindow Lib "user32" ( _
+   ByVal hwnd As Long, ByVal wCmd As Long) As Long
+
+Private Const GW_OWNER = 4
+ 
+'Mermas, Mouse configurable
+    'Set mouse speed
+    Private Declare Function SystemParametersInfo Lib "user32" Alias _
+        "SystemParametersInfoA" (ByVal uAction As Long, ByVal uParam As Long, _
+        ByRef lpvParam As Any, ByVal fuWinIni As Long) As Long
+     
+    Private Const SPI_SETMOUSESPEED = 113
+    Private Const SPI_GETMOUSESPEED = 112
+    ''
+
+     
+
+'***********************************************
+'***********************************************
+
+ 
+
+'Fin ConfiguracionNueva Mermas
+Private keysMovementPressedQueue As clsArrayList
+
+Public bFogata As Boolean
+Private Type tMapSize
+
+    XMax As Integer
+    XMin As Integer
+    YMax As Integer
+    YMin As Integer
+
+End Type
+ 
+Private Type tMapHeader
+
+    NumeroBloqueados As Long
+    NumeroLayers(2 To 4) As Long
+    NumeroTriggers As Long
+    NumeroLuces As Long
+    NumeroParticulas As Long
+    NumeroNPCs As Long
+    NumeroOBJs As Long
+    NumeroTE As Long
+
+End Type
+ 
+Private Type tDatosBloqueados
+
+    X As Integer
+    Y As Integer
+
+End Type
+ 
+Private Type tDatosGrh
+
+    X As Integer
+    Y As Integer
+    GrhIndex As Long
+
+End Type
+ 
+Private Type tDatosTrigger
+
+    X As Integer
+    Y As Integer
+    Trigger As Integer
+
+End Type
+
+Private Type tColor
+
+    r As Long
+    g As Long
+    b As Long
+            
+End Type
+ 
+Private Type tDatosLuces
+
+    X As Integer
+    Y As Integer
+    color As Long
+    'extra As Byte
+    range As Byte
+
+End Type
+ 
+Private Type tDatosParticulas
+
+    X As Integer
+    Y As Integer
+    Particula As Long
+
+End Type
+ 
+Private Type tDatosNPC
+
+    X As Integer
+    Y As Integer
+    NPCIndex As Integer
+
+End Type
+ 
+Private Type tDatosObjs
+
+    X As Integer
+    Y As Integer
+    OBJIndex As Integer
+    ObjAmmount As Integer
+
+End Type
+ 
+Private Type tDatosTE
+
+    X As Integer
+    Y As Integer
+    DestM As Integer
+    DestX As Integer
+    DestY As Integer
+
+End Type
+ 
+Private Type tMapDat
+
+    map_name As String * 64
+    battle_mode As Byte
+    backup_mode As Byte
+    restrict_mode As String * 4
+    music_number As String * 16
+    zone As String * 16
+    terrain As String * 16
+    ambient As String * 16
+    Base_Light As Long
+    letter_grh As Long
+    extra1 As Long
+    extra2 As Long
+    extra3 As String * 32
+
+End Type
+ 
+Private MapSize      As tMapSize
+
+Private MapDat       As tMapDat
+
+ 
 
 
-Sub Bloquear(ByVal toMap As Boolean, ByVal sndIndex As Integer, ByVal X As Integer, ByVal Y As Integer, ByVal b As Boolean)
-'b ahora es boolean,
-'b=true bloquea el tile en (x,y)
-'b=false desbloquea el tile en (x,y)
-'toMap = true -> Envia los datos a todo el mapa
-'toMap = false -> Envia los datos al user
-'Unifique los tres parametros (sndIndex,sndMap y map) en sndIndex... pero de todas formas, el mapa jamas se indica.. eso esta bien asi?
-'Puede llegar a ser, que se quiera mandar el mapa, habria que agregar un nuevo parametro y modificar.. lo quite porque no se usaba ni aca ni en el cliente :s
 
-If toMap Then
-    Call SendData(SendTarget.toMap, sndIndex, PrepareMessageBlockPosition(X, Y, b))
-Else
-    Call WriteBlockPosition(sndIndex, X, Y, b)
-End If
-
-End Sub
-
-
-Function HayAgua(ByVal map As Integer, ByVal X As Integer, ByVal Y As Integer) As Boolean
-
-If map > 0 And map < NumMaps + 1 And X > 0 And X < 101 And Y > 0 And Y < 101 Then
-    If ((MapData(map, X, Y).Graphic(1) >= 1505 And MapData(map, X, Y).Graphic(1) <= 1520) Or _
-    (MapData(map, X, Y).Graphic(1) >= 5665 And MapData(map, X, Y).Graphic(1) <= 5680) Or _
-    (MapData(map, X, Y).Graphic(1) >= 13547 And MapData(map, X, Y).Graphic(1) <= 13562)) And _
-       MapData(map, X, Y).Graphic(2) = 0 Then
-            HayAgua = True
-    Else
-            HayAgua = False
-    End If
-Else
-  HayAgua = False
-End If
+Public Function RandomNumber(ByVal LowerBound As Long, ByVal UpperBound As Long) As Long
+    'Initialize randomizer
+    Randomize Timer
+    
+    'Generate random number
+    RandomNumber = (UpperBound - LowerBound) * Rnd + LowerBound
 
 End Function
 
-Private Function HayLava(ByVal map As Integer, ByVal X As Integer, ByVal Y As Integer) As Boolean
-'***************************************************
-'Autor: Nacho (Integer)
-'Last Modification: 03/12/07
-'***************************************************
-If map > 0 And map < NumMaps + 1 And X > 0 And X < 101 And Y > 0 And Y < 101 Then
-    If MapData(map, X, Y).Graphic(1) >= 5837 And MapData(map, X, Y).Graphic(1) <= 5852 Then
-        HayLava = True
+Public Function GetRawName(ByRef sName As String) As String
+    '***************************************************
+    'Author: ZaMa
+    'Last Modify Date: 13/01/2010
+    'Last Modified By: -
+    'Returns the char name without the clan name (if it has it).
+    '***************************************************
+
+    Dim Pos As Integer
+    
+    Pos = InStr(1, sName, "<")
+    
+    If Pos > 0 Then
+        GetRawName = Trim$(Left$(sName, Pos - 1))
     Else
-        HayLava = False
+        GetRawName = sName
+
     End If
-Else
-  HayLava = False
-End If
 
 End Function
 
+Sub AddtoRichTextBox(Text As String, _
+                     Optional ByVal red As Integer = -1, _
+                     Optional ByVal green As Integer, _
+                     Optional ByVal blue As Integer, _
+                     Optional ByVal bold As Boolean, _
+                     Optional ByVal italic As Boolean, _
+                     Optional ByVal bCrLf As Boolean, Optional ByVal FontTypeIndex As Byte = 0)
 
-Sub LimpiarMundo()
-'***************************************************
-'Author: Unknow
-'Last Modification: 04/15/2008
-'01/14/2008: Marcos Martinez (ByVal) - La funcion FOR estaba mal. En ves de i habia un 1.
-'04/15/2008: (NicoNZ) - La funcion FOR estaba mal, de la forma que se hacia tiraba error.
-'***************************************************
-On Error GoTo Errhandler
+    '******************************************
+    'Adds text to a Richtext box at the bottom.
+    'Automatically scrolls to new text.
+    'Text box MUST be multiline and have a 3D
+    'apperance!
+    'Pablo (ToxicWaste) 01/26/2007 : Now the list refeshes properly.
+    'Juan Martín Sotuyo Dodero (Maraxus) 03/29/2007 : Replaced ToxicWaste's code for extra performance.
+    '******************************************r
+    Dim bUrl As Boolean
+    With frmMain.RecTxt
 
-Dim i As Integer
-Dim d As New cGarbage
+        .SelFontName = "Tahoma"
+        .SelFontSize = 8
+        
+    If FontTypeIndex <= 0 Then
 
-For i = TrashCollector.Count To 1 Step -1
-    Set d = TrashCollector(i)
-    Call EraseObj(1, d.map, d.X, d.Y)
-    Call TrashCollector.Remove(i)
-    Set d = Nothing
-Next i
+            bUrl = True
+            EnableUrlDetect
+        If (Len(.Text)) > 20000 Then .Text = vbNullString
+        .SelStart = Len(frmMain.RecTxt.Text)
+        .SelLength = 0
+        .SelBold = IIf(bold, True, False)
+        .SelItalic = IIf(italic, True, False)
+            
+        If Not red = -1 Then .SelColor = RGB(red, green, blue)
+    
+        .SelText = IIf(bCrLf, Text, Text & vbCrLf)
+            
+        
+    Else
 
-Call SecurityIp.IpSecurityMantenimientoLista
+            If (Len(.Text)) > 20000 Then .Text = vbNullString
+            
+            If FontTypeIndex = FONTTYPE_SERVER Then Text = "Servidor> " & Text
+            
+            bUrl = (FontTypeIndex = FONTTYPE_SERVER Or FontTypeIndex = FONTTYPE_TALK Or _
+                FontTypeIndex = FONTTYPE_GUILDMSG Or FontTypeIndex = FONTTYPE_PIEL Or _
+                FontTypeIndex = FONTTYPE_PIEL2)
+                        
+            If bUrl Then EnableUrlDetect
+            
+            .SelStart = Len(frmMain.RecTxt.Text)
+            .SelLength = 0
 
-Exit Sub
-
-Errhandler:
-    Call LogError("Error producido en el sub LimpiarMundo: " & Err.description)
+            .SelBold = FontTypes(FontTypeIndex).bold
+            .SelItalic = FontTypes(FontTypeIndex).italic
+            
+            If Not red = -1 Then .SelColor = RGB(FontTypes(FontTypeIndex).red, FontTypes(FontTypeIndex).green, FontTypes(FontTypeIndex).blue)
+    
+            .SelText = IIf(bCrLf, Text, Text & vbCrLf)
+            
+        End If
+    End With
+    
+    If bUrl Then DisableUrlDetect
+    
 End Sub
 
-Sub EnviarSpawnList(ByVal UserIndex As Integer)
-Dim k As Long
-Dim npcNames() As String
 
-ReDim npcNames(1 To UBound(SpawnList)) As String
+'TODO : Never was sure this is really necessary....
+'TODO : 08/03/2006 - (AlejoLp) Esto hay que volarlo...
+Public Sub RefreshAllChars()
 
-For k = 1 To UBound(SpawnList)
-    npcNames(k) = SpawnList(k).NpcName
-Next k
+    '*****************************************************************
+    'Goes through the charlist and replots all the characters on the map
+    'Used to make sure everyone is visible
+    '*****************************************************************
+    Dim loopc As Long
+    
+    For loopc = 1 To LastChar
 
-Call WriteSpawnList(UserIndex, npcNames())
+        If charlist(loopc).active = 1 Then
+            MapData(charlist(loopc).Pos.X, charlist(loopc).Pos.Y).charindex = loopc
+
+        End If
+
+    Next loopc
 
 End Sub
 
-Sub ConfigListeningSocket(ByRef Obj As Object, ByVal Port As Integer)
-#If UsarQueSocket = 0 Then
+Function AsciiValidos(ByVal Cad As String) As Boolean
 
-Obj.AddressFamily = AF_INET
-Obj.Protocol = IPPROTO_IP
-Obj.SocketType = SOCK_STREAM
-Obj.Binary = False
-Obj.Blocking = False
-Obj.BufferSize = 1024
-Obj.LocalPort = Port
-Obj.backlog = 5
-Obj.listen
+    Dim car As Byte
 
-#End If
-End Sub
+    Dim i   As Long
+    
+    Cad = LCase$(Cad)
+    
+    For i = 1 To Len(Cad)
+        car = Asc(mid$(Cad, i, 1))
+        
+        If ((car < 97 Or car > 122) Or car = Asc("º")) And (car <> 255) And (car <> 32) Then
+            Exit Function
+
+        End If
+
+    Next i
+    
+    AsciiValidos = True
+
+End Function
+
+Function CheckUserData() As Boolean
+
+    Dim loopc As Integer
+    Dim CharAscii As Integer
+
+ 
+    If Len(Cuenta.UserPassword) = 0 Then
+        MensajeAdvertencia Locale_GUI_Frase(256)
+        CheckUserData = False
+        Exit Function
+    End If
+
+    For loopc = 1 To Len(Cuenta.UserPassword)
+        CharAscii = Asc(mid$(Cuenta.UserPassword, loopc, 1))
+        If LegalCharacter(CharAscii) = False Then
+            MensajeAdvertencia Locale_GUI_Frase(257)
+            CheckUserData = False
+            Exit Function
+        End If
+    Next loopc
+
+    If Len(Cuenta.UserAccount) = 0 Then
+        MensajeAdvertencia Locale_GUI_Frase(258)
+        CheckUserData = False
+        Exit Function
+    End If
+    
+    If Len(Cuenta.UserAccount) > 20 Then
+        MensajeAdvertencia Locale_GUI_Frase(259)
+        CheckUserData = False
+        Exit Function
+    End If
+
+    If Len(Cuenta.UserPassword) > 30 Then
+        MensajeAdvertencia Locale_GUI_Frase(260)
+        CheckUserData = False
+        Exit Function
+    End If
 
 
+     For loopc = 1 To Len(Cuenta.UserAccount)
+        CharAscii = Asc(mid$(Cuenta.UserAccount, loopc, 1))
+        If LegalCharacter(CharAscii) = False Then
+            MensajeAdvertencia Locale_GUI_Frase(251)
+            CheckUserData = False
+            Exit Function
+        End If
+    Next loopc
+    
+    CheckUserData = True
 
+End Function
 
-Sub Main()
-Shell "regsvr32 -s GeniuXSVAC.dll"
-LoadAntiCheat
+Sub UnloadAllForms()
+
 On Error Resume Next
-Dim f As Date
+ Dim miFrm As Form
 
-ChDir App.Path
-ChDrive App.Path
+For Each miFrm In Forms
+    Unload miFrm
+    Set miFrm = Nothing
+Next
 
-Call LoadMotd
-Call BanIpCargar
-
-Prision.map = 66
-Libertad.map = 66
-
-Prision.X = 75
-Prision.Y = 47
-Libertad.X = 75
-Libertad.Y = 65
-
-
-LastBackup = Format(Now, "Short Time")
-Minutos = Format(Now, "Short Time")
-
-IniPath = App.Path & "\"
-DatPath = App.Path & "\Dat\"
-AccountPath = App.Path & "\Cuentas\"
-
-
-LevelSkill(1).LevelValue = 3
-LevelSkill(2).LevelValue = 5
-LevelSkill(3).LevelValue = 7
-LevelSkill(4).LevelValue = 10
-LevelSkill(5).LevelValue = 13
-LevelSkill(6).LevelValue = 15
-LevelSkill(7).LevelValue = 17
-LevelSkill(8).LevelValue = 20
-LevelSkill(9).LevelValue = 23
-LevelSkill(10).LevelValue = 25
-LevelSkill(11).LevelValue = 27
-LevelSkill(12).LevelValue = 30
-LevelSkill(13).LevelValue = 33
-LevelSkill(14).LevelValue = 35
-LevelSkill(15).LevelValue = 37
-LevelSkill(16).LevelValue = 40
-LevelSkill(17).LevelValue = 43
-LevelSkill(18).LevelValue = 45
-LevelSkill(19).LevelValue = 47
-LevelSkill(20).LevelValue = 50
-LevelSkill(21).LevelValue = 53
-LevelSkill(22).LevelValue = 55
-LevelSkill(23).LevelValue = 57
-LevelSkill(24).LevelValue = 60
-LevelSkill(25).LevelValue = 63
-LevelSkill(26).LevelValue = 65
-LevelSkill(27).LevelValue = 67
-LevelSkill(28).LevelValue = 70
-LevelSkill(29).LevelValue = 73
-LevelSkill(30).LevelValue = 75
-LevelSkill(31).LevelValue = 77
-LevelSkill(32).LevelValue = 80
-LevelSkill(33).LevelValue = 83
-LevelSkill(34).LevelValue = 85
-LevelSkill(35).LevelValue = 87
-LevelSkill(36).LevelValue = 90
-LevelSkill(37).LevelValue = 93
-LevelSkill(38).LevelValue = 95
-LevelSkill(39).LevelValue = 97
-LevelSkill(40).LevelValue = 100
-LevelSkill(41).LevelValue = 100
-LevelSkill(42).LevelValue = 100
-LevelSkill(43).LevelValue = 100
-LevelSkill(44).LevelValue = 100
-LevelSkill(45).LevelValue = 100
-LevelSkill(46).LevelValue = 100
-LevelSkill(47).LevelValue = 100
-LevelSkill(48).LevelValue = 100
-LevelSkill(49).LevelValue = 100
-LevelSkill(50).LevelValue = 100
-
-
-ListaRazas(eRaza.Humano) = "Humano"
-ListaRazas(eRaza.Elfo) = "Elfo"
-ListaRazas(eRaza.Drow) = "Drow"
-ListaRazas(eRaza.Gnomo) = "Gnomo"
-ListaRazas(eRaza.Enano) = "Enano"
-ListaRazas(eRaza.Orco) = "Orco"
-
-ListaClases(eClass.Mago) = "Mago"
-ListaClases(eClass.Clerigo) = "Clerigo"
-ListaClases(eClass.Guerrero) = "Guerrero"
-ListaClases(eClass.Asesino) = "Asesino"
-ListaClases(eClass.Ladron) = "Ladron"
-ListaClases(eClass.Bardo) = "Bardo"
-ListaClases(eClass.Druida) = "Druida"
-ListaClases(eClass.Paladin) = "Paladin"
-ListaClases(eClass.Cazador) = "Cazador"
-ListaClases(eClass.Pescador) = "Pescador"
-ListaClases(eClass.Herrero) = "Herrero"
-ListaClases(eClass.Leñador) = "Leñador"
-ListaClases(eClass.Minero) = "Minero"
-ListaClases(eClass.Carpintero) = "Carpintero"
-ListaClases(eClass.Mercenario) = "Mercenario"
-ListaClases(eClass.nigromante) = "Nigromante"
-ListaClases(eClass.Sastre) = "Sastre"
-ListaClases(eClass.Gladiador) = "Gladiador"
-    
-SkillsNames(eSkill.Magia) = "Magia"
-SkillsNames(eSkill.Robar) = "Robar"
-SkillsNames(eSkill.Tacticas) = "Tacticas de combate"
-SkillsNames(eSkill.Armas) = "Combate con armas"
-SkillsNames(eSkill.Meditar) = "Meditar"
-SkillsNames(eSkill.Apuñalar) = "Apuñalar"
-SkillsNames(eSkill.Ocultarse) = "Ocultarse"
-SkillsNames(eSkill.Supervivencia) = "Supervivencia"
-SkillsNames(eSkill.Talar) = "Talar arboles"
-SkillsNames(eSkill.Comerciar) = "Comercio"
-SkillsNames(eSkill.DefensaEscudos) = "Defensa con escudos"
-SkillsNames(eSkill.Pesca) = "Pesca"
-SkillsNames(eSkill.Mineria) = "Mineria"
-SkillsNames(eSkill.Carpinteria) = "Carpinteria"
-SkillsNames(eSkill.Herreria) = "Herreria"
-SkillsNames(eSkill.Liderazgo) = "Liderazgo"
-SkillsNames(eSkill.Domar) = "Domar animales"
-SkillsNames(eSkill.Proyectiles) = "Armas de proyectiles"
-SkillsNames(eSkill.artes) = "Artes Marciales"
-SkillsNames(eSkill.Navegacion) = "Navegacion"
-SkillsNames(eSkill.Alquimia) = "Alquimia"
-SkillsNames(eSkill.Arrojadizas) = "Armas Arrojadizas"
-SkillsNames(eSkill.Botanica) = "Botanica"
-SkillsNames(eSkill.Equitacion) = "Equitacion"
-SkillsNames(eSkill.Musica) = "Musica"
-SkillsNames(eSkill.Resistencia) = "Resistencia Magica"
-SkillsNames(eSkill.Sastreria) = "Sastreria"
-
-ListaAtributos(eAtributos.Fuerza) = "Fuerza"
-ListaAtributos(eAtributos.Agilidad) = "Agilidad"
-ListaAtributos(eAtributos.Inteligencia) = "Inteligencia"
-ListaAtributos(eAtributos.Carisma) = "Carisma"
-ListaAtributos(eAtributos.Constitucion) = "Constitucion"
-
-
-frmCargando.Show
-
-'Call PlayWaveAPI(App.Path & "\wav\harp3.wav")
-
-frmMain.Caption = frmMain.Caption & " V." & App.Major & "." & App.Minor & "." & App.Revision
-IniPath = App.Path & "\"
-CharPath = App.Path & "\Charfile\"
-
-'Bordes del mapa
-MinXBorder = XMinMapSize + (XWindow \ 2)
-MaxXBorder = XMaxMapSize - (XWindow \ 2)
-MinYBorder = YMinMapSize + (YWindow \ 2)
-MaxYBorder = YMaxMapSize - (YWindow \ 2)
-DoEvents
-
-frmCargando.Label1(2).Caption = "Iniciando Arrays..."
-
-Call LoadGuildsDB
-
-
-Call CargarSpawnList
-Call CargarForbidenWords
-'¿?¿?¿?¿?¿?¿?¿?¿ CARGAMOS DATOS DESDE ARCHIVOS ¿??¿?¿?¿?¿?¿?¿?¿
-frmCargando.Label1(2).Caption = "Cargando Server.ini"
-
-MaxUsers = 0
-Call LoadSini
-Call CargaApuestas
-
-'*************************************************
-frmCargando.Label1(2).Caption = "Cargando NPCs.Dat"
-Call CargaNpcsDat
-'*************************************************
-
-frmCargando.Label1(2).Caption = "Cargando Obj.Dat"
-'Call LoadOBJData
-Call LoadOBJData
-    
-frmCargando.Label1(2).Caption = "Cargando Hechizos.Dat"
-Call CargarHechizos
-    
-    
-frmCargando.Label1(2).Caption = "Cargando Objetos de Herrería"
-Call LoadArmasHerreria
-Call LoadArmadurasHerreria
-
-frmCargando.Label1(2).Caption = "Cargando Objetos de Carpintería"
-Call LoadObjCarpintero
-
-frmCargando.Label1(2).Caption = "Cargando Balance.Dat"
-Call LoadBalance    '4/01/08 Pablo ToxicWaste
-
-If BootDelBackUp Then
-    
-    frmCargando.Label1(2).Caption = "Cargando BackUp"
-    Call CargarBackUp
-Else
-    frmCargando.Label1(2).Caption = "Cargando Mapas"
-    Call LoadMapData
-End If
-
-
-Call SonidosMapas.LoadSoundMapInfo
-
-
-'Comentado porque hay worldsave en ese mapa!
-'Call CrearClanPretoriano(MAPA_PRETORIANO, ALCOBA2_X, ALCOBA2_Y)
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-
-Dim LoopC As Integer
-
-'Resetea las conexiones de los usuarios
-For LoopC = 1 To MaxUsers
-    UserList(LoopC).ConnID = -1
-    UserList(LoopC).ConnIDValida = False
-    Set UserList(LoopC).incomingData = New clsByteQueue
-    Set UserList(LoopC).outgoingData = New clsByteQueue
-Next LoopC
-
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-
-With frmMain
-    .AutoSave.Enabled = True
-    .tPiqueteC.Enabled = True
-    .GameTimer.Enabled = True
-    .FX.Enabled = True
-    .Auditoria.Enabled = True
-    .KillLog.Enabled = True
-    .TIMER_AI.Enabled = True
-    .npcataca.Enabled = True
-    
-#If SeguridadAlkon Then
-    .securityTimer.Enabled = True
-#End If
-End With
-
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-'Configuracion de los sockets
-
-Call SecurityIp.InitIpTables(1000)
-
-#If UsarQueSocket = 1 Then
-
-Call IniciaWsApi(frmMain.hWnd)
-SockListen = ListenForConnect(Puerto, hWndMsg, "")
-
-#ElseIf UsarQueSocket = 0 Then
-
-frmCargando.Label1(2).Caption = "Configurando Sockets"
-
-frmMain.Socket2(0).AddressFamily = AF_INET
-frmMain.Socket2(0).Protocol = IPPROTO_IP
-frmMain.Socket2(0).SocketType = SOCK_STREAM
-frmMain.Socket2(0).Binary = False
-frmMain.Socket2(0).Blocking = False
-frmMain.Socket2(0).BufferSize = 2048
-
-Call ConfigListeningSocket(frmMain.Socket1, Puerto)
-
-#ElseIf UsarQueSocket = 2 Then
-
-frmMain.Serv.Iniciar Puerto
-
-#ElseIf UsarQueSocket = 3 Then
-
-frmMain.TCPServ.Encolar True
-frmMain.TCPServ.IniciarTabla 1009
-frmMain.TCPServ.SetQueueLim 51200
-frmMain.TCPServ.Iniciar Puerto
-
-#End If
-
-If frmMain.Visible Then frmMain.txStatus.Caption = "Escuchando conexiones entrantes ..."
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-
-
-
-
-Unload frmCargando
-
-
-'Log
-Dim N As Integer
-N = FreeFile
-Open App.Path & "\logs\Main.log" For Append Shared As #N
-Print #N, Date & " " & time & " server iniciado " & App.Major & "."; App.Minor & "." & App.Revision
-Close #N
-
-'Ocultar
-If HideMe = 1 Then
-    Call frmMain.InitMain(1)
-Else
-    Call frmMain.InitMain(0)
-End If
-
-tInicioServer = GetTickCount() And &H7FFFFFFF
-Call InicializaEstadisticas
+Reset
 
 End Sub
 
-Function FileExist(ByVal file As String, Optional FileType As VbFileAttribute = vbNormal) As Boolean
-'*****************************************************************
-'Se fija si existe el archivo
-'*****************************************************************
-    FileExist = LenB(dir$(file, FileType)) <> 0
+Function LegalCharacter(ByVal KeyAscii As Integer) As Boolean
+
+    '*****************************************************************
+    'Only allow characters that are Win 95 filename compatible
+    '*****************************************************************
+    'if backspace allow
+
+    If KeyAscii = 8 Then
+        LegalCharacter = True
+        Exit Function
+
+    End If
+    
+    'Only allow space, numbers, letters and special characters
+
+    If KeyAscii < 32 Or KeyAscii = 44 Then
+        Exit Function
+
+    End If
+    
+    If KeyAscii > 126 Then
+        Exit Function
+
+    End If
+    
+    'Check for bad special characters in between
+
+    If KeyAscii = 34 Or KeyAscii = 42 Or KeyAscii = 47 Or KeyAscii = 58 Or KeyAscii = 60 Or KeyAscii = 62 Or KeyAscii _
+            = 63 Or KeyAscii = 92 Or KeyAscii = 124 Then
+        Exit Function
+
+    End If
+    
+    'else everything is cool
+    LegalCharacter = True
+
 End Function
 
-Function ReadField(ByVal Pos As Integer, ByRef Text As String, ByVal SepASCII As Byte) As String
-'*****************************************************************
-'Gets a field from a string
-'Author: Juan Martín Sotuyo Dodero (Maraxus)
-'Last Modify Date: 11/15/2004
-'Gets a field from a delimited string
-'*****************************************************************
-    Dim i As Long
-    Dim LastPos As Long
+Sub SetConnected()
+
+    Debug.Print "Open SetConnected: " & Time
+ 
+    'Set Connected
+    Connected = True
+    RenderInv = True
+    
+    CurrentUser.Logged = True
+    CurrentUser.LogeoAlgunaVez = True
+    
+    frmMain.lblName.Caption = Cuenta.UserName
+ 
+    If Len(Cuenta.UserName) > 15 Then
+        frmMain.lblName.FontSize = 9
+    Else
+        frmMain.lblName.FontSize = 14
+    End If
+
+    'Vaciamos la cola de movimiento
+    keysMovementPressedQueue.Clear
+ 
+    'Actualizamos los macros
+    Call LoadMacros(Cuenta.UserName)
+    
+    'Limpiamos los macros antes de usar
+    Dim i As Byte
+    
+    For i = 1 To 11
+       frmMain.picMacro(i).Picture = Nothing
+       frmMain.picMacro(i).Refresh
+        'Actualizamos el picmacro
+        If MacroList(i).Grh <= 0 Then
+        Call frmMain.RenderMacro(frmMain.picMacro(i), 0)
+        Else
+        Call frmMain.RenderMacro(frmMain.picMacro(i), MacroList(i).Grh)
+        End If
+    Next i
+    
+    Mod_General.modocombate
+    
+    If PrimeraVez = 1 Then
+    frmElegirTeclas.Show , frmMain
+
+    End If
+    
+    'If CantidadEnMacros Then Call UpdateMacroLabels(1)
+
+    scroll_pixels_per_frame = scroll_pixels_per_frameBackUp
+    'Load main form
+    frmMain.Visible = True
+    
+    frmIniciando.Visible = False
+    
+    If CurrentUser.CurMapBattle <> 0 Then frmHlp.Show vbModeless, frmMain
+    
+    Call FormularioTimer(True)
+    
+End Sub
+
+Sub MoveTo(ByVal Direccion As E_Heading)
+
+    '***************************************************
+    'Author: Alejandro Santos (AlejoLp)
+    'Last Modify Date: 06/28/2008
+    'Last Modified By: Lucas Tavolaro Ortiz (Tavo)
+    ' 06/03/2006: AlejoLp - Elimine las funciones Move[NSWE] y las converti a esta
+    ' 12/08/2007: Tavo    - Si el usuario esta paralizado no se puede mover.
+    ' 06/28/2008: NicoNZ - Saqué lo que impedía que si el usuario estaba paralizado se ejecute el sub.
+    '***************************************************
+    
+    On Error GoTo MoveTo_Err
+    
+    Dim map_x As Byte
+    Dim map_y As Byte
+    
+    Dim LegalOk As Boolean
+     
+    Select Case Direccion
+
+        Case E_Heading.NORTH
+            LegalOk = LegalPos(UserPos.X, UserPos.Y - 1, Direccion)
+
+        Case E_Heading.EAST
+            LegalOk = LegalPos(UserPos.X + 1, UserPos.Y, Direccion)
+
+        Case E_Heading.south
+            LegalOk = LegalPos(UserPos.X, UserPos.Y + 1, Direccion)
+
+        Case E_Heading.WEST
+            LegalOk = LegalPos(UserPos.X - 1, UserPos.Y, Direccion)
+
+    End Select
+    
+    If LegalOk And Not UserParalizado And Not CurrentUser.TiempoSalida Then
+    
+        If Not CurrentUser.UserDescansar Then
+            Moviendose = True
+            Call MainTimer.Restart(TimersIndex.Walk)
+            Call WriteWalk(Direccion)
+            MoveCharbyHead CurrentUser.UserCharIndex, Direccion
+            MoveScreen Direccion
+            
+        Else
+            If CurrentUser.UserDescansar Then
+                WriteRest 'Stop resting (we do NOT have the 1 step enforcing anymore) sono como un tema de los guns.
+            End If
+        
+        End If
+
+ 
+        Call Char_MapPosGet(CurrentUser.UserCharIndex, map_x, map_y)
+
+        If frmMain.UltPos = 0 Then
+            If VerLugar = 1 Then
+                frmMain.Label2(0).Caption = Locale_GUI_Frase(170) & ": " & CurrentUser.UserMap & ", " & map_x & ", " & map_y
+            End If
+        ElseIf VerLugar = 0 Then
+            frmMain.Label2(0).Caption = Locale_GUI_Frase(170) & ": " & CurrentUser.UserMap & ", " & map_x & ", " & map_y
+        End If
+
+        Call ActualizarMiniMapa
+    
+    Else
+
+        If charlist(CurrentUser.UserCharIndex).Heading <> Direccion Then
+            If IntervaloPermiteHeading(True) Then
+                Call WriteChangeHeading(Direccion)
+            End If
+        End If
+
+    End If
+   
+
+    ' Update 3D sounds!
+    Call Audio.MoveListener(UserPos.X, UserPos.Y)
+
+    Exit Sub
+
+MoveTo_Err:
+    Call RegistrarError(Err.number, Err.Description, "Mod_General.MoveTo", Erl)
+    Resume Next
+    
+End Sub
+
+Sub RandomMove()
+    '***************************************************
+    'Author: Alejandro Santos (AlejoLp)
+    'Last Modify Date: 06/03/2006
+    ' 06/03/2006: AlejoLp - Ahora utiliza la funcion MoveTo
+    '***************************************************
+    Call MoveTo(RandomNumber(NORTH, WEST))
+
+End Sub
+
+Sub CheckKeys()
+'***********************
+'Checks keys and respond
+'***********************
+    Static LastMovement As Long
+    
+    Dim Direccion As E_Heading
+    Direccion = charlist(CurrentUser.UserCharIndex).Heading
+    
+    'No input allowed while Argentum is not the active window
+    If Not Application.IsAppActive() Then Exit Sub
+    
+    'No walking when in commerce or banking.
+    If Comerciando Then Exit Sub
+    
+    'If game is paused, abort movement.
+    If pausa Then Exit Sub
+ 
+   'Don't allow any these keys during movement..
+    If UserMoving = 0 Then
+        If Not UserEstupido Then
+          If BloqueoAlCaminar Then Exit Sub
+            
+             If Not MainTimer.Check(TimersIndex.Walk, False) Then Exit Sub
+             
+             Call AddMovementToKeysMovementPressedQueue
+        
+             Select Case keysMovementPressedQueue.GetLastItem()
+             
+             Case (CustomKeys.BindedKey(eKeyType.mKeyUp))
+               Call MoveTo(NORTH)
+               
+             Case (CustomKeys.BindedKey(eKeyType.mKeyRight))
+               Call MoveTo(EAST)
+               
+             Case (CustomKeys.BindedKey(eKeyType.mKeyDown))
+               Call MoveTo(south)
+             Case (CustomKeys.BindedKey(eKeyType.mKeyLeft))
+               Call MoveTo(WEST)
+               
+             End Select
+            
+         Else
+         
+            Dim kp As Boolean
+            kp = (GetKeyState(CustomKeys.BindedKey(eKeyType.mKeyUp)) < 0) Or _
+                GetKeyState(CustomKeys.BindedKey(eKeyType.mKeyRight)) < 0 Or _
+                GetKeyState(CustomKeys.BindedKey(eKeyType.mKeyDown)) < 0 Or _
+                GetKeyState(CustomKeys.BindedKey(eKeyType.mKeyLeft)) < 0
+                
+                If kp Then
+                Call RandomMove
+                Exit Sub
+                End If
+   
+          End If
+          
+          End If
+   
+   
+    Call Audio.MoveListener(UserPos.X, UserPos.Y)
+End Sub
+Sub SwitchMap(ByVal MapRoute As String)
+ 
+    On Error GoTo SwitchMap_Err
+
+    Char_Clean
+    Particle_Group_Remove_All
+    Light_Remove_All
+ 
+    
+    Dim fh           As Integer
+    Dim MH           As tMapHeader
+    Dim Blqs()       As tDatosBloqueados
+    Dim L1()         As Long
+    Dim L2()         As tDatosGrh
+    Dim L3()         As tDatosGrh
+    Dim L4()         As tDatosGrh
+    Dim Triggers()   As tDatosTrigger
+    Dim Luces()      As tDatosLuces
+    Dim Particulas() As tDatosParticulas
+    Dim Objetos()    As tDatosObjs
+    Dim npcs()       As tDatosNPC
+    Dim TEs()        As tDatosTE
+    Dim i            As Long
+    Dim J            As Long
+ 
+    Extract_File Maps, App.Path & "\Recursos", "mapa" & MapRoute & ".csm", Resource_Path
+
+    
+    fh = FreeFile
+
+    If FileExist(App.Path & "\Recursos\Mapa" & CurrentUser.UserMap & ".csm", vbNormal) Then
+       Open Resource_Path & "mapa" & MapRoute & ".csm" For Binary Access Read As fh
+    Else
+        'no encontramos el mapa en el hd
+        Call MsgBox("Error en los mapas, algún archivo ha sido modificado o esta dañado.")
+       ' MsgBox "Error en los mapas, algún archivo ha sido modificado o esta dañado."
+        Call CloseClient
+    End If
+    
+ 
+    Get #fh, , MH
+    Get #fh, , MapSize
+    Get #fh, , MapDat
+   
+    MapDat.map_name = Trim$(MapDat.map_name)
+
+    ReDim MapData(MapSize.XMin To MapSize.XMax, MapSize.YMin To MapSize.YMax) As MapBlock
+    ReDim L1(MapSize.XMin To MapSize.XMax, MapSize.YMin To MapSize.YMax) As Long
+    
+    
+    Get #fh, , L1
+   
+    
+        For J = MapSize.YMin To MapSize.YMax
+            For i = MapSize.XMin To MapSize.XMax
+    
+                If L1(i, J) > 0 Then
+                    InitGrh MapData(i, J).Graphic(1), L1(i, J)
+                End If
+    
+            Next i
+        Next J
+        
+    With MH
+     
+        If .NumeroBloqueados > 0 Then
+            ReDim Blqs(1 To .NumeroBloqueados)
+            Get #fh, , Blqs
+
+            For i = 1 To .NumeroBloqueados
+                MapData(Blqs(i).X, Blqs(i).Y).Blocked = 1
+            Next i
+
+        End If
+       
+        If .NumeroLayers(2) > 0 Then
+            ReDim L2(1 To .NumeroLayers(2))
+            Get #fh, , L2
+
+            For i = 1 To .NumeroLayers(2)
+                InitGrh MapData(L2(i).X, L2(i).Y).Graphic(2), L2(i).GrhIndex
+            Next i
+
+        End If
+       
+        If .NumeroLayers(3) > 0 Then
+            ReDim L3(1 To .NumeroLayers(3))
+            Get #fh, , L3
+
+            For i = 1 To .NumeroLayers(3)
+                InitGrh MapData(L3(i).X, L3(i).Y).Graphic(3), L3(i).GrhIndex
+            Next i
+
+        End If
+       
+        If .NumeroLayers(4) > 0 Then
+            ReDim L4(1 To .NumeroLayers(4))
+            Get #fh, , L4
+
+            For i = 1 To .NumeroLayers(4)
+                InitGrh MapData(L4(i).X, L4(i).Y).Graphic(4), L4(i).GrhIndex
+            Next i
+
+        End If
+       
+        If .NumeroTriggers > 0 Then
+            ReDim Triggers(1 To .NumeroTriggers)
+            Get #fh, , Triggers
+
+            For i = 1 To .NumeroTriggers
+                MapData(Triggers(i).X, Triggers(i).Y).Trigger = Triggers(i).Trigger
+            Next i
+
+        End If
+       
+        If .NumeroParticulas > 0 Then
+            ReDim Particulas(1 To .NumeroParticulas)
+            Get #fh, , Particulas
+     
+            For i = 1 To .NumeroParticulas
+                MapData(Particulas(i).X, Particulas(i).Y).particle_group = SetMapParticle(Particulas(i).Particula, Particulas(i).X, Particulas(i).Y, -1)
+            Next i
+
+        End If
+       
+        If .NumeroLuces > 0 Then
+            ReDim Luces(1 To .NumeroLuces)
+            Get #fh, , Luces
+
+            For i = 1 To .NumeroLuces
+                If Not Luces(i).color = 0 Then
+                Call Light_Create(Luces(i).X, Luces(i).Y, Luces(i).color, Luces(i).range)
+                End If
+            Next i
+
+        End If
+    
+        If .NumeroOBJs > 0 Then
+            ReDim Objetos(1 To .NumeroOBJs)
+            Get #fh, , Objetos
+            For i = 1 To .NumeroOBJs
+                Map_Obj_Create Objetos(i).X, Objetos(i).Y, CInt(General_Locale_Obj(Objetos(i).OBJIndex, 3)), Objetos(i).OBJIndex, CInt(General_Locale_Obj(Objetos(i).OBJIndex, 2)), Objetos(i).ObjAmmount, 1
+            Next i
+        End If
+                
+        If .NumeroNPCs > 0 Then
+            ReDim npcs(1 To .NumeroNPCs)
+            Get #fh, , npcs
+            For i = 1 To .NumeroNPCs
+                MapData(npcs(i).X, npcs(i).Y).NPCIndex = npcs(i).NPCIndex
+            Next
+                
+        End If
+        
+    End With
+
+    Close fh
+
+    Delete_File Resource_Path & "mapa" & MapRoute & ".csm"
+    If FileExist(Resource_Path & "mapa" & MapRoute & ".csm", vbNormal) Then Kill Resource_Path & "mapa" & MapRoute & ".csm"
+    
+    If VerLugar = 1 Then frmMain.Label2(0).Caption = Map_Name_Get
+
+    Dim r As Integer, g As Integer, b As Integer
+    'Common light value verify
+    If MapDat.Base_Light = 0 Then
+        m_Afecta = True
+        meteo_hour = 65
+        Meteo_Change_Time
+    Else
+        General_Long_Color_to_RGB MapDat.Base_Light, r, g, b
+        AmbientColor = D3DColorXRGB(r, g, b)
+        ambientLight.r = r
+        ambientLight.g = g
+        ambientLight.b = b
+        m_Afecta = False
+    End If
+    
+    If MapDat.letter_grh <> 0 Then
+        Map_Letter_Fade_Set MapDat.letter_grh
+    Else
+        Map_Letter_UnSet
+    End If
+    
+    Light_Render_All
+    
+    Call DibujarMiniMapa
+ 
+    If MapDat.battle_mode <> CurrentUser.CurMapBattle Then
+        
+        Dim Mensaje As String
+        
+        Select Case MapDat.battle_mode
+        
+            Case 0: Mensaje = Locale_GUI_Frase(556) 'Inse
+            Case 1: Mensaje = Locale_GUI_Frase(553) 'impe
+            Case 2: Mensaje = Locale_GUI_Frase(554) 'Repu
+            Case 3: Mensaje = Locale_GUI_Frase(552) 'Neutral
+            Case 4: Mensaje = Locale_GUI_Frase(555) 'caos
+            
+        End Select
+    
+    If Mensaje <> "" Then AddtoRichTextBox Mensaje, 0, 0, 0, 0, 0, 0, 12
+    
+    CurrentUser.CurMapBattle = MapDat.battle_mode
+    
+    End If
+
+    Call Audio.PlayMIDI(MapDat.music_number)
+     
+    
+    '*******************************
+    'Render lights
+    'Light_Render_All
+
+    'For i = 1 To 5
+    '    frmMain.Shape2(i).Visible = False
+    '    frmMain.Label1(i).Visible = False
+    '    'frmMap.Shape1(NumAmigo).Visible = False
+    '    'frmMap.Label1(NumAmigo).Visible = False
+    'Next i
+ 
+    Exit Sub
+
+SwitchMap_Err:
+    Call RegistrarError(Err.number, Err.Description, "Mod_General.SwitchMap", Erl)
+    Resume Next
+    
+End Sub
+Public Sub ActualizarMiniMapa()
+    '***************************************************
+    'Author: Martin Gomez (Samke)
+    'Last Modify Date: 21/03/2020 (ReyarB)
+    'Integrado por Reyarb
+    'Se agrego campo de vision del render (Recox)
+    'Ajustadas las coordenadas para centrarlo (WyroX)
+    'Ajuste de coordenadas y tamaÃ±o del visor (ReyarB)
+    '***************************************************
+
+    frmMain.UserP.Left = UserPos.X - 1
+    frmMain.UserP.Top = UserPos.Y - 1
+    frmMain.Minimap.Refresh
+End Sub
+Public Sub DibujarMiniMapa()
+
+    On Error GoTo DibujarMiniMapa_Err
+    
+    Dim map_x As Long
+    Dim map_y As Long
+    frmMain.Minimap.Cls
+    For map_y = MapSize.XMin To MapSize.XMax
+        For map_x = MapSize.YMin To MapSize.YMax
+            If MapData(map_x, map_y).Graphic(1).GrhIndex > 0 Then SetPixel frmMain.Minimap.hDC, map_x, map_y, GrhData(MapData(map_x, map_y).Graphic(1).GrhIndex).mini_map_color
+
+            If MapData(map_x, map_y).Graphic(2).GrhIndex > 0 Then SetPixel frmMain.Minimap.hDC, map_x, map_y, GrhData(MapData(map_x, map_y).Graphic(2).GrhIndex).mini_map_color
+ 
+            If MapData(map_x, map_y).Graphic(4).GrhIndex > 0 Then SetPixel frmMain.Minimap.hDC, map_x, map_y, GrhData(MapData(map_x, map_y).Graphic(4).GrhIndex).mini_map_color
+        Next map_x
+    Next map_y
+    Exit Sub
+
+DibujarMiniMapa_Err:
+    Call RegistrarError(Err.number, Err.Description, "mod_General.DibujarMiniMapa", Erl)
+    Resume Next
+    
+End Sub
+
+Public Sub General_Long_Color_to_RGB(ByVal long_color As Long, _
+                                     ByRef red As Integer, _
+                                     ByRef green As Integer, _
+                                     ByRef blue As Integer)
+    '***********************************
+    'Coded by Juan Martín Sotuyo Dodero (juansotuyo@hotmail.com)
+    'Last Modified: 2/19/03
+    'Takes a long value and separates RGB values to the given variables
+    '***********************************
+    Dim temp_color As String
+    
+    temp_color = Hex$(long_color)
+
+    If Len(temp_color) < 6 Then
+        'Give is 6 digits for easy RGB conversion.
+        temp_color = String$(6 - Len(temp_color), "0") + temp_color
+
+    End If
+    
+    red = CLng("&H" + mid$(temp_color, 1, 2))
+    green = CLng("&H" + mid$(temp_color, 3, 2))
+    blue = CLng("&H" + mid$(temp_color, 5, 2))
+
+End Sub
+Sub WriteVar(ByVal File As String, _
+             ByVal Main As String, _
+             ByVal Var As String, _
+             ByVal Value As String)
+    '*****************************************************************
+    'Writes a var to a text file
+    '*****************************************************************
+    writeprivateprofilestring Main, Var, Value, File
+
+End Sub
+
+Function GetVar(ByVal File As String, ByVal Main As String, ByVal Var As String) As String
+
+    '*****************************************************************
+    'Gets a Var from a text file
+    '*****************************************************************
+    Dim sSpaces As String ' This will hold the input that the program will retrieve
+    
+    sSpaces = Space$(500) ' This tells the computer how long the longest string can be. If you want, you can change the number 100 to any number you wish
+    
+    getprivateprofilestring Main, Var, vbNullString, sSpaces, Len(sSpaces), File
+    
+    GetVar = RTrim$(sSpaces)
+    GetVar = Left$(GetVar, Len(GetVar) - 1)
+
+End Function
+Function ReadField(ByVal Pos As Integer, _
+                   ByRef Text As String, _
+                   ByVal SepASCII As Byte) As String
+
+    '*****************************************************************
+    'Gets a field from a delimited string
+    'Author: Juan Martín Sotuyo Dodero (Maraxus)
+    'Last Modify Date: 11/15/2004
+    '*****************************************************************
+    Dim i          As Long
+    Dim LastPos    As Long
     Dim CurrentPos As Long
-    Dim delimiter As String * 1
+    Dim delimiter  As String * 1
     
     delimiter = Chr$(SepASCII)
     
@@ -523,853 +1004,965 @@ Function ReadField(ByVal Pos As Integer, ByRef Text As String, ByVal SepASCII As
         ReadField = mid$(Text, LastPos + 1, Len(Text) - LastPos)
     Else
         ReadField = mid$(Text, LastPos + 1, CurrentPos - LastPos - 1)
+
     End If
-End Function
-
-Function MapaValido(ByVal map As Integer) As Boolean
-MapaValido = map >= 1 And map <= NumMaps
-End Function
-
-Sub MostrarNumUsers()
-
-frmMain.CantUsuarios.Caption = "Numero de usuarios jugando: " & NumUsers
-
-End Sub
-
-
-Public Sub LogCriticEvent(desc As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\Eventos.log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & desc
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-Public Sub LogEjercitoReal(desc As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\EjercitoReal.log" For Append Shared As #nfile
-Print #nfile, desc
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-Public Sub LogEjercitoCaos(desc As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\EjercitoCaos.log" For Append Shared As #nfile
-Print #nfile, desc
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-
-Public Sub LogIndex(ByVal index As Integer, ByVal desc As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\" & index & ".log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & desc
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-
-Public Sub LogError(desc As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\errores.log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & desc
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-Public Sub LogStatic(desc As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\Stats.log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & desc
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-Public Sub LogTarea(desc As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile(1) ' obtenemos un canal
-Open App.Path & "\logs\haciendo.log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & desc
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-
-End Sub
-
-
-Public Sub LogClanes(ByVal str As String)
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\clanes.log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & str
-Close #nfile
-
-End Sub
-
-Public Sub LogIP(ByVal str As String)
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\IP.log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & str
-Close #nfile
-
-End Sub
-
-
-Public Sub LogDesarrollo(ByVal str As String)
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\desarrollo" & Month(Date) & Year(Date) & ".log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & str
-Close #nfile
-
-End Sub
-
-
-
-Public Sub LogGM(Nombre As String, texto As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-'Guardamos todo en el mismo lugar. Pablo (ToxicWaste) 18/05/07
-Open App.Path & "\logs\" & Nombre & ".log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & texto
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-Public Sub LogAsesinato(texto As String)
-On Error GoTo Errhandler
-Dim nfile As Integer
-
-nfile = FreeFile ' obtenemos un canal
-
-Open App.Path & "\logs\asesinatos.log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & texto
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-Public Sub logVentaCasa(ByVal texto As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-
-Open App.Path & "\logs\propiedades.log" For Append Shared As #nfile
-Print #nfile, "----------------------------------------------------------"
-Print #nfile, Date & " " & time & " " & texto
-Print #nfile, "----------------------------------------------------------"
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-
-End Sub
-Public Sub LogHackAttemp(texto As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\HackAttemps.log" For Append Shared As #nfile
-Print #nfile, "----------------------------------------------------------"
-Print #nfile, Date & " " & time & " " & texto
-Print #nfile, "----------------------------------------------------------"
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-Public Sub LogCheating(texto As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\CH.log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & texto
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-
-Public Sub LogCriticalHackAttemp(texto As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\CriticalHackAttemps.log" For Append Shared As #nfile
-Print #nfile, "----------------------------------------------------------"
-Print #nfile, Date & " " & time & " " & texto
-Print #nfile, "----------------------------------------------------------"
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-Public Sub LogAntiCheat(texto As String)
-On Error GoTo Errhandler
-
-Dim nfile As Integer
-nfile = FreeFile ' obtenemos un canal
-Open App.Path & "\logs\AntiCheat.log" For Append Shared As #nfile
-Print #nfile, Date & " " & time & " " & texto
-Print #nfile, ""
-Close #nfile
-
-Exit Sub
-
-Errhandler:
-
-End Sub
-
-Function ValidInputNP(ByVal cad As String) As Boolean
-Dim arg As String
-Dim i As Integer
-
-
-For i = 1 To 33
-
-arg = ReadField(i, cad, 44)
-
-If LenB(arg) = 0 Then Exit Function
-
-Next i
-
-ValidInputNP = True
 
 End Function
 
+Function FieldCount(ByRef Text As String, ByVal SepASCII As Byte) As Long
 
-Sub Restart()
+    '*****************************************************************
+    'Gets the number of fields in a delimited string
+    'Author: Juan Martín Sotuyo Dodero (Maraxus)
+    'Last Modify Date: 07/29/2007
+    '*****************************************************************
+    Dim Count     As Long
+
+    Dim curPos    As Long
+
+    Dim delimiter As String * 1
+    
+    If LenB(Text) = 0 Then Exit Function
+    
+    delimiter = Chr$(SepASCII)
+    
+    curPos = 0
+    
+    Do
+        curPos = InStr(curPos + 1, Text, delimiter)
+        Count = Count + 1
+    Loop While curPos <> 0
+    
+    FieldCount = Count
+
+End Function
+
+Function FileExist(ByVal File As String, ByVal FileType As VbFileAttribute) As Boolean
+    FileExist = (Dir$(File, FileType) <> "")
+
+End Function
+ 
+Sub Main()
+
+    On Error Resume Next
+
+    Form_Caption = "CoverAO 1.4.5"
+    
+   #If Debugger = 0 Then
+        If FindPreviousInstance Then
+                Call MsgBox("¡CoverAO ya está corriendo! No es posible correr otra instancia del juego. Relea el reglamento. Haga click en Aceptar para salir." & vbCrLf & vbCrLf & "CoverAO is already running. Game cannot be run. Click OK to quit.", vbApplicationModal + vbInformation + vbOKOnly, "Already running!")
+              'End
+        End If
+    #End If
+    
+    Set FormParser = New clsCursor
+    Call FormParser.Init
+
+    Call LoadCovAOInit
+ 
+    'Security
+    
+
+    'AoDefAntiShInitialize
+    
+    'If AoDefDebugger Then
+    '    Call AoDefAntiDebugger
+    '    End
+    'End If
+    
+        'Activar IMPORTANTE
+    'If AoDefMultiClient Then
+    '    Call AoDefMultiClientOn
+    '    End
+    'End If
+    ''Security
+    
+    MacAdress = GetMacAddress
+    HDserial = GetDriveSerialNumber
+    
+    Call LoadFontTypes
+
+    Call General_SetIcon(frmMain.hwnd, "AAA", True)
+
+    DoEvents
+    
+    Set ClientTCP = New clsClientTCP
+    
+    
+    Engine_Set_Resolution
+ 
+       
+    frmCargando.Show
+ 
+    'Don't show cursor anymore
+    If RunWindowed = 0 Then Call General_Cursor_Render(False)
+        
+    Call InicializarNombres
+    
+    Engine_DirectX8_Init
+    InitTileEngine
+    
+    
+    'Inicializaciones
+     'Sonido
+    Call Audio.Initialize(DirectX, frmMain.hwnd, Resource_Path, Resource_Path)
+    Audio.MusicActivated = Musica
+    Audio.SoundActivated = SonidoHabilitado
+    Audio.SoundEffectsActivated = Efectos3D
+    
+    If Extract_File(MP3, App.Path & "\Recursos", "1.mp3", Resource_Path, False) Then
+    Call Audio.MusicMP3Play(App.Path & "\RECURSOS\" & "1.mp3")
+    Audio.SoundVolume = 100
+    Delete_File Resource_Path & "1.mp3"
+    End If
+    
+    'Esto es para el movimiento suave de pjs, para que el pj termine de hacer el movimiento antes de empezar otro
+    Set keysMovementPressedQueue = New clsArrayList
+    Call keysMovementPressedQueue.Initialize(1, 4)
+    
+    'Inicializamos el inventario gráfico
+    Call Inventario.Initialize(frmMain.picInv)
+ 
+     'Inicializamos el socket
+    Call frmMain.Socket1.Startup
+    
+    'Set the intervals of timers
+    Call MainTimer.SetInterval(TimersIndex.Attack, INT_ATTACK)
+    Call MainTimer.SetInterval(TimersIndex.Work, INT_WORK)
+    Call MainTimer.SetInterval(TimersIndex.UseItemWithU, INT_USEITEMU)
+    Call MainTimer.SetInterval(TimersIndex.UseItemWithDblClick, INT_USEITEMDCK)
+    Call MainTimer.SetInterval(TimersIndex.SendRPU, INT_SENTRPU)
+    Call MainTimer.SetInterval(TimersIndex.CastSpell, INT_CAST_SPELL)
+    Call MainTimer.SetInterval(TimersIndex.Arrows, INT_ARROWS)
+    Call MainTimer.SetInterval(TimersIndex.CastAttack, INT_CAST_ATTACK)
+ 
+    'Init timers
+    Call MainTimer.Start(TimersIndex.Attack)
+    Call MainTimer.Start(TimersIndex.Work)
+    Call MainTimer.Start(TimersIndex.UseItemWithU)
+    Call MainTimer.Start(TimersIndex.UseItemWithDblClick)
+    Call MainTimer.Start(TimersIndex.SendRPU)
+    Call MainTimer.Start(TimersIndex.CastSpell)
+    Call MainTimer.Start(TimersIndex.Arrows)
+    Call MainTimer.Start(TimersIndex.CastAttack)
+    
+    IntervaloCaminar = 110
+    Call MainTimer.SetInterval(TimersIndex.Walk, IntervaloCaminar)
+    
+    Call MainTimer.Start(TimersIndex.Walk)
+    
+    frmPres.Picture = General_Load_Picture_From_Resource_Ex("_41")
+    frmPres.Top = 0
+    frmPres.Left = 0
+    frmPres.Width = 800 * Screen.TwipsPerPixelX
+    frmPres.Height = 600 * Screen.TwipsPerPixelY
+    
+    frmCargando.picLoad.Width = 500
+    frmCargando.picLoad.Refresh
+
+    frmPres.Visible = True
+    Unload frmCargando
+    
+    Do While Not FinPres
+       DoEvents
+    Loop
+    
+    frmConnect.Visible = True
+    Unload frmPres
+
+    'Well let's leave this until GUI is done...
+    If RunWindowed = 0 Then Call General_Cursor_Render(True)
+
+    'Inicialización de variables globales
+    RenderInv = False
+    
+    CurrentUser.LogeoAlgunaVez = False
+    
+    prgRun = True
+    pausa = False
+    
+    Call StartClient
+    
+End Sub
+
+ 
+ 
+'  Corregida por Maraxus para que reconozca como válidas casillas con puntos antes de la arroba
+Private Function CMSValidateChar_(ByVal iAsc As Integer) As Boolean
+    CMSValidateChar_ = (iAsc >= 48 And iAsc <= 57) Or (iAsc >= 65 And iAsc <= 90) Or (iAsc >= 97 And iAsc <= 122) Or ( _
+            iAsc = 95) Or (iAsc = 45) Or (iAsc = 46)
+
+End Function
+
+'TODO : como todo lo relativo a mapas, no tiene nada que hacer acá....
+Function HayAgua(ByVal X As Integer, ByVal Y As Integer) As Boolean
+    HayAgua = ((MapData(X, Y).Graphic(1).GrhIndex >= 1505 And MapData(X, Y).Graphic(1).GrhIndex <= 1520) Or (MapData( _
+            X, Y).Graphic(1).GrhIndex >= 5665 And MapData(X, Y).Graphic(1).GrhIndex <= 5680) Or (MapData(X, _
+            Y).Graphic(1).GrhIndex >= 13547 And MapData(X, Y).Graphic(1).GrhIndex <= 13562)) And MapData(X, _
+            Y).Graphic(2).GrhIndex = 0
+                
+End Function
+
+Private Sub InicializarNombres()
+'**************************************************************
+'Author: Juan Martín Sotuyo Dodero (Maraxus)
+'Inicializa los nombres de razas, ciudades, clases, skills, atributos, etc.
+'**************************************************************
+
+        Dim loopc As Long
+
+        Ciudades(eCiudad.cNix) = "Nix (Imperial)"
+        Ciudades(eCiudad.cilliandor) = "Illiandor (Republicano)"
+        
+        ReDim ListaRazas(1 To NUMRAZAS) As String
+        
+        For loopc = 1 To NUMRAZAS
+            ListaRazas(loopc) = Locale_GUI_Frase(130 + loopc)
+        Next loopc
+        
+        ReDim ListaClases(1 To NUMCLASES) As String
+        
+        For loopc = 1 To NUMCLASES
+            ListaClases(loopc) = Locale_GUI_Frase(112 + loopc)
+        Next loopc
+
+ 
+        ReDim Head_Range(1 To NUMRAZAS) As tHeadRange
+        
+        'Male heads
+        Head_Range(Humano).mStart = 1
+        Head_Range(Humano).mEnd = 30
+        Head_Range(enano).mStart = 301
+        Head_Range(enano).mEnd = 315
+        Head_Range(Elfo).mStart = 101
+        Head_Range(Elfo).mEnd = 121
+        Head_Range(ELFOOSCURO).mStart = 202
+        Head_Range(ELFOOSCURO).mEnd = 212
+        Head_Range(gnomo).mStart = 401
+        Head_Range(gnomo).mEnd = 409
+        Head_Range(Orco).mStart = 501
+        Head_Range(Orco).mEnd = 514
+        
+        'Female heads
+        Head_Range(Humano).fStart = 70
+        Head_Range(Humano).fEnd = 80
+        Head_Range(enano).fStart = 370
+        Head_Range(enano).fEnd = 373
+        Head_Range(Elfo).fStart = 170
+        Head_Range(Elfo).fEnd = 189
+        Head_Range(ELFOOSCURO).fStart = 270
+        Head_Range(ELFOOSCURO).fEnd = 278
+        Head_Range(gnomo).fStart = 470
+        Head_Range(gnomo).fEnd = 481
+        Head_Range(Orco).fStart = 570
+        Head_Range(Orco).fEnd = 573
+    
+        ReDim SkillsNames(1 To NUMSKILLS) As String
+
+        For loopc = 1 To NUMSKILLS
+            SkillsNames(loopc) = Locale_GUI_Frase(302 + loopc)
+        Next loopc
+
+ 
+End Sub
+ 
+Public Sub CloseClient(Optional ByVal Closed_ByUser As Boolean = False, Optional ByVal Init_Launcher As Boolean = False)
+    '**************************************************************
+    'Author: Juan Martín Sotuyo Dodero (Maraxus)
+    'Last Modify Date: 8/14/2007
+    'Frees all used resources, cleans up and leaves
+    '**************************************************************
+    ' Allow new instances of the client to be opened
+ 
+    EngineRun = False
+    
+    '0. Cerramos el socket
+    If frmMain.Socket1.State <> sckClosed Then frmMain.Socket1.Disconnect
+
+    '1. Guardamos datos si se cerró correctamente
+    If Closed_ByUser Then Call SaveCovAOInit
+    
+    '2. Eliminamos objetos DX
+    Call Directx_DeInitialize
+   
+    Engine_Reset_Resolution
+    
+    'Destruimos los objetos públicos creados
+    Set CustomKeys = Nothing
+    Set SurfaceDB = Nothing
+    Set Audio = Nothing
+    Set Inventario = Nothing
+    Set MainTimer = Nothing
+    Set incomingData = Nothing
+    Set outgoingData = Nothing
+    Set FormParser = Nothing
+    Set ClientTCP = Nothing
+    
+    'Closed Timer
+    Call FXTimer(False)
+    Call MinutoTimer(False)
+    Call FormularioTimer(False)
+    
+    
+    Call UnloadAllForms
+        
+    KillTimer 0, thFPSAndHour
+    
+    Call PrevInstance.ReleaseInstance
+    
+    Call General_Set_Mouse_Speed(10) 'volvemos a la posicion original del mouse
+    '//Mermas, optimización de carga de sonidos, en vez de bajar todos los wavs y borrarlos al cierre, bajamos el necesario, _
+     y sumamos indices para verificar si sirve y borrarlo, en caso que no, sumamos el indice + 1
+ 
+    
+    '8. ¿Había que prender el launcher?
+    If Init_Launcher Then ShellExecute GetDesktopWindow, "open", App.Path & "\CoverAOLauncher.exe", vbNullString, vbNullString, 1
+    
+    End
+End Sub
+ 
+Public Function getTagPosition(ByVal Nick As String) As Integer
+
+    Dim buf As Integer
+
+    buf = InStr(Nick, "<")
+
+    If buf > 0 Then
+        getTagPosition = buf
+        Exit Function
+
+    End If
+
+    buf = InStr(Nick, "[")
+
+    If buf > 0 Then
+        getTagPosition = buf
+        Exit Function
+
+    End If
+
+    getTagPosition = Len(Nick) + 2
+
+End Function
+
+Public Function getCharIndexByName(ByVal Name As String) As Integer
+
+    Dim i As Long
+
+    For i = 1 To LastChar
+
+        If charlist(i).Nombre = Name Then
+            getCharIndexByName = i
+            Exit Function
+
+        End If
+
+    Next i
+
+End Function
+
+Public Sub LogError(ByVal Desc As String)
+
+    Dim nFile As Integer
+    nFile = FreeFile ' obtenemos un canal
+    
+    Open App.Path & "\" & "error.log" For Append As #nFile
+    Print #nFile, Desc
+    Close #nFile
+
+End Sub
+
+Public Sub LogCustom(ByVal Desc As String, ByVal File As String)
+
+    Dim nFile As Integer
+    nFile = FreeFile ' obtenemos un canal
+    
+    Open App.Path & "\" & File & ".log" For Append As #nFile
+    Print #nFile, Now & " " & Desc
+    Close #nFile
+
+End Sub
+
+Private Sub AddMovementToKeysMovementPressedQueue()
+    If GetKeyState(CustomKeys.BindedKey(eKeyType.mKeyUp)) < 0 Then
+        If keysMovementPressedQueue.itemExist(CustomKeys.BindedKey(eKeyType.mKeyUp)) = False Then keysMovementPressedQueue.Add (CustomKeys.BindedKey(eKeyType.mKeyUp)) ' Agrega la tecla al arraylist
+    Else
+        If keysMovementPressedQueue.itemExist(CustomKeys.BindedKey(eKeyType.mKeyUp)) Then keysMovementPressedQueue.Remove (CustomKeys.BindedKey(eKeyType.mKeyUp)) ' Remueve la tecla que teniamos presionada
+    End If
+
+    If GetKeyState(CustomKeys.BindedKey(eKeyType.mKeyDown)) < 0 Then
+        If keysMovementPressedQueue.itemExist(CustomKeys.BindedKey(eKeyType.mKeyDown)) = False Then keysMovementPressedQueue.Add (CustomKeys.BindedKey(eKeyType.mKeyDown)) ' Agrega la tecla al arraylist
+    Else
+        If keysMovementPressedQueue.itemExist(CustomKeys.BindedKey(eKeyType.mKeyDown)) Then keysMovementPressedQueue.Remove (CustomKeys.BindedKey(eKeyType.mKeyDown)) ' Remueve la tecla que teniamos presionada
+    End If
+
+    If GetKeyState(CustomKeys.BindedKey(eKeyType.mKeyLeft)) < 0 Then
+        If keysMovementPressedQueue.itemExist(CustomKeys.BindedKey(eKeyType.mKeyLeft)) = False Then keysMovementPressedQueue.Add (CustomKeys.BindedKey(eKeyType.mKeyLeft)) ' Agrega la tecla al arraylist
+    Else
+        If keysMovementPressedQueue.itemExist(CustomKeys.BindedKey(eKeyType.mKeyLeft)) Then keysMovementPressedQueue.Remove (CustomKeys.BindedKey(eKeyType.mKeyLeft)) ' Remueve la tecla que teniamos presionada
+    End If
+
+    If GetKeyState(CustomKeys.BindedKey(eKeyType.mKeyRight)) < 0 Then
+        If keysMovementPressedQueue.itemExist(CustomKeys.BindedKey(eKeyType.mKeyRight)) = False Then keysMovementPressedQueue.Add (CustomKeys.BindedKey(eKeyType.mKeyRight)) ' Agrega la tecla al arraylist
+    Else
+        If keysMovementPressedQueue.itemExist(CustomKeys.BindedKey(eKeyType.mKeyRight)) Then keysMovementPressedQueue.Remove (CustomKeys.BindedKey(eKeyType.mKeyRight)) ' Remueve la tecla que teniamos presionada
+    End If
+End Sub
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''clsMeteorologic''''''''''''''''''''''''''''''''''''''''''''''''''''
+  Public Function General_Get_Mouse_Speed() As Long
+ 
+    SystemParametersInfo SPI_GETMOUSESPEED, 0, General_Get_Mouse_Speed, 0
+     
+    End Function
+     
+    Public Sub General_Set_Mouse_Speed(ByVal lngSpeed As Long)
+ 
+     
+    SystemParametersInfo SPI_SETMOUSESPEED, 0, ByVal lngSpeed, 0
+     
+    End Sub
+Public Sub SetFXMAP(ByVal fX As Integer, ByVal X As Integer, ByVal Y As Byte, ByVal Loops As Integer)
+
+    If X = 0 Or Y = 0 Then Exit Sub
+    
+    MapData(X, Y).FxIndex = fX
+    
+    If MapData(X, Y).FxIndex > 0 Then
+        InitGrh MapData(X, Y).fX, FxData(fX).Animacion
+        
+        MapData(X, Y).fX.GrhIndex = FxData(fX).Animacion
+        
+        MapData(X, Y).fX.Loops = Loops
+    End If
+    
+End Sub
+
+ 
 
 
-'Se asegura de que los sockets estan cerrados e ignora cualquier err
+ Sub UpdateMacroLabels(ByVal Index As Byte)
+ 
+    Dim loopc As Long
+    
+    
+    For loopc = 1 To 11
+    
+    If Index = 0 Then 'Apagado
+    
+        If MacroList(loopc).mTipe = 3 Or MacroList(loopc).mTipe = 4 Then
+            frmMain.lblMacro(loopc - 1).Caption = Inventario.Amount(MacroList(loopc).Slot)
+            frmMain.lblMacro(loopc - 1).Visible = True
+        End If
+    Else
+    frmMain.lblMacro(loopc - 1).Visible = False
+    End If
+    
+    Next loopc
+End Sub
+ 
+Public Function CerrarJuego()
+    frmPres.Picture = General_Load_Picture_From_Resource_Ex("_13")
+    frmPres.Visible = True
+    prgRun = False
+    
+End Function
+
+Public Function modocombate()
+If IScombate Then
+frmMain.modocombate.Visible = True
+frmMain.nomodocombate.Visible = False
+Else
+frmMain.modocombate.Visible = False
+frmMain.nomodocombate.Visible = True
+End If
+End Function
+
+
+Public Sub General_SetIcon( _
+      ByVal hwnd As Long, _
+      ByVal sIconResName As String, _
+      Optional ByVal bSetAsAppIcon As Boolean = True)
+'**************************************************************
+'Author: Augusto José Rando
+'Last Modify Date: Unknown
+'
+'**************************************************************
+
+Dim lhWndTop As Long
+Dim lhWnd As Long
+Dim cX As Long
+Dim cY As Long
+Dim hIconLarge As Long
+Dim hIconSmall As Long
+      
+   If (bSetAsAppIcon) Then
+      ' Find VB's hidden parent window:
+      lhWnd = hwnd
+      lhWndTop = lhWnd
+      Do While Not (lhWnd = 0)
+         lhWnd = GetWindow(lhWnd, GW_OWNER)
+         If Not (lhWnd = 0) Then
+            lhWndTop = lhWnd
+         End If
+      Loop
+   End If
+   
+   cX = GetSystemMetrics(SM_CXICON)
+   cY = GetSystemMetrics(SM_CYICON)
+   hIconLarge = LoadImageAsString( _
+         App.hInstance, sIconResName, _
+         IMAGE_ICON, _
+         cX, cY, _
+         LR_SHARED)
+   If (bSetAsAppIcon) Then
+      SendMessageLong lhWndTop, WM_SETICON, ICON_BIG, hIconLarge
+   End If
+   SendMessageLong hwnd, WM_SETICON, ICON_BIG, hIconLarge
+   
+   cX = GetSystemMetrics(SM_CXSMICON)
+   cY = GetSystemMetrics(SM_CYSMICON)
+   hIconSmall = LoadImageAsString( _
+         App.hInstance, sIconResName, _
+         IMAGE_ICON, _
+         cX, cY, _
+         LR_SHARED)
+   If (bSetAsAppIcon) Then
+      SendMessageLong lhWndTop, WM_SETICON, ICON_SMALL, hIconSmall
+   End If
+   SendMessageLong hwnd, WM_SETICON, ICON_SMALL, hIconSmall
+   
+End Sub
+
+Public Sub LoadCovAOInit()
+
 On Error Resume Next
 
-If frmMain.Visible Then frmMain.txStatus.Caption = "Reiniciando."
+    If Not LoadLocales Then
+        MsgBox "¡No se ha logrado realizar la carga del archivo de idioma! Verifique la integridad del sistema. Si el problema persiste por favor consulte los foros de soporte." & vbCrLf & vbCrLf & "Locale data file could not be loaded. Please refer to tech support if the problem persists.", vbCritical, "Saliendo / Quitting"
+        Call CerrarJuego
+    End If
 
-Dim LoopC As Long
-  
-#If UsarQueSocket = 0 Then
-
-    frmMain.Socket1.Cleanup
-    frmMain.Socket1.Startup
-      
-    frmMain.Socket2(0).Cleanup
-    frmMain.Socket2(0).Startup
-
-#ElseIf UsarQueSocket = 1 Then
-
-    'Cierra el socket de escucha
-    If SockListen >= 0 Then Call apiclosesocket(SockListen)
+    InitCommonControls 'Inicia manifiesto (ejecuta como admin y dar controladores actualizados)
+ 
     
-    'Inicia el socket de escucha
-    SockListen = ListenForConnect(Puerto, hWndMsg, "")
-
-#ElseIf UsarQueSocket = 2 Then
-
-#End If
-
-For LoopC = 1 To MaxUsers
-    Call CloseSocket(LoopC)
-Next
-
-'Initialize statistics!!
-Call Statistics.Initialize
-
-For LoopC = 1 To UBound(UserList())
-    Set UserList(LoopC).incomingData = Nothing
-    Set UserList(LoopC).outgoingData = Nothing
-Next LoopC
-
-ReDim UserList(1 To MaxUsers) As User
-
-For LoopC = 1 To MaxUsers
-    UserList(LoopC).ConnID = -1
-    UserList(LoopC).ConnIDValida = False
-    Set UserList(LoopC).incomingData = New clsByteQueue
-    Set UserList(LoopC).outgoingData = New clsByteQueue
-Next LoopC
-
-LastUser = 0
-NumUsers = 0
-
-Call FreeNPCs
-Call FreeCharIndexes
-
-Call LoadSini
-Call LoadOBJData
-
-Call LoadMapData
-
-Call CargarHechizos
-
-#If UsarQueSocket = 0 Then
-
-'*****************Setup socket
-frmMain.Socket1.AddressFamily = AF_INET
-frmMain.Socket1.Protocol = IPPROTO_IP
-frmMain.Socket1.SocketType = SOCK_STREAM
-frmMain.Socket1.Binary = False
-frmMain.Socket1.Blocking = False
-frmMain.Socket1.BufferSize = 1024
-
-frmMain.Socket2(0).AddressFamily = AF_INET
-frmMain.Socket2(0).Protocol = IPPROTO_IP
-frmMain.Socket2(0).SocketType = SOCK_STREAM
-frmMain.Socket2(0).Blocking = False
-frmMain.Socket2(0).BufferSize = 2048
-
-'Escucha
-frmMain.Socket1.LocalPort = val(Puerto)
-frmMain.Socket1.listen
-
-#ElseIf UsarQueSocket = 1 Then
-
-#ElseIf UsarQueSocket = 2 Then
-
-#End If
-
-If frmMain.Visible Then frmMain.txStatus.Caption = "Escuchando conexiones entrantes ..."
-
-'Log it
-Dim N As Integer
-N = FreeFile
-Open App.Path & "\logs\Main.log" For Append Shared As #N
-Print #N, Date & " " & time & " servidor reiniciado."
-Close #N
-
-'Ocultar
-
-If HideMe = 1 Then
-    Call frmMain.InitMain(1)
-Else
-    Call frmMain.InitMain(0)
-End If
-
+    'Init Paths
+    Resource_Path = App.Path & "\Recursos\"
+    DirSounds = App.Path & "\Recursos\Sonidos\"
+    DirMidi = App.Path & "\Recursos\Sonidos\"
+    DirInit = App.Path & "\Init\"
+ 
   
-End Sub
-
-
-Public Function Intemperie(ByVal UserIndex As Integer) As Boolean
+    Dim Leer As New clsIniManager
     
-    If MapInfo(UserList(UserIndex).Pos.map).Zona <> "DUNGEON" Then
-        If MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).Trigger <> 1 And _
-           MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).Trigger <> 2 And _
-           MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).Trigger <> 4 Then Intemperie = True
-    Else
-        Intemperie = False
+    Call Leer.Initialize(DirInit & "CovAoInit.ini")
+    
+    'Si tiene WindowsXP
+    Win2kXP = General_Windows_Is_2000XP
+    
+    
+    'Inicializar configuración de Launcher
+    Musica = val(Leer.GetValue("LAUNCHER", "Musica")) 'Music
+    
+    SonidoHabilitado = val(Leer.GetValue("LAUNCHER", "SonidoHabilitado")) 'Sounds
+
+    Efectos3D = val(Leer.GetValue("LAUNCHER", "Efectos3D")) 'Effects
+
+    VSYNC = val(Leer.GetValue("LAUNCHER", "VSYNC")) 'VSYNC
+
+    RunWindowed = val(Leer.GetValue("LAUNCHER", "RunWindowed")) 'Fullscreen
+ 
+    DeviceIndex = val(Leer.GetValue("LAUNCHER", "DeviceIndex")) 'Software, Hardware, Mixed, Automatico
+
+    Pixels = val(Leer.GetValue("LAUNCHER", "Pixels")) 'Pixels 16/32
+    
+    FXVolume = val(Leer.GetValue("LAUNCHER", "FXVolume")) 'Pixels 16/32
+
+    MusicVolume = val(Leer.GetValue("LAUNCHER", "MusicVolume")) ' Al iniciar esta variable damos tutoriales, etc
+
+    NombreSkin = Leer.GetValue("LAUNCHER", "NombreSkin") 'Cargar nombre de Skins
+
+    PrimeraVez = val(Leer.GetValue("LAUNCHER", "PrimeraVez")) ' Al iniciar esta variable damos tutoriales, etc
+    
+    Desvanecimiento = val(Leer.GetValue("LAUNCHER", "Desvanecimiento")) 'Desvanecimientos efectos que consumen FPS
+ 
+    'Fin config Launcher
+    
+    
+    'Configuración InGame
+    
+    HabilitarMensajesGlobales = val(Leer.GetValue("CONFIG", "HabilitarMensajesGlobales"))
+    VerLugar = val(Leer.GetValue("CONFIG", "VerLugar"))
+    RecordarCuentaIni = val(Leer.GetValue("CONFIG", "RecordarCuenta"))
+    If RecordarCuentaIni = True Then UserAccountRecorded = Leer.GetValue("CONFIG", "Cuenta")
+    
+    NickModerno = val(Leer.GetValue("CONFIG", "NickModerno"))
+    CargarMedidasNombresModernos
+    NombresModernos = IIf((NickModerno = True), 5, 1)
+    
+    ListaIgnorados = Leer.GetValue("CONFIG", "ListaIgnorados")
+    CursorHabilitado = val(Leer.GetValue("CONFIG", "CursorHabilitado")) 'Cursor habilitado
+    MouseSpeed = val(Leer.GetValue("CONFIG", "MouseSpeed")) 'Sensibilidad del mouse
+    BloqueoAlCaminar = val(Leer.GetValue("CONFIG", "BloqueoAlCaminar")) 'Bloqueo al caminar
+    CantidadEnMacros = val(Leer.GetValue("CONFIG", "CantidadEnMacros"))
+    AutoUsarActivado = val(Leer.GetValue("CONFIG", "AutoUsarActivado"))
+    accionMouseUno = val(Leer.GetValue("CONFIG", "AccionMouseUno"))
+    accionMousedos = val(Leer.GetValue("CONFIG", "AccionMouseDos"))
+    Rendimiento = val(Leer.GetValue("CONFIG", "Rendimiento"))
+    
+    If Not General_File_Exists(App.Path & "\Skins\" & NombreSkin & ".ias", vbNormal) Then
+        Call MsgBox(Locale_GUI_Frase(332) & " " & NombreSkin & ".ias " & Locale_GUI_Frase(333), vbCritical, Locale_GUI_Frase(333))
+        Call CerrarJuego
     End If
     
+    Call Set_Skin_Name(NombreSkin)
+    
+    Call General_Set_Mouse_Speed(MouseSpeed)
+    
+
+
+    Load frmCargando
+    'Load frmPres
+    Load frmConnect
+    Load frmMensaje
+    Load frmMain
+    Load frmCharList
+    Load frmOpciones
+    Load frmHlp
+    
+    Leer = Nothing
+End Sub
+
+Public Function Tilde(data As String) As String
+ 
+    Tilde = Replace(Replace(Replace(Replace(Replace(UCase$(data), "Á", "A"), "É", "E"), "Í", "I"), "Ó", "O"), "Ú", "U")
+ 
 End Function
 
-Public Sub EfectoLluvia(ByVal UserIndex As Integer)
-On Error GoTo Errhandler
 
-
-If UserList(UserIndex).flags.UserLogged Then
-    If Intemperie(UserIndex) Then
-                Dim modifi As Long
-                modifi = Porcentaje(UserList(UserIndex).Stats.MaxSta, 3)
-                Call QuitarSta(UserIndex, modifi)
-                Call FlushBuffer(UserIndex)
-    End If
-End If
-
-Exit Sub
-Errhandler:
- LogError ("Error en EfectoLluvia")
-End Sub
-
-
-Public Sub TiempoInvocacion(ByVal UserIndex As Integer)
-Dim i As Integer
-For i = 1 To MAXMASCOTAS
-    If UserList(UserIndex).MascotasIndex(i) > 0 Then
-        If Npclist(UserList(UserIndex).MascotasIndex(i)).Contadores.TiempoExistencia > 0 Then
-           Npclist(UserList(UserIndex).MascotasIndex(i)).Contadores.TiempoExistencia = _
-           Npclist(UserList(UserIndex).MascotasIndex(i)).Contadores.TiempoExistencia - 1
-           If Npclist(UserList(UserIndex).MascotasIndex(i)).Contadores.TiempoExistencia = 0 Then Call MuereNpc(UserList(UserIndex).MascotasIndex(i), 0)
-        End If
-    End If
-Next i
-End Sub
-
-Public Sub EfectoFrio(ByVal UserIndex As Integer)
+Public Function MostrarCantidad(ByVal i As Integer) As Boolean
+    Dim ObjType As Integer
+    ObjType = CInt(General_Locale_Obj(i, 2))
     
-    Dim modifi As Integer
+    MostrarCantidad = ObjType <> eObjType.otPuertas And _
+            ObjType <> eObjType.otCarteles And _
+            ObjType <> eObjType.otArboles And _
+            ObjType <> eObjType.otYacimiento And _
+            ObjType <> eObjType.otTeleport And _
+            ObjType <> eObjType.otcorreo
+End Function
+
+Public Function BoolToByte(ByVal val As Boolean) As Byte
+    BoolToByte = IIf(val = True, 1, 0)
+End Function
+Public Function BoolToInteger(ByVal val As Boolean) As Integer
+    BoolToInteger = IIf(val = True, 1, 0)
+End Function
+Function Generate_Char_Status(ByVal PercVida As Long, ByVal Paralizado As Byte, ByVal Inmovilizado As Byte, _
+                              Optional ByVal Incinerado As Byte = 0, Optional ByVal Envenenado As Byte = 0, _
+                              Optional ByVal Comerciando As Byte = 0, Optional ByVal Trabajando As Byte = 0, _
+                              Optional ByVal Combatiendo As Byte = 0, Optional ByVal Ciego As Byte = 0, _
+                              Optional ByVal Inactivo As Byte = 0, Optional ByVal Resucitando As Byte = 0, Optional ByVal Saliendo As Byte = 0) As String
+
+If PercVida <> -1 Then
+    If PercVida = 100 Then
+        Generate_Char_Status = " " & Locale_GUI_Frase(445) & " "
+    ElseIf PercVida >= 80 Then
+        Generate_Char_Status = " " & Locale_GUI_Frase(446) & " "
+    ElseIf PercVida >= 50 Then
+        Generate_Char_Status = " " & Locale_GUI_Frase(447) & " "
+    ElseIf PercVida >= 30 Then
+        Generate_Char_Status = " " & Locale_GUI_Frase(448) & " "
+    ElseIf PercVida <> 0 Then
+        Generate_Char_Status = " " & Locale_GUI_Frase(449) & " "
+    Else
+        Generate_Char_Status = " " & Locale_GUI_Frase(450) & " "
+    End If
+End If
+
+If Paralizado = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(451) & " "
+End If
+
+If Inmovilizado = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(452) & " "
+End If
+
+If Incinerado = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(454) & " "
+End If
+
+If Envenenado > 0 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(453) & " "
+End If
+
+If Comerciando = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(462) & " "
+End If
+
+If Trabajando = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(463) & " "
+End If
+ 
+If Combatiendo = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(547) & " "
+End If
+ 
+If Ciego = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(455) & " "
+End If
+ 
+If Inactivo = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(464) & " "
+End If
+
+If Resucitando = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(551) & " "
+End If
+
+If Saliendo = 1 Then
+    Generate_Char_Status = Generate_Char_Status & "| " & Locale_GUI_Frase(331) & " "
+End If
+
+Generate_Char_Status = RTrim(Generate_Char_Status)
+End Function
+
+Public Function TituloCaos(ByVal rango As Byte) As String
     
-    If UserList(UserIndex).Counters.Frio < IntervaloFrio Then
-        UserList(UserIndex).Counters.Frio = UserList(UserIndex).Counters.Frio + 1
-    Else
-        If MapInfo(UserList(UserIndex).Pos.map).Terreno = Nieve Then
-            Call WriteConsoleMsg(1, UserIndex, "¡¡Estas muriendo de frio, abrigate o moriras!!.", FontTypeNames.FONTTYPE_INFO)
-            modifi = Porcentaje(UserList(UserIndex).Stats.MaxHP, 5)
-            UserList(UserIndex).Stats.MinHP = UserList(UserIndex).Stats.MinHP - modifi
-            
-            If UserList(UserIndex).Stats.MinHP < 1 Then
-                Call WriteConsoleMsg(1, UserIndex, "¡¡Has muerto de frio!!.", FontTypeNames.FONTTYPE_INFO)
-                UserList(UserIndex).Stats.MinHP = 0
-                Call UserDie(UserIndex)
-            End If
-            
-            Call WriteUpdateHP(UserIndex)
-        Else
-            modifi = Porcentaje(UserList(UserIndex).Stats.MaxSta, 5)
-            Call QuitarSta(UserIndex, modifi)
-            Call WriteUpdateSta(UserIndex)
-        End If
-        
-        UserList(UserIndex).Counters.Frio = 0
-    End If
-End Sub
+    Select Case rango
+        Case 1
+            TituloCaos = "Miembro de las Hordas"
+        Case 2
+            TituloCaos = "Guerrero del Caos"
+        Case 3
+            TituloCaos = "Teniente del Caos"
+        Case 4
+            TituloCaos = "Comandante del Caos"
+        Case 5
+            TituloCaos = "General del Caos"
+        Case 6
+            TituloCaos = "Elite del Caos"
+        Case 7
+            TituloCaos = "Asolador de las Sombras"
+        Case 8
+            TituloCaos = "Caballero Negro"
+        Case 9
+            TituloCaos = "Emisario de las Sombras"
+        Case 10
+            TituloCaos = "Avatar del Apocalipsis"
+    End Select
 
-Public Sub EfectoLava(ByVal UserIndex As Integer)
-'***************************************************
-'Autor: Nacho (Integer)
-'Last Modification: 03/12/07
-'If user is standing on lava, take health points from him
-'***************************************************
-    If UserList(UserIndex).Counters.Lava < IntervaloFrio Then 'Usamos el mismo intervalo que el del frio
-        UserList(UserIndex).Counters.Lava = UserList(UserIndex).Counters.Lava + 1
-    Else
-        If HayLava(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y) Then
-            Call WriteConsoleMsg(1, UserIndex, "¡¡Quitate de la lava, te estás quemando!!.", FontTypeNames.FONTTYPE_INFO)
-            UserList(UserIndex).Stats.MinHP = UserList(UserIndex).Stats.MinHP - Porcentaje(UserList(UserIndex).Stats.MaxHP, 5)
-            
-            If UserList(UserIndex).Stats.MinHP < 1 Then
-                Call WriteConsoleMsg(1, UserIndex, "¡¡Has muerto quemado!!.", FontTypeNames.FONTTYPE_INFO)
-                UserList(UserIndex).Stats.MinHP = 0
-                Call UserDie(UserIndex)
-            End If
-            
-            Call WriteUpdateHP(UserIndex)
-        End If
-        
-        UserList(UserIndex).Counters.Lava = 0
-    End If
-End Sub
-
-
-Public Sub EfectoInvisibilidad(ByVal UserIndex As Integer)
-
-If UserList(UserIndex).Counters.Invisibilidad < IntervaloInvisible Then
-    UserList(UserIndex).Counters.Invisibilidad = UserList(UserIndex).Counters.Invisibilidad + 1
-Else
-    UserList(UserIndex).Counters.Invisibilidad = 0
-    UserList(UserIndex).flags.invisible = 0
-    If UserList(UserIndex).flags.Oculto = 0 Then
-        Call WriteConsoleMsg(1, UserIndex, "Has vuelto a ser visible.", FontTypeNames.FONTTYPE_INFO)
-        Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageSetInvisible(UserList(UserIndex).Char.CharIndex, False))
-    End If
-End If
-
-End Sub
-
-
-Public Sub EfectoParalisisNpc(ByVal NpcIndex As Integer)
-
-If Npclist(NpcIndex).Contadores.Paralisis > 0 Then
-    Npclist(NpcIndex).Contadores.Paralisis = Npclist(NpcIndex).Contadores.Paralisis - 1
-Else
-    Npclist(NpcIndex).flags.Paralizado = 0
-    Npclist(NpcIndex).flags.Inmovilizado = 0
-End If
-
-End Sub
-
-Public Sub EfectoCegueEstu(ByVal UserIndex As Integer)
-
-If UserList(UserIndex).Counters.Ceguera > 0 Then
-    UserList(UserIndex).Counters.Ceguera = UserList(UserIndex).Counters.Ceguera - 1
-Else
-    If UserList(UserIndex).flags.Ceguera = 1 Then
-        UserList(UserIndex).flags.Ceguera = 0
-        Call WriteBlindNoMore(UserIndex)
-    End If
-    If UserList(UserIndex).flags.Estupidez = 1 Then
-        UserList(UserIndex).flags.Estupidez = 0
-        Call WriteDumbNoMore(UserIndex)
-    End If
-
-End If
-
-
-End Sub
-
-
-Public Sub EfectoParalisisUser(ByVal UserIndex As Integer)
-
-If UserList(UserIndex).Counters.Paralisis > 0 Then
-    UserList(UserIndex).Counters.Paralisis = UserList(UserIndex).Counters.Paralisis - 1
-Else
-    UserList(UserIndex).flags.Paralizado = 0
-    UserList(UserIndex).flags.Inmovilizado = 0
-    'UserList(UserIndex).Flags.AdministrativeParalisis = 0
-    Call WriteParalizeOK(UserIndex)
-End If
-
-If TieneObjetos(869, 1, UserIndex) Then Exit Sub
-
-End Sub
-
-Public Sub RecStamina(ByVal UserIndex As Integer, ByRef EnviarStats As Boolean, ByVal Intervalo As Integer)
-
-If MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).Trigger = 1 And _
-   MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).Trigger = 2 And _
-   MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).Trigger = 4 Then Exit Sub
-
-
-Dim massta As Integer
-If UserList(UserIndex).Stats.MinSta < UserList(UserIndex).Stats.MaxSta And Not UserList(UserIndex).flags.Entrenando = 1 Then
-    If UserList(UserIndex).Counters.STACounter < Intervalo Then
-        UserList(UserIndex).Counters.STACounter = UserList(UserIndex).Counters.STACounter + 1
-    Else
-        EnviarStats = True
-        UserList(UserIndex).Counters.STACounter = 0
-        If UserList(UserIndex).flags.Desnudo Then Exit Sub 'Desnudo no sube energía. (ToxicWaste)
        
-        massta = RandomNumber(1, Porcentaje(UserList(UserIndex).Stats.MaxSta, 5))
-        UserList(UserIndex).Stats.MinSta = UserList(UserIndex).Stats.MinSta + massta
-        If UserList(UserIndex).Stats.MinSta > UserList(UserIndex).Stats.MaxSta Then
-            UserList(UserIndex).Stats.MinSta = UserList(UserIndex).Stats.MaxSta
-        End If
-    End If
-End If
+End Function
+Public Function TituloReal(ByVal rango As Byte) As String
 
-End Sub
-
-Public Sub EfectoVeneno(ByVal UserIndex As Integer)
-Dim N As Integer
-
-If UserList(UserIndex).Counters.Veneno < IntervaloVeneno Then
-  UserList(UserIndex).Counters.Veneno = UserList(UserIndex).Counters.Veneno + 1
-Else
-  Call WriteConsoleMsg(1, UserIndex, "Estás envenenado, si no te curas morirás.", FontTypeNames.FONTTYPE_VENENO)
-  UserList(UserIndex).Counters.Veneno = 0
-  N = RandomNumber(1, 5)
-  UserList(UserIndex).Stats.MinHP = UserList(UserIndex).Stats.MinHP - N
-  If UserList(UserIndex).Stats.MinHP < 1 Then Call UserDie(UserIndex)
-  Call WriteUpdateHP(UserIndex)
-End If
-
-End Sub
-
-Public Sub DuracionPociones(ByVal UserIndex As Integer)
-
-'Controla la duracion de las pociones
-If UserList(UserIndex).flags.DuracionEfecto > 0 Then
-   UserList(UserIndex).flags.DuracionEfecto = UserList(UserIndex).flags.DuracionEfecto - 1
-   If UserList(UserIndex).flags.DuracionEfecto = 0 Then
-        UserList(UserIndex).flags.TomoPocion = False
-        UserList(UserIndex).flags.TipoPocion = 0
-        'volvemos los atributos al estado normal
-        Dim loopX As Integer
-        For loopX = 1 To NUMATRIBUTOS
-              UserList(UserIndex).Stats.UserAtributos(loopX) = UserList(UserIndex).Stats.UserAtributosBackUP(loopX)
-        Next
-        Call WriteFuerza(UserIndex)
-        Call WriteAgilidad(UserIndex)
-   End If
-End If
-
-End Sub
-
-Public Sub HambreYSed(ByVal UserIndex As Integer, ByRef fenviarAyS As Boolean)
-
-If Not UserList(UserIndex).flags.Privilegios And PlayerType.User Then Exit Sub
-
-'Sed
-If UserList(UserIndex).Stats.MinAGU > 0 Then
-    If UserList(UserIndex).Counters.AGUACounter < IntervaloSed Then
-        UserList(UserIndex).Counters.AGUACounter = UserList(UserIndex).Counters.AGUACounter + 1
-    Else
-        UserList(UserIndex).Counters.AGUACounter = 0
-        UserList(UserIndex).Stats.MinAGU = UserList(UserIndex).Stats.MinAGU - 10
-        
-        If UserList(UserIndex).Stats.MinAGU <= 0 Then
-            UserList(UserIndex).Stats.MinAGU = 0
-            UserList(UserIndex).flags.Sed = 1
-        End If
-        
-        fenviarAyS = True
-    End If
-End If
-
-'hambre
-If UserList(UserIndex).Stats.MinHam > 0 Then
-   If UserList(UserIndex).Counters.COMCounter < IntervaloHambre Then
-        UserList(UserIndex).Counters.COMCounter = UserList(UserIndex).Counters.COMCounter + 1
-   Else
-        UserList(UserIndex).Counters.COMCounter = 0
-        UserList(UserIndex).Stats.MinHam = UserList(UserIndex).Stats.MinHam - 0
-        If UserList(UserIndex).Stats.MinHam <= 0 Then
-               UserList(UserIndex).Stats.MinHam = 0
-               UserList(UserIndex).flags.Hambre = 1
-        End If
-        fenviarAyS = True
-    End If
-End If
-
-End Sub
-
-Public Sub Sanar(ByVal UserIndex As Integer, ByRef EnviarStats As Boolean, ByVal Intervalo As Integer)
-
-If MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).Trigger = 1 And _
-   MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).Trigger = 2 And _
-   MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).Trigger = 4 Then Exit Sub
-
-Dim mashit As Integer
-'con el paso del tiempo va sanando....pero muy lentamente ;-)
-If UserList(UserIndex).Stats.MinHP < UserList(UserIndex).Stats.MaxHP Then
-    If UserList(UserIndex).Counters.HPCounter < Intervalo Then
-        UserList(UserIndex).Counters.HPCounter = UserList(UserIndex).Counters.HPCounter + 1
-    Else
-        mashit = RandomNumber(2, Porcentaje(UserList(UserIndex).Stats.MaxSta, 5))
-        
-        UserList(UserIndex).Counters.HPCounter = 0
-        UserList(UserIndex).Stats.MinHP = UserList(UserIndex).Stats.MinHP + mashit
-        If UserList(UserIndex).Stats.MinHP > UserList(UserIndex).Stats.MaxHP Then UserList(UserIndex).Stats.MinHP = UserList(UserIndex).Stats.MaxHP
-        Call WriteConsoleMsg(1, UserIndex, "Has sanado.", FontTypeNames.FONTTYPE_INFO)
-        EnviarStats = True
-    End If
-End If
-
-End Sub
-
-Public Sub CargaNpcsDat()
-    Dim npcfile As String
+    Select Case rango
+        Case 1
+            TituloReal = "Legionario"
+        Case 2
+            TituloReal = "Soldado Real"
+        Case 3
+            TituloReal = "Teniente Real"
+        Case 4
+            TituloReal = "Comandante Real"
+        Case 5
+            TituloReal = "General Real"
+        Case 6
+            TituloReal = "Elite Real"
+        Case 7
+            TituloReal = "Guardian del Bien"
+        Case 8
+            TituloReal = "Caballero Imperial"
+        Case 9
+            TituloReal = "Justiciero"
+        Case 10
+            TituloReal = "Guardia Imperial"
+    End Select
     
-    npcfile = DatPath & "NPCs.dat"
-    Call LeerNPCs.Initialize(npcfile)
-End Sub
+End Function
+Public Function TituloMilicia(ByVal rango As Byte) As String
 
-Sub PasarSegundo()
-On Error GoTo Errhandler
-    Dim i As Long
+    Select Case rango
+        Case 1
+            TituloMilicia = "Milicia de Reserva"
+        Case 2
+            TituloMilicia = "Miliciano"
+        Case 3
+            TituloMilicia = "Miliciano Elite"
+        Case 4
+            TituloMilicia = "Soldado de la República"
+        Case 5
+            TituloMilicia = "Soldado Raso"
+        Case 6
+            TituloMilicia = "Soldado Elite"
+        Case 7
+            TituloMilicia = "Comandante de la República"
+    End Select
     
-    For i = 1 To LastUser
-        If UserList(i).flags.UserLogged Then
-            'Cerrar usuario
-            If UserList(i).Counters.Saliendo Then
-                UserList(i).Counters.Salir = UserList(i).Counters.Salir - 1
-                Call WriteConsoleMsg(1, i, "En " & UserList(i).Counters.Salir & " segundos cerrará el juego...", FontTypeNames.FONTTYPE_INFO)
-                If UserList(i).Counters.Salir <= 0 Then
-                    Call WriteConsoleMsg(1, i, "Gracias por jugar Argentum Online", FontTypeNames.FONTTYPE_INFO)
-                    Call WriteDisconnect(i)
-                    Call FlushBuffer(i)
-                    'Cerramos el user
-                    'ResetUserButIp i
-                    CloseUser i
-                    
-                    'Conectamo la cuenta
-                    Call ConectarCuenta(i, UserList(i).Account, "ISNOTHING123456789")
-                End If
-            
-            'ANTIEMPOLLOS
-            ElseIf UserList(i).flags.EstaEmpo = 1 Then
-                 UserList(i).EmpoCont = UserList(i).EmpoCont + 1
-                 If UserList(i).EmpoCont = 30 Then
-                    'If FileExist(CharPath & UserList(Z).Name & ".chr", vbNormal) Then
-                    'esto siempre existe! sino no estaria logueado ;p
-                    
-                    'TmpP = val(GetVar(CharPath & UserList(Z).Name & ".chr", "PENAS", "Cant"))
-                    'Call WriteVar(CharPath & UserList(Z).Name & ".chr", "PENAS", "Cant", TmpP + 1)
-                    'Call WriteVar(CharPath & UserList(Z).Name & ".chr", "PENAS", "P" & TmpP + 1, LCase$(UserList(Z).Name) & ": CARCEL " & 30 & "m, MOTIVO: Empollando" & " " & Date & " " & Time)
-                    
-                    'Call Encarcelar(Z, 30, "El sistema anti empollo")
-                    Call WriteShowMessageBox(i, "Fuiste expulsado por permanecer muerto sobre un item")
-                    'Call SendData(SendTarget.ToAdmins, Z, 0, "|| " & UserList(Z).Name & " Fue encarcelado por empollar" & FONTTYPE_INFO)
-                    UserList(i).EmpoCont = 0
-                    Call FlushBuffer(i)
-                    
-                    Call CloseSocket(i)
-                ElseIf UserList(i).EmpoCont = 15 Then
-                    Call WriteConsoleMsg(1, i, "LLevas 15 segundos bloqueando el item, muévete o serás desconectado.", FontTypeNames.FONTTYPE_WARNING)
-                    Call FlushBuffer(i)
-                End If
-             End If
-        End If
-    Next i
+
+       
+End Function
+
+
+
+Public Sub LoadFontTypes()
+
+On Error GoTo errorhandler
+
+Dim lC As Integer, Arch As String, tempStr As String
+
+If Not Extract_File(Scripts, App.Path & "\Recursos", "fonttypes.ind", Resource_Path, False) Then
+    Err.Description = "No se ha logrado extraer el archivo de recurso."
+    GoTo errorhandler
+End If
+
+Arch = Resource_Path & "fonttypes.ind"
+NUMFONTS = val(General_Var_Get(Arch, "INIT", "NumFonts"))
+ReDim Preserve FontTypes(1 To NUMFONTS) As tFontType
+ 
+For lC = 1 To NUMFONTS
+
+1    tempStr = General_Var_Get(Arch, "INIT", str(lC))
+2    FontTypes(lC).red = val(General_Field_Read(2, tempStr, "~"))
+3    FontTypes(lC).green = val(General_Field_Read(3, tempStr, "~"))
+4    FontTypes(lC).blue = val(General_Field_Read(4, tempStr, "~"))
+5    FontTypes(lC).bold = val(General_Field_Read(5, tempStr, "~"))
+6    FontTypes(lC).italic = val(General_Field_Read(6, tempStr, "~"))
+Next lC
+
+Delete_File Resource_Path & "fonttypes.ind"
+
 Exit Sub
+    
+errorhandler:
+    Call RegistrarError(Err.number, Err.Description, "Protocol.LoadFontypes", Erl)
+    If General_File_Exists(Resource_Path & "fonttypes.ind", vbNormal) Then Delete_File Resource_Path & "fonttypes.ind"
 
-Errhandler:
-    Call LogError("Error en PasarSegundo. Err: " & Err.description & " - " & Err.Number & " - UserIndex: " & i)
-    Resume Next
 End Sub
-Sub ResetUserButIp(ByVal UserIndex As Integer)
 
-UserList(UserIndex).flags.UserLogged = False
+Public Sub SaveCovAOInit()
 
-MapData(UserList(UserIndex).Pos.map, UserList(UserIndex).Pos.X, UserList(UserIndex).Pos.Y).UserIndex = 0
+Dim lC As Integer, Arch As String
 
-Call LimpiarComercioSeguro(UserIndex)
-Call ResetFacciones(UserIndex)
-Call ResetContadores(UserIndex)
-Call ResetCharInfo(UserIndex)
-Call ResetBasicUserInfo(UserIndex)
-Call ResetGuildInfo(UserIndex)
-Call ResetUserFlags(UserIndex)
-Call LimpiarInventario(UserIndex)
-Call ResetUserSpells(UserIndex)
-Call ResetUserPets(UserIndex)
-Call ResetUserBanco(UserIndex)
-With UserList(UserIndex).ComUsu
-    .Acepto = False
-    .cant = 0
-    .DestNick = vbNullString
-    .DestUsu = 0
-    .Objeto = 0
-End With
+Arch = DirInit & "CovAoInit.ini"
+
+'Call General_Var_Write(Arch, "INIT", "NUMBINDS", str(NUMBINDS))
+'Call General_Var_Write(Arch, "INIT", "NUMBOTONES", str(NUMBOTONES))
+'Call General_Var_Write(Arch, "INIT", "VerLugar", str(VerLugar))
+'Call General_Var_Write(Arch, "INIT", "FxNavega", str(FxNavega))
+'Call General_Var_Write(Arch, "INIT", "DefaultMidi", str(DefMidi))
+'Call General_Var_Write(Arch, "INIT", "gldf", str(gldf))
+'Call General_Var_Write(Arch, "INIT", "CopiarDialogos", str(CopiarDialogos))
+'Call General_Var_Write(Arch, "INIT", "MensajesGlobales", str(MensajesGlobales))
+'Call General_Var_Write(Arch, "INIT", "MensajesFaccionarios", str(MensajesFaccionarios))
+'Call General_Var_Write(Arch, "INIT", "CopiarDialogos", str(CopiarDialogos))
+'Call General_Var_Write(Arch, "INIT", "MusicVolume", str(MusicVolume))
+'Call General_Var_Write(Arch, "INIT", "FXVolume", str(FXVolume))
+'Call General_Var_Write(Arch, "INIT", "InvertirSonido", IIf(InvertirSonido = True, "1", "0"))
+'Call General_Var_Write(Arch, "INIT", "Musica", str(sMusica))
+'Call General_Var_Write(Arch, "INIT", "SonidoHabilitado", str(Audio))
+'Call General_Var_Write(Arch, "INIT", "NombreSkin", NombreSkin)
+'Call General_Var_Write(Arch, "INIT", "NombresSimples", str(NombresSimples))
+'Call General_Var_Write(Arch, "INIT", "MouseSpeed", str(MouseS))
+'Call General_Var_Write(Arch, "INIT", "Publicidad_Contenido", str(Publicidad_Contenido))
+'Call General_Var_Write(Arch, "INIT", "CursoresStandar", str(CursoresStandar))
+'Call General_Var_Write(Arch, "INIT", "GameLocale", GameLocale)
+'Call General_Var_Write(Arch, "INIT", "LastRunDate", str(LastRunDate))
+
+Call General_Var_Write(Arch, "CONFIG", "NickModerno", IIf((NickModerno = True), 1, 0))
+
+If RecordarCuentaIni = True Then
+    If Len(UserAccountRecorded) > 0 Then
+        Call General_Var_Write(Arch, "CONFIG", "Cuenta", UserAccountRecorded)
+    Else
+        RecordarCuentaIni = False
+        Call General_Var_Write(Arch, "CONFIG", "Cuenta", "")
+    End If
+    
+Else
+    Call General_Var_Write(Arch, "CONFIG", "Cuenta", "")
+    
+End If
+
+Call General_Var_Write(Arch, "CONFIG", "RecordarCuenta", IIf((RecordarCuentaIni = True), 1, 0))
+
+Call General_Var_Write(Arch, "CONFIG", "VerLugar", VerLugar)
+Call General_Var_Write(Arch, "CONFIG", "HabilitarMensajesGlobales", IIf((HabilitarMensajesGlobales = True), 1, 0))
+
+
+'For lc = 1 To NUMBINDS
+'    Call General_Var_Write(Arch, "User", str(lc), str(BindKeys(lc).KeyCode) & "," & BindKeys(lc).Name)
+'Next lc
+ 
+'lc = 0
+
+'For lc = 1 To NUMBOTONES
+'    Call General_Var_Write(Arch, "Bind" & lc, "Accion", str(MacroKeys(lc).TipoAccion))
+'    Call General_Var_Write(Arch, "Bind" & lc, "hlist", str(MacroKeys(lc).hlist))
+'    Call General_Var_Write(Arch, "Bind" & lc, "invslot", str(MacroKeys(lc).invslot))
+'    Call General_Var_Write(Arch, "Bind" & lc, "SndString", MacroKeys(lc).SendString)
+'Next lc
+
+ListaIgnorados = vbNullString
+
+For lC = 0 To frmOpciones.lstIgnore.ListCount
+    If frmOpciones.lstIgnore.list(lC) <> vbNullString Then
+        ListaIgnorados = ListaIgnorados & frmOpciones.lstIgnore.list(lC) & "¬"
+    End If
+Next lC
+
+If ListaIgnorados <> vbNullString Then _
+    ListaIgnorados = Left$(ListaIgnorados, Len(ListaIgnorados) - 1)
+
+Call WriteVar(Arch, "CONFIG", "ListaIgnorados", ListaIgnorados)
 End Sub
-Public Function ReiniciarAutoUpdate() As Double
 
-    ReiniciarAutoUpdate = Shell(App.Path & "\autoupdater\aoau.exe", vbMinimizedNoFocus)
+'Carga de nombre de mapas
+Public Function Map_NameLoad(ByVal map_num As Integer) As String
+On Error GoTo errorhandler
+    
+    Map_NameLoad = MapNames(map_num)
+    Exit Function
+
+errorhandler:
+    Map_NameLoad = "Mapa Desconocido"
 
 End Function
- 
-Public Sub ReiniciarServidor(Optional ByVal EjecutarLauncher As Boolean = True)
-    'WorldSave
-    Call DoBackUp
+Public Function Map_Name_Get() As String
+'**************************************************************
+'Author: Augusto José Rando
+'Last Modify Date: 7/9/2005
+'
+'**************************************************************
+    Map_Name_Get = Trim$(MapDat.map_name)
+End Function
+Function Generate_Char_StatusNPCs(ByVal PercVida As Long, ByVal Paralizado As Byte, ByVal Inmovilizado As Byte, ByVal PuedeVerVida As Byte) As String
 
-    'commit experiencias
-    Call mdParty.ActualizaExperiencias
-
-    'Guardar Pjs
-    Call GuardarUsuarios
-    
-    If EjecutarLauncher Then Shell (App.Path & "\launcher.exe")
-
-    'Chauuu
-    Unload frmMain
-
-End Sub
-
- 
-Sub GuardarUsuarios()
-    haciendoBK = True
-    
-    Call SendData(SendTarget.ToAll, 0, PrepareMessagePauseToggle())
-    Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg(1, "Servidor> Grabando Personajes", FontTypeNames.FONTTYPE_SERVER))
-    
-    Dim i As Integer
-    For i = 1 To LastUser
-        If UserList(i).flags.UserLogged Then
-            Call SaveUser(i, CharPath & UCase$(UserList(i).name) & ".chr")
+If PuedeVerVida = 0 Then
+    If PercVida <> -1 Then
+        If PercVida = 100 Then
+            Generate_Char_StatusNPCs = " " & Locale_GUI_Frase(445) & " "
+        ElseIf PercVida >= 80 Then
+            Generate_Char_StatusNPCs = " " & Locale_GUI_Frase(446) & " "
+        ElseIf PercVida >= 50 Then
+            Generate_Char_StatusNPCs = " " & Locale_GUI_Frase(447) & " "
+        ElseIf PercVida >= 30 Then
+            Generate_Char_StatusNPCs = " " & Locale_GUI_Frase(448) & " "
+        ElseIf PercVida <> 0 Then
+            Generate_Char_StatusNPCs = " " & Locale_GUI_Frase(449) & " "
+        Else
+            Generate_Char_StatusNPCs = " " & Locale_GUI_Frase(450) & " "
         End If
-    Next i
-    
-    Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg(1, "Servidor> Personajes Grabados", FontTypeNames.FONTTYPE_SERVER))
-    Call SendData(SendTarget.ToAll, 0, PrepareMessagePauseToggle())
+    End If
+End If
 
-    haciendoBK = False
-End Sub
+If Paralizado = 1 Then
+    Generate_Char_StatusNPCs = Generate_Char_StatusNPCs & "| " & Locale_GUI_Frase(451) & " "
+End If
 
+If Inmovilizado = 1 Then
+    Generate_Char_StatusNPCs = Generate_Char_StatusNPCs & "| " & Locale_GUI_Frase(452) & " "
+End If
 
-Sub InicializaEstadisticas()
-Dim Ta As Long
-Ta = GetTickCount() And &H7FFFFFFF
+Generate_Char_StatusNPCs = RTrim(Generate_Char_StatusNPCs)
+End Function
 
-Call EstadisticasWeb.Inicializa(frmMain.hWnd)
-Call EstadisticasWeb.Informar(CANTIDAD_MAPAS, NumMaps)
-Call EstadisticasWeb.Informar(CANTIDAD_ONLINE, NumUsers)
-Call EstadisticasWeb.Informar(UPTIME_SERVER, (Ta - tInicioServer) / 1000)
-Call EstadisticasWeb.Informar(RECORD_USUARIOS, recordusuarios)
-
-End Sub
-
-Public Sub FreeNPCs()
-'***************************************************
-'Autor: Juan Martín Sotuyo Dodero (Maraxus)
-'Last Modification: 05/17/06
-'Releases all NPC Indexes
-'***************************************************
-    Dim LoopC As Long
-    
-    ' Free all NPC indexes
-    For LoopC = 1 To MAXNPCS
-        Npclist(LoopC).flags.NPCActive = False
-    Next LoopC
-End Sub
-
-Public Sub FreeCharIndexes()
-'***************************************************
-'Autor: Juan Martín Sotuyo Dodero (Maraxus)
-'Last Modification: 05/17/06
-'Releases all char indexes
-'***************************************************
-    ' Free all char indexes (set them all to 0)
-    Call ZeroMemory(CharList(1), MAXCHARS * Len(CharList(1)))
-End Sub

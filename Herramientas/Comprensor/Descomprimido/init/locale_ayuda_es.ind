@@ -1,0 +1,72 @@
+\(NICK):
+Con este comando mandarán mensajes en privado a un jugador que esté online in-game. Es importante destacar que este comando utiliza la barra invertida a diferencia de los demás. Si el nombre es compuesto (Ej.: El Tejon) deberán usar el símbolo + en el lugar que está el espacio, ejemplo: “\El+Tejon Hola!”.
+/DESC:
+Con este comando pueden cambiar la descripción del personaje. Ejemplo: “/Desc Soy el mejor Mago”
+/DM /GM /AYUDA:
+Comando para pedir ayuda a un DM.
+/RETIRAR:
+Con este comando te retirarás de la facción que pertenezcas y así te convertirás en renegado. Tu nombre aparecerá de color gris.
+/DUELO (NICK) (ORO):
+Éste comando sirve para retar a otro usuario a un duelo, impidiendo la intervención de cualquier otro usuario que no sea el que se haya escrito (NICK) en el comando mencionado. Este comando sólo puede ser usado en la arena de combate de la ciudad de Rinkel. Para iniciar el duelo ambos usuarios deben tener el “Modo Combate” desactivado. El ORO es opcional.
+/ONLINE:
+Informa el número de usuarios conectados en el momento en el que se escribe.
+/PING:
+Informa el número de ping que se tiene. Este número está relacionado con el “Lag” que se tiene. También puedes apretar adentro del juego el siguiente botón “ * ” (Asterisco) y te aparecerá tus MS y FPS.
+/GRMG:
+Este comando sirve para hablar en forma privada pero a varios usuarios dentro del grupo.
+/FMMG:
+Este comando sirve para hablar a la facción en que perteneces y solo la recibirá el que sea de la misma facción por global.
+/FMSG:
+Este comando solo sirve para hablar con tus “amigos” agregados a la lista.
+/CMSG:
+Este comando te permitirá comunicarte con los miembros pertenecientes a tu clan (Únicamente es utilizable para jugadores que posean clan).
+/SALIR:
+Sale del juego
+/ONLINECLAN:
+Informa el número y los nombres de los usuarios conectados pertenecientes al clan.
+/APOSTAR(ORO):
+El mínimo de oro a apostar debe ser de 5000 monedas de oro, actualmente, hay un timbero ubicado en cada una de las tres principales ciudades.
+/ENLISTAR:
+Si cumples los requisitos establecidos, podrás ingresar a la facción deseada.
+/SALIRCLAN:
+Abandona el clan actual.
+/IGNORAR(NICK):
+Reemplaza “Nick” por el nombre del usuario que no desees que te escriba. Para desbloquear al usuario, deberás reingresar el comando.
+/HOGAR:
+Sirve directamente para la “Runa de teletransportación”, la cual acercándote al sacerdote de las ciudades que te corresponde y escribiendo dicho comando te dará como resultado el hogar en esa ciudad que quisiste.
+/PROPONER (NICK):
+Este comando te permite proponerle a otra persona casarse contigo. Para hacerlo deben ir las dos personas al templo de la ciudad que quieran, clickear al sacerdote y escribir /PROPONER (NICK DE TU PAREJA). Ejemplo: Yo soy M y me quiero casar con R, entonces vamos los dos al sacerdote y lo clickeamos, yo escribo el comando /PROPONER R y entonces ella escribe /PROPONER M. Automáticamente estaremos casados.
+/DIVORCIO:
+Este comando permite a una persona divorciarse de su pareja. Para hacerlo debes ir al templo de cualquier ciudad y clickear al sacerdote, luego escribir /DIVORCIO y listo, ya no estarás casado con nadie. Ejemplo: Yo soy M y estoy casado con R, voy al sacerdote y escribo /DIVORCIO.
+/EVENTOS:
+Este comando te permite saber en tiempo real qué eventos (automáticos) están en curso. Además de proporcionarte un listado detallado de los eventos activos, te dirá el tiempo de duración restante.
+/PENA:
+Este comando te permitirá saber cuánto tiempo de cárcel te queda (si es que estas encarcelado).
+/DENUNCIAR:
+Este comando te permitirá denunciar las malas actitudes de los usuarios. Entre ellas, puedes denunciar un abuso de la comunicación, uso de programas externos, anti-facción (aunque actualmente no este penada), entorpecimiento del juego, nombres ofensivos, otros.
+/DEPOSITAR (Cantidad de oro):
+Estando cerca de un banquero, este comando te permitirá depositar “x” cantidad de oro. Ejemplo: /Depositar 10000
+/RETIRAR (Cantidad de oro):
+Estando cerca de un banquero, este comando te permitirá retirar “x” cantidad de oro. Ejemplo: /Retirar 10000
+/COMERCIAR:
+Permite a dos usuarios comerciar objetos entre sí de forma segura, para esto se debe hacer click izquierdo en el usuario y luego ejecutar este comando. Para que su uso haga efecto ambos deben estar fuera de combate (C).
+/BOVEDA:
+Abre la boveda del personaje si es que previamente estás cerca del banquero y lo hayas seleccionado.
+/FUNDARCLAN:
+Si cumples con los requisitos te permite crear un clan.
+/CERRARCLAN:
+Si es que tienes un clan, lo podrás eliminar.
+/FADD:
+Permite agregar usuarios a tu lista de amigos.
+/FDEL:
+Elimina usuarios de tu lista de amigos.
+/FLIST:
+Muestra la lista de amigos.
+/FADD:
+Acepta a alguien que quiere ser tu amigo
+/PERDON:
+Se utiliza seleccionando al NPC para poder volver a ingresar a una faccón que previamente hayas abandonado para matar usuarios pertenecientes a la misma.
+/SKIN:
+Abre una ventana para la selección de Skins si es que tienes disponibles.
+/DONADOR:
+Abre una ventana con los beneficios a usuarios donadores.es.

@@ -1,0 +1,120 @@
+Curar Veneno|Cura el envenenamiento|Has curado a|te ha curado del envenenamiento.|Te has curado del envenenamiento.|Nihil Ved|1|10|1|8
+Proyectil Mágico|Causa 2 a 7 puntos daño a la víctima.|Has lanzado Proyectil Mágico sobre|lanzo Proyectil Mágico sobre vos.||Rah'Za'Lu|2|12|2|5
+Curar heridas leves|Curar heridas leves, restaura entre 1 y 5 puntos de salud.|Has sanado a|te ha curado algunas heridas.|Te has curado algunas heridas.|Corp Sanc|3|10|3|10
+Envenenar|Envenenamiento, provoca la muerte si no se contraresta con un antídoto.|Has envenenado a|te ha envenenado.|Te has envenenado.|Serp Xon In|3|20|4|20
+Curar heridas graves|Curar heridas graves, restaura entre 15 y 25 puntos de salud.|Has curado a|te ha curado.|Te has curado.|En Corp Sanctis|3|40|5|35
+Saeta Ígnea|Causa 8 a 14 puntos de daño a la victima.|Has lanzado saeta ígnea sobre |lanzó Saeta ígnea sobre vos.|Has lanzado Saeta ígnea sobre ti.|Fogûs Saex|3|20|5|12
+Proyectil eléctrico|Causa 16 a 22 puntos de daño a la victima.|Has lanzado Proyectil eléctrico sobre|lanzó Proyectil eléctrico sobre vos.|Has lanzado proyectil eléctrico sobre ti.|SUN VAP|3|35|7|22
+Bomba mágica|Causa 20 a 30 puntos de daño en un área de dos tiles.|Has lanzado Bomba mágica sobre|lanzó Bomba mágica sobre vos.|Has lanzado Bomba mágica sobre ti.|VAX IN TAR|4|50|25|37
+Paralizar|Impide que la víctima realize todo movimiento.|Has paralizado a|te ha paralizado.|Te has paralizado.|HOAX VORP|3|400|90|63
+Remover paralisis|Remueve la paralisis.|Le has removido la paralisis a|te ha removido la paralisis.|Te has removido la paralisis.|AN HOAX VORP|3|340|80|45
+Resucitar|Devuelve la vida al objetivo.|Has resucitado a|te ha resucitado.|Te has resucitado.|AHIL KNÄ XÄR|1|420|100|75
+Grito de Igôr|Aumenta criticamente la fuerza.|Le has lanzado Grito de Igôr a|te ha lanzado el hechizo Grito de Igôr.|Te has lanzado el hechizo Grito de Igôr.|ÔL HÀX|1|360|40|55
+Furia de Uhkrul|Aumenta la agilidad y fuerza críticamente.|Le has lanzado Furia de Uhkrul a|te ha lanzado Furia de Uhkrul.|Te has lanzado Furia de Uhkrul.|ÛX'ÔL'HIC|1|720|250|85
+Invisibilidad|Vuelve invisible al objetivo, efecto no permanente.|Has lanzado Invisibilidad sobre|lanzo Invisibilidad sobre vos.|Te has lanzado Invisibilidad.|Invisibilidad|1|560|60|87
+Tormenta de fuego|Causa 35 a 50 puntos de daño en un área de tres tiles.|Has lanzado Tormenta de fuego sobre|lanzo Tormenta de fuego sobre vos.|Has lanzado Tormenta de fuego sobre ti.|RAX IN ZAR|4|250|60|45
+Llamado musical|Implora el espiritu musical, un bardo acudirá en tu ayuda.|Has invocado un bardo.|||Impendere et worg|4|460|35|50
+Llamado a la naturaleza|Trae tres lobos que ayudarán a tu causa.|Has invocado tres lobos.|||In amari söpra T'ai|4|250|40|30
+Celeridad|Aumenta la agilidad del usuario que recibe el spell|Has lanzado Celeridad sobre |ha lanzado Celeridad sobre ti.|Has lanzado Celeridad sobre ti.|YUP A'INC|1|60|20|23
+Torpeza|Reduce la agilidad del usuario que recibe el spell|Has lanzado Torpeza sobre |ha lanzado Torpeza sobre ti.|Has lanzado Torpeza sobre ti.|ASYNC YUP A'INC|1|40|10|30
+Fuerza|Aumenta la fuerza del objetivo|Has lanzado Fuerza sobre |ha lanzado Fuerza sobre ti.|Has lanzado Fuerza sobre ti.|Ar A'kron|1|75|25|35
+Debilidad|Reduce la fuerza del usuario que recibe el spell|Has lanzado Debilidad sobre |ha lanzado Debilidad sobre ti.|Has lanzado Debilidad sobre ti.|ASYNC AR A'KRON|1|50|15|35
+Desencantar|Desencantar remueve todo efecto mágico del usuario que lo conjure.|Has lanzado Desencantar sobre|lanzo Desencantar sobre vos.|Has lanzado Desencantar sobre ti.|Nequita|1|1250|250|60
+Corriente eléctrica|Causa 55 a 65 puntos de daño en un área de cuatro tiles.|Has lanzado Corriente eléctrica sobre|lanzo Corriente eléctrica sobre vos.|Has lanzado Corriente eléctrica sobre ti.|T'HY KOOOL|4|300|70|60
+Inmovilizar|Impide que la víctima se movilize.|Has inmovilizado a|te ha inmovilizado.|Te has inmovilizado.|Är Prop s'uo|3|230|60|55
+Apocalipsis|Causa 113 a 124 puntos de daño a la víctima.|Has lanzado Apocalipsis sobre|lanzo Apocalipsis sobre vos.|Has lanzado Apocalipsis sobre ti.|Rahma Nañarak O'al|3|1000|110|90
+Invocar elemental de fuego|Invocar elemental de fuego|Has invocado un elemental de fuego.|||Yur'rax|4|740|100|100
+Invocar elemental de agua|Invocar elemental de ague|Has invocado un elemental de agua.|||Mantra'rax|4|780|110|90
+Invocar elemental de tierra|Invocar elemental de tierra|Has invocado un elemental de tierra.|||Mantra'rax|4|800|100|100
+Implorar ayuda|Implorar ayuda|¡Has implorado ayuda a los dioses!|||Ar'Cos Mantra'rax|4|2000|240|100
+Ceguera|Este embrujo le quitará el sentido de la vista a vuestro oponente.|Has lanzado ceguera sobre |lanzó ceguera vos.|Has lanzado ceguera sobre ti.|Non vides|1|1400|140|80
+Espíritu de Leviathan|Eleva tus atributos al máximo, a costa de tu energía|Has lanzado Espíritu de Leviathan sobre|lanzo Espíritu de Leviathan sobre sobre vos.|Has lanzado Espíritu de Leviathan sobre ti.|Espíritu de Leviathan|1|0|350|0
+Sanar|Restaura entre 50 y 90 de daño al usuario y remueve todos los efectos negativos que éste pueda tener.|Has lanzado Sanar sobre|lanzó Sanar sobre vos.|Has lanzado Sanar sobre ti.|Nihil Vitae|1|1500|550|100
+Desatar la ira|Desatar la ira reduce la fuerza y la agilidad del usuario críticamente.|Has desatado la ira de|te ha desatado la ira|Te has desatado la ira.|Hic Dei|1|1440|250|90
+Implosión|Causa 125 a 138 puntos de daño a la victima.|Has lanzado Implosión sobre|lanzo Implosión sobre vos.|Has lanzado Implosión sobre ti.|Nihil Mortem|3|1450|120|100
+Lluvia de Mosquitos|Los insectos paralizarán y dejaran ciega a la victima.|Has lanzado lluvia de mosquitos sobre|lanzó Lluvia de mosquitos sobre vos.|Has lanzado Lluvia de mosquitos sobre ti.|Hut Inefectus|1|2400|240|100
+Hechizo de NPC||||||3|0|0|0
+HechizoNPCB|Hechizo de NPC.|||||3|0|0|0
+Metamorfosis: Gólem|Transforma al usuario en un Gólem, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.|Has transformado en Gólem a|te transformó en Gólem.|Te has transformado en Gólem.||1|1000|200|100
+Metamorfosis: Dragón|Transforma al usuario en un Dragón, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.|Has transformado en dragón a|te transformó en dragón.|Te has transformado en dragón.||1|1000|200|100
+Metamorfosis: Lobo|Transforma al usuario en un Lobo, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.|Has transformado en lobo a|te transformó en lobo.|Te has transformado en lobo.||1|100|20|20
+Paralizar|Hechizo de NPC.||||HOAX VORP|1|0|0|0
+Metamorfosis: Dragón Legendario|Transforma al usuario en un Dragón Legendario, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.|Has transformado en Dragón Legendario a|te transformó en Dragón Legendario.|Te has transformado en Dragón Legendario.||1|100|30|15
+|||||||0|0|0
+Metamorfosis: Oso Pardo|Transforma al usuario en un Oso Pardo, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.|Has transformado en oso pardo a|te transformó en oso pardo.|Te has transformado en oso pardo.||1|200|40|85
+Metamorfosis: Tortuga|Transforma al usuario en un Tortuga, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.|Has transformado en Tortuga a|te transformó en Tortuga.|Te has transformado en Tortuga.||1|200|40|30
+|||||||0|0|0
+Metamorfosis: Ent|Transforma al usuario en un Ent, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.|Has transformado en Ent a|te transformó en Ent.|Te has transformado en Ent.||1|1000|200|90
+|||||||0|0|0
+|||||||0|0|0
+Metamorfosis: Tigre|Transforma al usuario en un Tigre, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.|Has transformado en tigre a|te transformó en tigre.|Te has transformado en tigre.||1|100|30|40
+HechizoNPCC|Hechizo de NPC.||||||0|0|0
+Juicio final|Causa 145 a 150 puntos de daño a la victima.|Has lanzado Juicio final sobre|lanzo Juicio final sobre vos.|Has lanzado Juicio final sobre ti.|Finis Mortem|3|1800|200|100
+Portal planar|Crea un teleport a Intermundia.|Has creado un Portal interplanar.|||Opercure Dimentia|4|2300|300|100
+Resurrección|Revive completamente a un usuario.|Has revivido a|te ha revivido.|Te has revivido.|HÎC KNÄ XÄR|1|840|200|100
+Materializar: Comida|Los hechizos de materialización convierten magia en materia. Este hechizo puede crear comida a partir de su lanzamiento.|Has creado algo de comida.|||Sunt Alifens|4|500|120|90
+Incinerar|Una llamarada incinerará al objetivo, causando un daño considerable rápidamente.|Has incinerado a|te ha incinerado.|Te has incinerado.|Incendere|1|1400|100|90
+Tormenta ácida|Causa 45 a 60 puntos de daño y envenena en un área de tres tiles.|Has lanzado Tormenta ácida sobre|lanzo Tormenta ácida sobre vos.|Has lanzado Tormenta ácida sobre ti.|VAX IN XORP|4|400|100|80
+Maldición|La criatura no podrá atacar durante unos instantes.|Has maldecido a|te ha maldecido.|Te has maldecido.|Mallum Est|2|2300|100|75
+Llamado al familiar|Llama o retira tu familiar||||Familiarê Asimis|4|0|0|0
+Materializar: Bebida|Los hechizos de materialización convierten magia en materia. Este hechizo puede crear bebida a partir de su lanzamiento.|Has creado algo de bebida.|||Sunt Aquum|4|500|120|90
+Señal a tu mascota|Llama o retira tu mascota|||||4|0|0|0
+Detectar invisibilidad|Detecta todo usuario invisible en el rango de visión del usuario.|Has lanzado Detectar invisibilidad.|||Fant Visiblî|4|1800|300|95
+Lamento de la Banshee|Causa 135 a 138 puntos de daño al objetivo, sin afectar daño/resistencia mágica.|Has lanzado Lamento de la Banshee sobre|lanzo Lamento de la Banshee sobre vos.|Has lanzado Lamento de la Banshee sobre ti.|VÂR NI MÈS|3|1600|180|100
+Veneno crítico|Envenenamiento crítico, provoca la muerte rápidamente si no se contraresta con un antídoto.|Has envenenado críticamente a|te ha envenenado críticamente.|Te has envenenado críticamente.|Pestis Xôn In|3|250|90|60
+Tornado|Paraliza en un área de dos tiles.|Has paralizado a|te ha paralizado.|Te has paralizado.|Ênt Naturâ Veé|4|1400|300|100
+Terror 'Rey Dragón|Hechizo de NPC.|||||1|1440|100|90
+Curar heridas críticas|Curar heridas críticas, restaura entre 30 y 60 puntos de salud.|Has curado a|te ha curado.|Te has curado.|Sum Corp Sanctis|3|360|80|65
+Palabra sagrada|La palabra sagrada paraliza y debilita al objetivo.|Has lanzado Palabra sagrada sobre|te ha lanzado Palabra sagrada|Te has lanzado Palabra sagrada|Feresdeth Averin|1|900|180|90
+Descarga Flamígera|Castiga al enemigo con el fuego divino, causando entre 105 y 115 puntos de daño e incinerándolo|Has lanzado Descarga Flamígera sobre|te ha lanzado Descarga Flamígera|Te has lanzado Descarga Flamígera|Entenath Fir|3|950|150|100
+Aura sagrada|Crea momentaneamente un escudo sagrado alrededor del usuario por 15 segundos.|||Un aura te protege|Elinethik|1|1000|300|90
+Pregonar la palabra de Dios|Cura en un diámetro de 5 tiles entre 75 y 125 puntos de vida|La palabra de Dios cura y fortalece|te ha curado.|Te has curado.|Uere Ferethiele|4 'Efecto área|1000|350|100
+Golpe certero|El receptor no fallará el próximo golpe|Has lanzado Golpe certero sobre|te ha lanzado Golpe certero|¡Tu próximo golpe no fallará!|Ar'Sen Benerim|1|1480|300|90
+Poder divino|El poder del receptor aumenta considerablemente|Has lanzado Poder Divino sobre|te ha lanzado Poder Divino|Te sientes más fuerte|Anath Ekelnar|1|1300|270|90
+Animar a la naturaleza|Le da vida momentáneamente a un árbol.|La naturaleza te protege|||In amari söpra T'ai|4|1000|0|70
+Círculo curativo|Curar entre 25 y 35 puntos de salud en un diámetro de 3 tiles.|Has lanzado círculo curativo sobre|te ha curado.|Te has curado.|AmaÎri Sanctis|4|500|90|45
+Semillas de fuego|Bellotas y bayas se convierten en bolas de fuego, causando 115 a 125 puntos de daño.|Has lanzado Semillas de fuego sobre|lanzo Semillas de fuego sobre vos.|Has lanzado Semillas de fuego sobre ti.|Samarin Tar|3|950|100|100
+Rayo solar|Haz de luz que ciega e inflige 90 a 110 puntos de daño.|Has lanzado Rayo solar sobre|lanzo Rayo solar sobre vos.|Has lanzado Rayo solar sobre ti.|Alata Aüre|3|1350|125|100
+Terremoto|Causa entre 60 y 90 puntos de daño en un radio de 3 tiles.|Has lanzado un terremoto|te ha atrapado en el terremoto.|Te has atrapado en el terremoto.|Undumë Ken|4'4 'Efecto área|650|200|95
+Resucitar familiar o mascota|Resucita el familiar o mascota del objetivo.||ha resucitado tu familiar.|Has resucitado tu familiar.|Nature Xâr|1|1200|200|75
+|||||||0|0|0
+|||||||0|0|0
+Intimidar al espíritu|Reduce la fuerza y el daño del arma del receptor por 15 segundos.|Has intimidado a|te ha intimidado|Te has intimidado|Espiritus Exterrere|1|900|200|80
+Cobijo seguro de Leomundo|Nuestra vestimenta gana +40 en defensa por 15 segundos.|Te sientes protegido|||Uelare cum Uireso|1|1000|300|90
+Lamento de las almas|Causa entre 114 y 117 puntos de daño.|Has lanzado Lamento de las almas sobre|lanzo Lamento de las almas sobre vos.|Has lanzado Lamento de las almas sobre ti.|Uita Subtrahere|3|950|150|100
+Inspiracion|Cura malos estados y aumenta la agilidad|Has inspirado a|te ha inspirado|Te has inspirado|Mussas Apello|1|1000|150|100
+|||||||0|0|0
+Castigo Divino|Causa 88 a 95 puntos de daño a la victima.|Has lanzado Castigo Divino sobre|lanzo Castigo Divino vos.|Has lanzado Castigo Divino sobre ti.|Ekelnar Menie|3|520|100|80
+Fuente de vida|La fuente de vida recupera entre 30 y 45 puntos de vida.|Has lanzado Fuente de Vida sobre|lanzo Fuente de vida sobre vos.|Has lanzado Fuente de Vida sobre ti.|Kelne Benath|3|300|75|80
+Honor del Paladín|Los dioses te bendicen aumentando tu potencial.|||Te sientes más fuerte|Migen Kaeltar|1|650|280|85
+Hechizo NPC Flecha cazador|Hechizo de NPC.|||||1|0|0|0
+Arma mágica|Crea momentáneamente un arma por 1 minuto que inflige un daño considerable|||Un arma mágica se blande en tu mano|Lure Xil|1|650|300|87
+Misil Mágico|Causa 25 a 35 puntos de daño a la victima.|Has lanzado Misil Mágico sobre|lanzo Misil Mágico sobre vos.|Has lanzado Misil Mágico sobre ti.|INX TO RÂ|3|40|20|30
+Descarga eléctrica|Causa 60 a 70 puntos de daño a la victima.|Has lanzado Descarga Eléctrica sobre|lanzo Descarga Eléctrica sobre vos.|Has lanzado Descarga Eléctrica sobre ti.|T'HY KOOOL|3|250|60|65
+Ráfaga ígnea|Causa 80 a 95 puntos de daño a la victima.|Has lanzado Ráfaga ígnea sobre|lanzo Ráfaga ígnea vos.|Has lanzado Ráfaga ígnea sobre ti.|IGNÎS XAR|3|700|100|75
+Invocar esqueletos|Traerá tres esqueletos de los escombros.|Has invocado tres esqueletos.|||MoÎ côrps|4|150|20|20
+Invocar zombies|Invoca la ayuda del los muertos, tres zombies acudirán en tu ayuda.|Has invocado tres zombies.|||MoÎ cámus|4|250|40|30
+Bomba mágica|Causa 10 a 30 puntos de daño en un área de dos tiles.|Has lanzado Bomba mágica sobre|lanzó Bomba mágica sobre vos.|Has lanzado Bomba mágica sobre ti.|VAX IN TAR|3|50|20|38
+Hechizo de la vaca loca||||||3|0|0|0
+Adivinación|Detecta todo usuario invisible en el rango de visión de quien lo conjure.|Has lanzado Adivinación.|||Vothaler Visibili|4|1600|200|100
+Curar heridas graves GMs|Curar heridas graves, restaura La vida entera.|Has curado a|te ha curado.|Te has curado.|Toma toda la Vida.|3|0|5|0
+Apocalipsis GMs|Causa 50 a 90 puntos de daño en un area de cuatro tiles.|Has lanzado Apocalipsis GM sobre|lanzo Apocalipsis GM sobre vos.|Has lanzado Apocalipsis GM sobre ti.|Rahma Nañarak O'al '^GM^'|3|1|1|80
+Fuego elemental ' amarillo|Hechizo de NPC.|||||1|1440|100|100
+Fuego elemental '(azul)|Hechizo de NPC.|||||1|1440|100|100
+Fuego elemental ' marron|Hechizo de NPC.|||||1|1440|100|100
+Flama Elemental Gris|Hechizo de NPC.|||||1|1440|100|100
+Fuego elemental '(fucsia)|Hechizo de NPC.|||||1|1440|100|100
+Fuego elemental '(verde)|Hechizo de NPC.|||||1|1440|100|100
+Flama Elemental Verde Oscuro|Hechizo de NPC.|||||1|1440|100|100
+Hechizo de Garveloth.|Hechizo de NPC.|||||1|1440|100|100
+Hechizo de Castigador|Hechizo de NPC.|||||1|1440|100|100
+Hechizo de Fantasma.|Hechizo de NPC.|||||1|1440|100|100
+Castigo Ilusorio|Hechizo de NPC.||||Poen'capti|1|1440|100|100
+Hechizo de Alma cautiva|Hechizo de NPC.|||||1|1440|100|100
+NoName 'Lo tira el vampiro, vampiresa|Hechizo de NPC.||||Poen'capti|1|1440|100|100
+Rayo Arcano|Causa 40 a 55 puntos de daño a la victima.|Has lanzado Rayo Arcano sobre|lanzo Rayo Arcano sobre vos.|Has lanzado Rayo Arcano sobre ti.|XÄR NÏ RÖ|3|75|30|43
+Metamorfosis: Águila|Transforma al usuario en un Águila, efecto no permanente. Las criaturas no te atacarán si aparentas ser más poderoso que ellas, y obtendrás un bonificador en tu ataque y defensa.|Has transformado en Águila a|te transformó en Águila.|Te has transformado en Águila.||1|100|30|15
+Temple|Llena tu barra de energía a costa de tu defensa física por 15 segundos.|Has lanzado Temple sobre|lanzo Temple sobre sobre vos.|Has lanzado Temple sobre ti.|Temple|1|0|0|0
+Plegaria|Recuperas tu salúd a costas de tus habilidades.|Has lanzado Plegaria sobre|lanzo Plegaria sobre sobre vos.|Has lanzado Plegaria sobre ti.|Plegaria|1|0|350|0
+Sacrificio Impío|Reduce drasticamente tu vida a coste de disminuir el porcentaje de fallos al objetivo por 15 segundos.|Has lanzado Sacrificio Impío sobre|lanzo Sacrificio Impío sobre sobre vos.|Has lanzado Sacrificio Impío sobre ti.|Sacrificio Impío|1|0|350|0
+Furor Ígneo|Reduce el tiempo de ataque al objetivo por 5 segundos.|Has lanzado Furor Ígneo sobre|lanzo Furor Ígneo sobre sobre vos.|Has lanzado Furor Ígneo sobre ti.|Furor Ígneo|1|0|200|0

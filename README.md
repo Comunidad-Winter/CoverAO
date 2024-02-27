@@ -1,33 +1,45 @@
-### Introducción
+### Cover AO 2021
 
-CoverAO es un mod de HunterAO, el cual esta basado en HunterAO, este a su vez estando basado en IAO Clon.
+Está basado en un Alkon 13.0 dx7, pasado a dx8, tiene muchas implementaciones buscando tener los sistemas similares al otro servidor, no recuerdo y no tengo una lista de cambios de esa versión, pero para el que la jugó es exactamente la jugaron en ese tiempo. Sin ningún cambio en el código.
 
-### Rastreo de Modificaciones
+Así tal cual lo tienen pueden abrirlo incluso ejecutando los .exe, ya que vienen generado en localhost, en caso de querer cambiar la IP deben buscar en el cliente:
 
-El historial de modificaciones que ha dado origen a CoverAO puede resumirse en el siguiente gráfico:
+'Cargar IP/PUERTO
+Public Const CurServerIP   As String = "localhost"
+Public Const CurServerPort As Integer = 7666
 
->Imperium AO 4.5 - Inframundo
-><br>..................|
-><br>..................|---IAO Clon
-><br>.........................|
-><br>.........................|---HunterAO
-><br>.................................|
-><br>.................................|---CoverAO
+### Agradecimientos
 
-### Requisitos
+Agradecimiento especiales a quienes estuvieron en esa versión ya sea presente o dándonos una mano grande que sin duda nos hicieron crecer.
 
-Se necesita Visual Basic 6 para compilar los fuentes tanto del cliente como del servidor. El repositorio contiene todos los elementos necesarios para compilar la versión a un ejecutable funcional.
+@Grihilwen : que se puso el servidor encima en un momento que yo venia a full con otras cosas <3
+@Blandix : Que puso organización a nuestra forma de laburar, por encargarse y dirigir nuestro Discord y el desarrollo que nos aportó al servidor <3 (tkm)
+@Juzenav : Por el avance en mapas y gráfica que siempre dispuso a ayudar :3
+Merhak: Por dedicarse al balance del juego y poder mejorarlo <3
+Avk: Que paralelamente siempre estuvo dando una mano con el testeo de absolutamente todo, crack. <3
+@shermie80 : Obviamente mi bb con el que venimos bancando los trapos hace años <3 <3 <3
+A los GMs de ese momento que fueron los que mantuvieron el servidor con eventos, Valkyria, Eurora y Avk.
 
-### Menciones especiales
+Y principalmente a la comunidad de AO que sin ustedes no hubiéramos crecido hasta lo que somos hoy, son motivo principal por el que hago la liberación <3
 
-* Wildem, Luuq y Andy por sus contribuciones a HunterAO.
-* Shermie80 por sus contribuciones a CoverAO.
-* miqueas150 por sus modificaciones al motor gráfico.
+### Imagenes
 
-### Disclaimer
+https://postimg.cc/8FjvZK9L
 
-La comunidad del Argentum Online no es la más prolija del mundo. Habitualmente nacen modificaciones de versiones sin referenciar que duran unos pocos días y luego los fuentes son liberados al "morir". También es lamentablemente frecuente ver que nacen versiones **_que no son liberadas en lo absoluto_**, a pesar de que la licencia [GNU General Public License](https://en.wikipedia.org/wiki/GNU_General_Public_License) del Argentum Online original de Pablo Ignacio Márquez ("Morgolock") así lo requiere. 
+https://postimg.cc/YLcQG6XY
 
-Actualmente, sitios como [GS-Zone](http://www.gs-zone.org/) y [Servers Argentum](http://www.servers-argentum.org/) ofician cierto rol de "repositorios" para aquellas versiones de AO que ya no existen más que en el recuerdo. La existencia de sitios como estos es pivotal para la continuidad del espíritu del Argentum luego de la caída de Alkon; pero al ser foros, sus capacidades son extremadamente limitidas. Los usuarios se valen de hacer _threads_ y utilizar links a sitios de hosting de terceros, los cuales eventualmente se "caen" y la versión de AO en cuestión termina completamente perdida para la comunidad.
+https://postimg.cc/87yWBQK1
 
-Los códigos y recursos en este repositorio son, en realidad, una recopilación de varias fuentes (pues no había una sola que tuviera _todos_ los elementos necesarios para hacer que el cliente y el servidor funcionaran adecuadamente). Dichas fuentes consultadas no presentaban los contenidos de una forma demasiado "sólida", por lo que es posible que cierta información presente aquí no sea del todo correcta (por ejemplo, al rastreo de modificaciones puede que le falte alguna versión intermedia; o que falte gente en las menciones especiales; etc).
+https://postimg.cc/r04rkd8m
+
+https://postimg.cc/MfbfnhfJ
+
+https://postimg.cc/hQq7PSj0
+
+https://postimg.cc/FYF3LsxW
+
+https://postimg.cc/jWm7m6Ym
+
+### Fuente
+
+https://www.gs-zone.org/temas/liberacion-coverao-full.100845/

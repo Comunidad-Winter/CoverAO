@@ -41,11 +41,6 @@ Attribute VB_Exposed = False
 
 Option Explicit
 
-
-
 Public UserName As String
-Public desc As String
-
-
-
+Public desc     As String
 

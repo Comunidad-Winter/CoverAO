@@ -65,6 +65,6 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Sub Command1_Click()
-Me.Visible = False
-End Sub
+    Me.Visible = False
 
+End Sub

@@ -47,50 +47,59 @@ Private Const ARCHIVOCONFIG = "\dat\consultas.dat"
 
 Private pEncuestaActualNum As Integer
 Private pEncuestaActualTex As String
-Private pNivelRequerido As Integer
-Private pOpciones() As Integer
-
+Private pNivelRequerido    As Integer
+Private pOpciones()        As Integer
 
 Public Property Let Numero(ByVal NumEncuesta As Integer)
     pEncuestaActualNum = NumEncuesta
+
 End Property
 
 Public Property Get Numero() As Integer
     Numero = pEncuestaActualNum
+
 End Property
 
 Public Property Let texto(ByVal Descripcion As String)
     pEncuestaActualTex = Descripcion
+
 End Property
 
 Public Property Get texto() As String
     texto = pEncuestaActualTex
+
 End Property
 
-
 Public Sub LoadData()
-Dim CantOpciones As Integer
-Dim i As Integer
-
+    Dim CantOpciones As Integer
+    Dim i            As Integer
+    
+    If frmMain.Visible Then frmMain.txtStatus.Text = "Cargando consultas.dat."
+    
     pEncuestaActualNum = val(GetVar(App.Path & ARCHIVOCONFIG, "INIT", "ConsultaActual"))
     pEncuestaActualTex = GetVar(App.Path & ARCHIVOCONFIG, "INIT", "ConsultaActualTexto")
     pNivelRequerido = GetVar(App.Path & ARCHIVOCONFIG, "INIT", "NivelRequerido")
 
     If pEncuestaActualNum > 0 Then
-       'cargo todas las opciones
+        'cargo todas las opciones
         CantOpciones = val(GetVar(App.Path & ARCHIVOCONFIG, "ENCUESTA" & pEncuestaActualNum, "CANTOPCIONES"))
         ReDim pOpciones(1 To CantOpciones) As Integer
+
         For i = 1 To CantOpciones
             pOpciones(i) = val(GetVar(App.Path & ARCHIVOCONFIG, "ENCUESTA" & pEncuestaActualNum, "OPCION" & i))
         Next i
+
     End If
+    If frmMain.Visible Then frmMain.txtStatus.Text = Date & " " & Time & " - Se cargo consultas.dat."
 End Sub
 
 Public Function doVotar(ByVal UserIndex As Integer, ByVal opcion As Integer) As String
-On Error GoTo errorh
-Dim YaVoto As Boolean
-Dim CharFile As String
-Dim sufragio As Integer
+
+    On Error GoTo errorh
+
+    Dim YaVoto   As Boolean
+    Dim CharFile As String
+    Dim sufragio As Integer
 
     'revisar q no haya votado
     'grabar en el charfile el numero de encuesta
@@ -98,101 +107,116 @@ Dim sufragio As Integer
     If pEncuestaActualNum = 0 Then
         doVotar = "No hay consultas populares abiertas"
         Exit Function
+
     End If
 
-    CharFile = CharPath & UserList(UserIndex).name & ".chr"
-    
-    
+    CharFile = CharPath & UserList(UserIndex).Name & ".chr"
     
     If (UserList(UserIndex).Stats.ELV >= pNivelRequerido) Then
         If (OpcionValida(opcion)) Then
             YaVoto = val(GetVar(CharFile, "CONSULTAS", "Voto")) >= pEncuestaActualNum
+
             If Not YaVoto Then
                 If Not MailYaVoto(UserList(UserIndex).email) Then
                     'pj apto para votar
-                    sufragio = CLng(val(GetVar(App.Path & ARCHIVOCONFIG, "RESULTADOS" & pEncuestaActualNum, "V" & opcion)))
+                    sufragio = CLng(val(GetVar(App.Path & ARCHIVOCONFIG, "RESULTADOS" & pEncuestaActualNum, "V" & _
+                            opcion)))
                     sufragio = sufragio + 1
-                    Call WriteVar(App.Path & ARCHIVOCONFIG, "RESULTADOS" & pEncuestaActualNum, "V" & opcion, str(sufragio))
+                    Call WriteVar(App.Path & ARCHIVOCONFIG, "RESULTADOS" & pEncuestaActualNum, "V" & opcion, str( _
+                            sufragio))
                     doVotar = "Tu voto ha sido computado. Opcion: " & opcion
                     Call MarcarPjComoQueYaVoto(UserIndex)
                     Call MarcarMailComoQueYaVoto(UserList(UserIndex).email)
                 Else
                     Call MarcarPjComoQueYaVoto(UserIndex)
                     doVotar = "Este email ya voto en la consulta: " & pEncuestaActualTex
+
                 End If
+
             Else
                 doVotar = "Este personaje ya voto en la consulta: " & pEncuestaActualTex
+
             End If
+
         Else
             doVotar = "Esa no es una opcion para votar"
+
         End If
+
     Else
         doVotar = "Para votar en esta consulta debes ser nivel " & pNivelRequerido & " o superior"
-    End If
-   
 
-Exit Function
+    End If
+
+    Exit Function
 errorh:
-Call LogError("Error en ConsultasPopularse.doVotar: " & Err.description)
+    Call LogError("Error en ConsultasPopularse.doVotar: " & Err.description)
 
 End Function
-
 
 Public Function SendInfoEncuesta(ByVal UserIndex As Integer) As String
-Dim i As Integer
-    Call WriteConsoleMsg(1, UserIndex, "CONSULTA POPULAR NUMERO " & pEncuestaActualNum, FontTypeNames.FONTTYPE_GUILD)
-    Call WriteConsoleMsg(1, UserIndex, pEncuestaActualTex, FontTypeNames.FONTTYPE_GUILD)
-    Call WriteConsoleMsg(1, UserIndex, " Opciones de voto: ", FontTypeNames.FONTTYPE_GUILDMSG)
-    For i = 1 To UBound(pOpciones)
-        Call WriteConsoleMsg(1, UserIndex, "(Opcion " & i & "): " & GetVar(App.Path & ARCHIVOCONFIG, "ENCUESTA" & pEncuestaActualNum, "OPCION" & i), FontTypeNames.FONTTYPE_GUILDMSG)
-    Next i
-    Call WriteConsoleMsg(1, UserIndex, " Para votar una opcion, escribe /encuesta NUMERODEOPCION, por ejemplo para votar la opcion 1, escribe /encuesta 1. Tu voto no podra ser cambiado.", FontTypeNames.FONTTYPE_VENENO)
-End Function
+    Dim i As Integer
+    Call WriteConsoleMsg(UserIndex, "CONSULTA POPULAR NUMERO " & pEncuestaActualNum, FontTypeNames.FONTTYPE_GUILD)
+    Call WriteConsoleMsg(UserIndex, pEncuestaActualTex, FontTypeNames.FONTTYPE_GUILD)
+    Call WriteConsoleMsg(UserIndex, " Opciones de voto: ", FontTypeNames.FONTTYPE_GUILDMSG)
 
+    For i = 1 To UBound(pOpciones)
+        Call WriteConsoleMsg(UserIndex, "(Opcion " & i & "): " & GetVar(App.Path & ARCHIVOCONFIG, "ENCUESTA" & _
+                pEncuestaActualNum, "OPCION" & i), FontTypeNames.FONTTYPE_GUILDMSG)
+    Next i
+
+    Call WriteConsoleMsg(UserIndex, _
+            " Para votar una opcion, escribe /encuesta NUMERODEOPCION, por ejemplo para votar la opcion 1, escribe /encuesta 1. Tu voto no podra ser cambiado.", _
+            FontTypeNames.FONTTYPE_VENENO)
+
+End Function
 
 Private Sub MarcarPjComoQueYaVoto(ByVal UserIndex As Integer)
-    Call WriteVar(CharPath & UserList(UserIndex).name & ".chr", "CONSULTAS", "Voto", str(pEncuestaActualNum))
-End Sub
+    Call WriteVar(CharPath & UserList(UserIndex).Name & ".chr", "CONSULTAS", "Voto", str(pEncuestaActualNum))
 
+End Sub
 
 Private Function MailYaVoto(ByVal email As String) As Boolean
-'abro el archivo, while not eof levnato 1 linea y comparo. Si da true, cierro
-Dim ArchN As Integer
-Dim Tmp As String
+    'abro el archivo, while not eof levnato 1 linea y comparo. Si da true, cierro
+    Dim ArchN As Integer
+    Dim Tmp   As String
 
-MailYaVoto = False
+    MailYaVoto = False
 
-ArchN = FreeFile()
+    ArchN = FreeFile()
 
-Open App.Path & ARCHIVOMAILS For Input As #ArchN
+    Open App.Path & ARCHIVOMAILS For Input As #ArchN
 
-Do While Not EOF(ArchN)
-    Line Input #ArchN, Tmp
-    If email = Tmp Then
-        MailYaVoto = True
-        Close #ArchN
-        Exit Function
-    End If
-Loop
+    Do While Not EOF(ArchN)
+        Line Input #ArchN, Tmp
 
-Close #ArchN
+        If email = Tmp Then
+            MailYaVoto = True
+            Close #ArchN
+            Exit Function
+
+        End If
+
+    Loop
+
+    Close #ArchN
+
 End Function
 
-
 Private Sub MarcarMailComoQueYaVoto(ByVal email As String)
-Dim ArchN As Integer
+    Dim ArchN As Integer
 
-ArchN = FreeFile()
+    ArchN = FreeFile()
 
-Open App.Path & ARCHIVOMAILS For Append As #ArchN
-Print #ArchN, email
+    Open App.Path & ARCHIVOMAILS For Append As #ArchN
+    Print #ArchN, email
 
-Close #ArchN
+    Close #ArchN
 
 End Sub
-
 
 Private Function OpcionValida(ByVal opcion As Integer) As Boolean
     OpcionValida = opcion > 0 And opcion <= UBound(pOpciones)
+
 End Function
 

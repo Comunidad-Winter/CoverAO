@@ -33,12 +33,13 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Type p_tSoundMapInfo
+
     Cantidad As Integer
     SoundIndex() As Integer
     flags() As Long
     Probabilidad() As Single
-End Type
 
+End Type
 Private Enum p_eSoundFlags
     ninguna = 0
     Lluvia = 1
@@ -46,34 +47,36 @@ End Enum
 
 Private p_Mapas() As p_tSoundMapInfo
 
-
 'sonidos conocidos, pasados a enum para intelisense
 Public Enum e_SoundIndex
+
     MUERTE_HOMBRE = 11
     MUERTE_MUJER = 74
     FLECHA_IMPACTO = 65
     CONVERSION_BARCO = 55
     MORFAR_MANZANA = 82
     SOUND_COMIDA = 7
+
 End Enum
 
 Private Sub Class_Initialize()
-'armar el array
+    'armar el array
     ReDim p_Mapas(1 To NumMaps) As p_tSoundMapInfo
     Call LoadSoundMapInfo
+
 End Sub
 
 Public Sub LoadSoundMapInfo()
-    Dim i As Integer
-    Dim j As Integer
-    Dim Temps As String
+    Dim i       As Integer
+    Dim j       As Integer
+    Dim Temps   As String
     Dim MAPFILE As String
     
     MAPFILE = App.Path & MapPath & "MAPA"
     
     'Usage of Val() prevents errors when dats are corrputed or incomplete. All invalid values are assumed to be zero.
     
-'TODO : Log the error in the dat for correction.
+    'TODO : Log the error in the dat for correction.
     For i = 1 To UBound(p_Mapas)
         Temps = GetVar(MAPFILE & i & ".dat", "SONIDOS", "Cantidad")
         
@@ -89,10 +92,14 @@ Public Sub LoadSoundMapInfo()
                 p_Mapas(i).Probabilidad(j) = val(GetVar(MAPFILE & i & ".dat", "SONIDO" & j, "Probabilidad"))
                 p_Mapas(i).SoundIndex(j) = val(GetVar(MAPFILE & i & ".dat", "SONIDO" & j, "Sonido"))
             Next j
+
         Else
             p_Mapas(i).Cantidad = 0
+
         End If
+
     Next i
+
 End Sub
 
 Public Sub ReproducirSonidosDeMapas()
@@ -124,6 +131,9 @@ Public Sub ReproducirSonidosDeMapas()
     Next i
 End Sub
 
-Public Sub ReproducirSonido(ByVal Destino As SendTarget, ByVal index As Integer, ByVal SoundIndex As Integer)
-    Call SendData(Destino, index, PrepareMessagePlayWave(SoundIndex, UserList(index).Pos.X, UserList(index).Pos.Y))
+Public Sub ReproducirSonido(ByVal Destino As SendTarget, _
+                            ByVal index As Integer, _
+                            ByVal SoundIndex As Integer)
+    Call SendData(Destino, index, PrepareMessagePlayWave(SoundIndex, UserList(index).Pos.x, UserList(index).Pos.y))
+
 End Sub
