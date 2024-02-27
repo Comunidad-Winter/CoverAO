@@ -1,12 +1,16 @@
+<img src="https://i.imgur.com/G3xznNE.png"></img>
+
 ### Cover AO 2021
 
 Está basado en un Alkon 13.0 dx7, pasado a dx8, tiene muchas implementaciones buscando tener los sistemas similares al otro servidor, no recuerdo y no tengo una lista de cambios de esa versión, pero para el que la jugó es exactamente la jugaron en ese tiempo. Sin ningún cambio en el código.
 
 Así tal cual lo tienen pueden abrirlo incluso ejecutando los .exe, ya que vienen generado en localhost, en caso de querer cambiar la IP deben buscar en el cliente:
 
-'Cargar IP/PUERTO
-Public Const CurServerIP   As String = "localhost"
-Public Const CurServerPort As Integer = 7666
+`'Cargar IP/PUERTO`
+
+`Public Const CurServerIP   As String = "localhost"`
+
+`Public Const CurServerPort As Integer = 7666`
 
 ### Agradecimientos
 
