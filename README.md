@@ -28,21 +28,19 @@ Y principalmente a la comunidad de AO que sin ustedes no hubiéramos crecido has
 
 ### Imagenes
 
-https://postimg.cc/8FjvZK9L
+![image](https://github.com/Comunidad-Winter/CoverAO/assets/1338437/051a2354-5df7-4112-b48c-ccb1c18b636b)
 
-https://postimg.cc/YLcQG6XY
+![image](https://github.com/Comunidad-Winter/CoverAO/assets/1338437/47fc37bf-c77d-4f59-a627-9b536d1146dd)
 
-https://postimg.cc/87yWBQK1
+![image](https://github.com/Comunidad-Winter/CoverAO/assets/1338437/d5e6e375-cd61-425a-afb3-af6cff3f9690)
 
-https://postimg.cc/r04rkd8m
+![image](https://github.com/Comunidad-Winter/CoverAO/assets/1338437/1481d48d-9a65-4b07-8df9-8e7df817ea84)
 
-https://postimg.cc/MfbfnhfJ
+![image](https://github.com/Comunidad-Winter/CoverAO/assets/1338437/128b976b-b4fa-43dc-8232-630c62a19494)
 
-https://postimg.cc/hQq7PSj0
+![image](https://github.com/Comunidad-Winter/CoverAO/assets/1338437/f68ddaf0-9cb7-44b0-bced-72298bbc9b1c)
 
-https://postimg.cc/FYF3LsxW
-
-https://postimg.cc/jWm7m6Ym
+![image](https://github.com/Comunidad-Winter/CoverAO/assets/1338437/00975cd5-4cbd-46b0-9991-5be90d71a2b9)
 
 ### Fuente
 
